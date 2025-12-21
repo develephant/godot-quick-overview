@@ -1431,9 +1431,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#expansion" class="md-nav__link">
+  <a href="#self" class="md-nav__link">
     <span class="md-ellipsis">
-      $ expansion
+      self
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expansion-get_node" class="md-nav__link">
+    <span class="md-ellipsis">
+      $ Expansion (-&gt; get_node)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#await" class="md-nav__link">
+    <span class="md-ellipsis">
+      await
     </span>
   </a>
   
@@ -1458,9 +1476,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#class-name" class="md-nav__link">
+  <a href="#node-class" class="md-nav__link">
     <span class="md-ellipsis">
-      Class Name
+      Node Class
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#refcounted-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      RefCounted Class
     </span>
   </a>
   
@@ -1509,9 +1536,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#expansion" class="md-nav__link">
+  <a href="#self" class="md-nav__link">
     <span class="md-ellipsis">
-      $ expansion
+      self
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expansion-get_node" class="md-nav__link">
+    <span class="md-ellipsis">
+      $ Expansion (-&gt; get_node)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#await" class="md-nav__link">
+    <span class="md-ellipsis">
+      await
     </span>
   </a>
   
@@ -1536,9 +1581,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#class-name" class="md-nav__link">
+  <a href="#node-class" class="md-nav__link">
     <span class="md-ellipsis">
-      Class Name
+      Node Class
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#refcounted-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      RefCounted Class
     </span>
   </a>
   
@@ -1561,8 +1615,21 @@
 
 
 <h1 id="helpers">Helpers</h1>
-<h2 id="expansion"><code>$</code> expansion</h2>
-<div class="highlight"><pre><span></span><code><span class="k">var</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">$</span><span class="n">SomeNode</span><span class="w"> </span><span class="c1">#get_node(&quot;SomeNode&quot;)</span>
+<h2 id="self"><code>self</code></h2>
+<p>A reference in code to the current <code>Object</code> instance.</p>
+<div class="highlight"><pre><span></span><code><span class="k">var</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">self</span><span class="o">.</span><span class="n">Name</span>
+</code></pre></div>
+<p><strong>NOTE</strong>: <code>self</code> will only work in <code>Object</code> instances</p>
+<h2 id="expansion-get_node"><code>$</code> Expansion (-&gt; get_node)</h2>
+<div class="highlight"><pre><span></span><code><span class="k">var</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">$</span><span class="n">SomeNode</span>
+
+<span class="c1"># same as get_tree().get_node(&quot;SomeNode&quot;)</span>
+</code></pre></div>
+<h2 id="await"><code>await</code></h2>
+<p>Wait on a process.</p>
+<div class="highlight"><pre><span></span><code><span class="n">await</span><span class="w"> </span><span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">create_timer</span><span class="p">(</span><span class="mf">1.5</span><span class="p">)</span><span class="o">.</span><span class="n">timeout</span>
+<span class="c1"># waiting 1.5 seconds...</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;timer done!&quot;</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="string-replace">String Replace</h2>
 <div class="highlight"><pre><span></span><code><span class="k">var</span><span class="w"> </span><span class="nb">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;You got </span><span class="si">%d</span><span class="s2"> coins&quot;</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">10</span>
@@ -1574,7 +1641,7 @@
 <h2 id="auto-type">Auto-Type</h2>
 <div class="highlight"><pre><span></span><code><span class="k">var</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Boxes&quot;</span>
 </code></pre></div>
-<h2 id="class-name">Class Name</h2>
+<h2 id="node-class">Node Class</h2>
 <p>Providing a class name will automatically register the class as global. </p>
 <p>It will also be available in the <code>Node</code> selector.</p>
 <div class="highlight"><pre><span></span><code><span class="k">class_name</span><span class="w"> </span><span class="n">CargoBox</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="n">Node2D</span>
@@ -1584,6 +1651,19 @@
 
 <span class="c1"># USAGE (anywhere):</span>
 <span class="k">var</span><span class="w"> </span><span class="n">cargo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CargoBox</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
+</code></pre></div>
+<h2 id="refcounted-class">RefCounted Class</h2>
+<p>This creates a auto-registered <code>RefCounted</code> static class called <code>Food</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="k">class_name</span><span class="w"> </span><span class="n">Food</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="n">RefCounted</span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">func</span><span class="w"> </span><span class="n">make_tacos</span><span class="p">(</span><span class="n">amount</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">int</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nb nb-Type">void</span><span class="p">:</span>
+<span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;You made </span><span class="si">%d</span><span class="s2"> tacos!&quot;</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="nb">str</span><span class="p">(</span><span class="n">amount</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</code></pre></div>
+<p><strong>USAGE:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Access from anywhere</span>
+
+<span class="k">var</span><span class="w"> </span><span class="n">tacos_made</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Food</span><span class="o">.</span><span class="n">make_tacos</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 </code></pre></div>
 
 
