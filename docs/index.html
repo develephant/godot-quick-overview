@@ -1,0 +1,2813 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+        <link rel="next" href="project/game_boot/">
+      
+      
+      <link rel="icon" href="images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Godot 4 Rapid Reference</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#godot-4-2d-rapid-reference" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="Godot 4 Rapid Reference" class="md-header__button md-logo" aria-label="Godot 4 Rapid Reference" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Godot 4 Rapid Reference
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Rapid Reference
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Rapid Reference
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="project/game_boot/" class="md-tabs__link">
+          
+  
+  
+  Project
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="scene/node_vs_refcounted/" class="md-tabs__link">
+          
+  
+  
+  Scene
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="class/custom_classes/" class="md-tabs__link">
+          
+  
+  
+  Class
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="signals/signal/" class="md-tabs__link">
+          
+  
+  
+  Signal
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="tween/tweening_2d/" class="md-tabs__link">
+          
+  
+  
+  Tween
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="ui/basic_ui/" class="md-tabs__link">
+          
+  
+  
+  UI
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="data/save_and_load/" class="md-tabs__link">
+          
+  
+  
+  Data
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="resource/custom_resources_tres/" class="md-tabs__link">
+          
+  
+  
+  Resource
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="modding/ugc_create_and_load/" class="md-tabs__link">
+          
+  
+  
+  Modding
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="more/working_with_groups/" class="md-tabs__link">
+          
+  
+  
+  More
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Godot 4 Rapid Reference" class="md-nav__button md-logo" aria-label="Godot 4 Rapid Reference" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Godot 4 Rapid Reference
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Rapid Reference
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Rapid Reference
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core-node-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Node Types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transform-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transform Properties
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visual-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Properties
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#physics-properties-characterbody2d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Physics Properties (CharacterBody2D)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Node Functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#characterbody2d-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      CharacterBody2D Functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#area2d-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Area2D Signals
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input Functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scene-tree-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scene Tree Functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resource-loading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resource Loading
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vector2-math" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vector2 Math
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collision-layers-masks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Collision Layers &amp; Masks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#animatedsprite2d" class="md-nav__link">
+    <span class="md-ellipsis">
+      AnimatedSprite2D
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timer-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Timer Functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#camera2d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Camera2D
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utility-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utility Functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-constants" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Constants
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#signal-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Signal Connection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tween-quick-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tween Quick Reference
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-export-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common @export Types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delta-time-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delta Time Usage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-code-snippets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Code Snippets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quick Code Snippets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-movement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Movement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#platformer-movement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Platformer Movement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#follow-mouse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Follow Mouse
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#look-at-target" class="md-nav__link">
+    <span class="md-ellipsis">
+      Look At Target
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spawn-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spawn Object
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Project
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Project
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="project/game_boot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Game Boot
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="project/project_structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Structure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Scene
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Scene
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="scene/node_vs_refcounted/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Node vs Ref
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="scene/scene_visual_elements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Visual Elements
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Class
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Class
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="class/custom_classes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Custom
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="class/class_instances/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instances
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="class/objects_and_custom_objects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Objects
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="class/typing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Type Hints
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Signal
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Signal
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="signals/signal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Usage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="signals/collision_signals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Collision
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tween
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Tween
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tween/tweening_2d/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tween 2D
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tween/movement_types_2d/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Movment Type
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    UI
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            UI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ui/basic_ui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Basics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ui/input_events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Input
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Data
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Data
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="data/save_and_load/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Save/Load
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Resource
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Resource
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="resource/custom_resources_tres/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Custom .tres
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Modding
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Modding
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modding/ugc_create_and_load/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UGC Concepts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modding/modding_system_theory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    System Theory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    More
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            More
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="more/working_with_groups/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Groups
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="more/helpers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Helpers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core-node-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Node Types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transform-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transform Properties
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visual-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Properties
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#physics-properties-characterbody2d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Physics Properties (CharacterBody2D)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Node Functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#characterbody2d-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      CharacterBody2D Functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#area2d-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Area2D Signals
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input Functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scene-tree-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scene Tree Functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resource-loading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resource Loading
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vector2-math" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vector2 Math
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collision-layers-masks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Collision Layers &amp; Masks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#animatedsprite2d" class="md-nav__link">
+    <span class="md-ellipsis">
+      AnimatedSprite2D
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timer-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Timer Functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#camera2d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Camera2D
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utility-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utility Functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-constants" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Constants
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#signal-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Signal Connection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tween-quick-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tween Quick Reference
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-export-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common @export Types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delta-time-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delta Time Usage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-code-snippets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Code Snippets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quick Code Snippets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-movement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Movement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#platformer-movement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Platformer Movement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#follow-mouse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Follow Mouse
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#look-at-target" class="md-nav__link">
+    <span class="md-ellipsis">
+      Look At Target
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spawn-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spawn Object
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="godot-4-2d-rapid-reference">Godot 4 - 2D Rapid Reference</h1>
+<h2 id="core-node-types">Core Node Types</h2>
+<table>
+<thead>
+<tr>
+<th>Node Type</th>
+<th>Purpose</th>
+<th>Common Use Cases</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Node2D</code></td>
+<td>Base 2D node with transform</td>
+<td>Parent containers, pivot points</td>
+</tr>
+<tr>
+<td><code>Sprite2D</code></td>
+<td>Display single image</td>
+<td>Characters, items, static objects</td>
+</tr>
+<tr>
+<td><code>AnimatedSprite2D</code></td>
+<td>Play sprite animations</td>
+<td>Animated characters, effects</td>
+</tr>
+<tr>
+<td><code>CharacterBody2D</code></td>
+<td>Physics body with move_and_slide</td>
+<td>Player, NPCs, moving entities</td>
+</tr>
+<tr>
+<td><code>RigidBody2D</code></td>
+<td>Physics-simulated body</td>
+<td>Physics objects, ragdolls</td>
+</tr>
+<tr>
+<td><code>StaticBody2D</code></td>
+<td>Non-moving physics body</td>
+<td>Walls, platforms, obstacles</td>
+</tr>
+<tr>
+<td><code>Area2D</code></td>
+<td>Detect overlaps/triggers</td>
+<td>Collectibles, triggers, hitboxes</td>
+</tr>
+<tr>
+<td><code>CollisionShape2D</code></td>
+<td>Define collision area</td>
+<td>Used with physics bodies</td>
+</tr>
+<tr>
+<td><code>Camera2D</code></td>
+<td>2D camera view</td>
+<td>Follow player, screen shake</td>
+</tr>
+<tr>
+<td><code>CanvasLayer</code></td>
+<td>UI layer above game</td>
+<td>HUD, menus, overlays</td>
+</tr>
+<tr>
+<td><code>Control</code></td>
+<td>Base UI node</td>
+<td>UI containers and elements</td>
+</tr>
+<tr>
+<td><code>Timer</code></td>
+<td>Count down timer</td>
+<td>Delays, cooldowns, events</td>
+</tr>
+<tr>
+<td><code>AudioStreamPlayer2D</code></td>
+<td>Positional sound</td>
+<td>Footsteps, projectiles</td>
+</tr>
+<tr>
+<td><code>TileMap</code></td>
+<td>Grid-based tile system</td>
+<td>Levels, terrain, backgrounds</td>
+</tr>
+<tr>
+<td><code>Line2D</code></td>
+<td>Draw lines</td>
+<td>Trails, paths, debug</td>
+</tr>
+<tr>
+<td><code>Polygon2D</code></td>
+<td>Draw filled shapes</td>
+<td>Custom shapes, effects</td>
+</tr>
+</tbody>
+</table>
+<h2 id="transform-properties">Transform Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>position</code></td>
+<td>Vector2</td>
+<td>World position (x, y)</td>
+</tr>
+<tr>
+<td><code>global_position</code></td>
+<td>Vector2</td>
+<td>Position in world space</td>
+</tr>
+<tr>
+<td><code>rotation</code></td>
+<td>float</td>
+<td>Rotation in radians</td>
+</tr>
+<tr>
+<td><code>rotation_degrees</code></td>
+<td>float</td>
+<td>Rotation in degrees</td>
+</tr>
+<tr>
+<td><code>scale</code></td>
+<td>Vector2</td>
+<td>Scale multiplier (x, y)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="visual-properties">Visual Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>visible</code></td>
+<td>bool</td>
+<td>Show/hide node</td>
+</tr>
+<tr>
+<td><code>modulate</code></td>
+<td>Color</td>
+<td>Tint color and alpha</td>
+</tr>
+<tr>
+<td><code>self_modulate</code></td>
+<td>Color</td>
+<td>Tint without affecting children</td>
+</tr>
+<tr>
+<td><code>z_index</code></td>
+<td>int</td>
+<td>Draw order (-4096 to 4096)</td>
+</tr>
+<tr>
+<td><code>z_as_relative</code></td>
+<td>bool</td>
+<td>Z-index relative to parent</td>
+</tr>
+</tbody>
+</table>
+<h2 id="physics-properties-characterbody2d">Physics Properties (CharacterBody2D)</h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>velocity</code></td>
+<td>Vector2</td>
+<td>Current movement velocity</td>
+</tr>
+<tr>
+<td><code>floor_stop_on_slope</code></td>
+<td>bool</td>
+<td>Stop sliding on slopes</td>
+</tr>
+<tr>
+<td><code>floor_max_angle</code></td>
+<td>float</td>
+<td>Maximum walkable angle</td>
+</tr>
+</tbody>
+</table>
+<h2 id="node-functions">Node Functions</h2>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>_ready()</code></td>
+<td>Called when node enters scene tree</td>
+</tr>
+<tr>
+<td><code>_process(delta)</code></td>
+<td>Called every frame</td>
+</tr>
+<tr>
+<td><code>_physics_process(delta)</code></td>
+<td>Called every physics frame (60 FPS)</td>
+</tr>
+<tr>
+<td><code>queue_free()</code></td>
+<td>Delete node at end of frame</td>
+</tr>
+<tr>
+<td><code>get_node("path")</code> or <code>$path</code></td>
+<td>Get reference to child node</td>
+</tr>
+<tr>
+<td><code>get_parent()</code></td>
+<td>Get parent node</td>
+</tr>
+<tr>
+<td><code>add_child(node)</code></td>
+<td>Add child node</td>
+</tr>
+<tr>
+<td><code>remove_child(node)</code></td>
+<td>Remove child node</td>
+</tr>
+<tr>
+<td><code>reparent(new_parent)</code></td>
+<td>Move to new parent</td>
+</tr>
+</tbody>
+</table>
+<h2 id="characterbody2d-functions">CharacterBody2D Functions</h2>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>move_and_slide()</code></td>
+<td>Move with collision detection</td>
+</tr>
+<tr>
+<td><code>is_on_floor()</code></td>
+<td>Check if on floor</td>
+</tr>
+<tr>
+<td><code>is_on_wall()</code></td>
+<td>Check if touching wall</td>
+</tr>
+<tr>
+<td><code>is_on_ceiling()</code></td>
+<td>Check if touching ceiling</td>
+</tr>
+<tr>
+<td><code>get_floor_normal()</code></td>
+<td>Get floor surface normal</td>
+</tr>
+</tbody>
+</table>
+<h2 id="area2d-signals">Area2D Signals</h2>
+<table>
+<thead>
+<tr>
+<th>Signal</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>body_entered(body)</code></td>
+<td>When a body enters area</td>
+</tr>
+<tr>
+<td><code>body_exited(body)</code></td>
+<td>When a body exits area</td>
+</tr>
+<tr>
+<td><code>area_entered(area)</code></td>
+<td>When another area enters</td>
+</tr>
+<tr>
+<td><code>area_exited(area)</code></td>
+<td>When another area exits</td>
+</tr>
+</tbody>
+</table>
+<h2 id="input-functions">Input Functions</h2>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Input.is_action_pressed("action")</code></td>
+<td>Check if action is held</td>
+</tr>
+<tr>
+<td><code>Input.is_action_just_pressed("action")</code></td>
+<td>Check if just pressed this frame</td>
+</tr>
+<tr>
+<td><code>Input.is_action_just_released("action")</code></td>
+<td>Check if just released</td>
+</tr>
+<tr>
+<td><code>Input.get_vector("left", "right", "up", "down")</code></td>
+<td>Get movement vector</td>
+</tr>
+<tr>
+<td><code>Input.get_axis("negative", "positive")</code></td>
+<td>Get 1D axis (-1 to 1)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="scene-tree-functions">Scene Tree Functions</h2>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>get_tree().paused = true</code></td>
+<td>Pause game</td>
+</tr>
+<tr>
+<td><code>get_tree().reload_current_scene()</code></td>
+<td>Restart current scene</td>
+</tr>
+<tr>
+<td><code>get_tree().change_scene_to_file("path")</code></td>
+<td>Load new scene</td>
+</tr>
+<tr>
+<td><code>get_tree().change_scene_to_packed(scene)</code></td>
+<td>Load preloaded scene</td>
+</tr>
+<tr>
+<td><code>get_tree().quit()</code></td>
+<td>Exit game</td>
+</tr>
+<tr>
+<td><code>get_tree().create_timer(seconds)</code></td>
+<td>Create one-shot timer</td>
+</tr>
+</tbody>
+</table>
+<h2 id="resource-loading">Resource Loading</h2>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>load("res://path")</code></td>
+<td>Load resource (blocks game)</td>
+</tr>
+<tr>
+<td><code>preload("res://path")</code></td>
+<td>Load at compile time</td>
+</tr>
+<tr>
+<td><code>ResourceLoader.load_threaded_request("path")</code></td>
+<td>Async load</td>
+</tr>
+</tbody>
+</table>
+<h2 id="vector2-math">Vector2 Math</h2>
+<table>
+<thead>
+<tr>
+<th>Function/Constant</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Vector2(x, y)</code></td>
+<td>Create vector</td>
+</tr>
+<tr>
+<td><code>Vector2.ZERO</code></td>
+<td>(0, 0)</td>
+</tr>
+<tr>
+<td><code>Vector2.ONE</code></td>
+<td>(1, 1)</td>
+</tr>
+<tr>
+<td><code>Vector2.UP</code></td>
+<td>(0, -1)</td>
+</tr>
+<tr>
+<td><code>Vector2.DOWN</code></td>
+<td>(0, 1)</td>
+</tr>
+<tr>
+<td><code>Vector2.LEFT</code></td>
+<td>(-1, 0)</td>
+</tr>
+<tr>
+<td><code>Vector2.RIGHT</code></td>
+<td>(1, 0)</td>
+</tr>
+<tr>
+<td><code>vector.length()</code></td>
+<td>Get magnitude</td>
+</tr>
+<tr>
+<td><code>vector.normalized()</code></td>
+<td>Get unit vector</td>
+</tr>
+<tr>
+<td><code>vector.distance_to(other)</code></td>
+<td>Distance between points</td>
+</tr>
+<tr>
+<td><code>vector.direction_to(other)</code></td>
+<td>Normalized direction</td>
+</tr>
+<tr>
+<td><code>vector.lerp(target, weight)</code></td>
+<td>Linear interpolation</td>
+</tr>
+<tr>
+<td><code>vector.move_toward(target, delta)</code></td>
+<td>Move toward target</td>
+</tr>
+</tbody>
+</table>
+<h2 id="collision-layers-masks">Collision Layers &amp; Masks</h2>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>set_collision_layer_value(layer, bool)</code></td>
+<td>Enable/disable layer</td>
+</tr>
+<tr>
+<td><code>set_collision_mask_value(layer, bool)</code></td>
+<td>Enable/disable mask</td>
+</tr>
+<tr>
+<td><code>get_collision_layer_value(layer)</code></td>
+<td>Check layer state</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Concept:</strong>
+- <strong>Layer</strong> = "I am on these layers"
+- <strong>Mask</strong> = "I collide with these layers"</p>
+<h2 id="animatedsprite2d">AnimatedSprite2D</h2>
+<table>
+<thead>
+<tr>
+<th>Function/Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>play("animation_name")</code></td>
+<td>Play animation</td>
+</tr>
+<tr>
+<td><code>stop()</code></td>
+<td>Stop animation</td>
+</tr>
+<tr>
+<td><code>animation_finished</code> signal</td>
+<td>When animation completes</td>
+</tr>
+<tr>
+<td><code>frame</code></td>
+<td>Current frame number</td>
+</tr>
+<tr>
+<td><code>speed_scale</code></td>
+<td>Playback speed multiplier</td>
+</tr>
+</tbody>
+</table>
+<h2 id="timer-functions">Timer Functions</h2>
+<table>
+<thead>
+<tr>
+<th>Function/Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>start(seconds)</code></td>
+<td>Start/restart timer</td>
+</tr>
+<tr>
+<td><code>stop()</code></td>
+<td>Stop timer</td>
+</tr>
+<tr>
+<td><code>timeout</code> signal</td>
+<td>Emitted when timer ends</td>
+</tr>
+<tr>
+<td><code>wait_time</code></td>
+<td>Duration in seconds</td>
+</tr>
+<tr>
+<td><code>one_shot</code></td>
+<td>Fire once or loop</td>
+</tr>
+<tr>
+<td><code>autostart</code></td>
+<td>Start on _ready()</td>
+</tr>
+</tbody>
+</table>
+<h2 id="camera2d">Camera2D</h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>enabled</code></td>
+<td>Activate this camera</td>
+</tr>
+<tr>
+<td><code>zoom</code></td>
+<td>Camera zoom level (Vector2)</td>
+</tr>
+<tr>
+<td><code>offset</code></td>
+<td>Camera offset from position</td>
+</tr>
+<tr>
+<td><code>position_smoothing_enabled</code></td>
+<td>Smooth camera movement</td>
+</tr>
+<tr>
+<td><code>position_smoothing_speed</code></td>
+<td>Smoothing speed</td>
+</tr>
+<tr>
+<td><code>drag_horizontal_enabled</code></td>
+<td>Enable horizontal drag</td>
+</tr>
+<tr>
+<td><code>drag_vertical_enabled</code></td>
+<td>Enable vertical drag</td>
+</tr>
+</tbody>
+</table>
+<h2 id="utility-functions">Utility Functions</h2>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>lerp(from, to, weight)</code></td>
+<td>Linear interpolation</td>
+</tr>
+<tr>
+<td><code>clamp(value, min, max)</code></td>
+<td>Limit value to range</td>
+</tr>
+<tr>
+<td><code>move_toward(from, to, delta)</code></td>
+<td>Move toward value</td>
+</tr>
+<tr>
+<td><code>remap(value, istart, istop, ostart, ostop)</code></td>
+<td>Remap range</td>
+</tr>
+<tr>
+<td><code>abs(value)</code></td>
+<td>Absolute value</td>
+</tr>
+<tr>
+<td><code>sign(value)</code></td>
+<td>Returns -1, 0, or 1</td>
+</tr>
+<tr>
+<td><code>deg_to_rad(degrees)</code></td>
+<td>Convert to radians</td>
+</tr>
+<tr>
+<td><code>rad_to_deg(radians)</code></td>
+<td>Convert to degrees</td>
+</tr>
+<tr>
+<td><code>randf()</code></td>
+<td>Random float 0.0-1.0</td>
+</tr>
+<tr>
+<td><code>randi()</code></td>
+<td>Random integer</td>
+</tr>
+<tr>
+<td><code>randf_range(from, to)</code></td>
+<td>Random float in range</td>
+</tr>
+<tr>
+<td><code>randi_range(from, to)</code></td>
+<td>Random int in range</td>
+</tr>
+</tbody>
+</table>
+<h2 id="common-constants">Common Constants</h2>
+<table>
+<thead>
+<tr>
+<th>Constant</th>
+<th>Value</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PI</code></td>
+<td>3.14159...</td>
+<td>Circle calculations</td>
+</tr>
+<tr>
+<td><code>TAU</code></td>
+<td>6.28318...</td>
+<td>Full rotation (2π)</td>
+</tr>
+<tr>
+<td><code>INF</code></td>
+<td>Infinity</td>
+<td>Math comparisons</td>
+</tr>
+<tr>
+<td><code>NAN</code></td>
+<td>Not a Number</td>
+<td>Error checking</td>
+</tr>
+</tbody>
+</table>
+<h2 id="signal-connection">Signal Connection</h2>
+<div class="highlight"><pre><span></span><code><span class="x"># Code connection</span>
+<span class="x">$Node.signal_name.connect(_on_signal)</span>
+
+<span class="x"># Disconnect</span>
+<span class="x">$Node.signal_name.disconnect(_on_signal)</span>
+
+<span class="x"># Check if connected</span>
+<span class="x">$Node.signal_name.is_connected(_on_signal)</span>
+</code></pre></div>
+<h2 id="tween-quick-reference">Tween Quick Reference</h2>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>create_tween()</code></td>
+<td>Create new tween</td>
+</tr>
+<tr>
+<td><code>tween.tween_property(object, property, value, duration)</code></td>
+<td>Animate property</td>
+</tr>
+<tr>
+<td><code>tween.tween_interval(seconds)</code></td>
+<td>Add delay</td>
+</tr>
+<tr>
+<td><code>tween.tween_callback(callable)</code></td>
+<td>Call function</td>
+</tr>
+<tr>
+<td><code>tween.set_parallel(bool)</code></td>
+<td>Parallel mode</td>
+</tr>
+<tr>
+<td><code>tween.set_loops(count)</code></td>
+<td>Repeat animation</td>
+</tr>
+<tr>
+<td><code>tween.kill()</code></td>
+<td>Stop and destroy tween</td>
+</tr>
+</tbody>
+</table>
+<h2 id="common-export-types">Common @export Types</h2>
+<div class="highlight"><pre><span></span><code><span class="x">@export var speed: float = 100.0</span>
+<span class="x">@export var health: int = 100</span>
+<span class="x">@export var player_name: String = &quot;Hero&quot;</span>
+<span class="x">@export var enabled: bool = true</span>
+<span class="x">@export var sprite: Texture2D</span>
+<span class="x">@export var sound: AudioStream</span>
+<span class="x">@export var next_scene: PackedScene</span>
+<span class="x">@export_range(0, 100) var volume: int = 50</span>
+<span class="x">@export_enum(&quot;Easy&quot;, &quot;Medium&quot;, &quot;Hard&quot;) var difficulty: String</span>
+<span class="x">@export_flags(&quot;Run&quot;, &quot;Jump&quot;, &quot;Attack&quot;) var abilities: int</span>
+</code></pre></div>
+<h2 id="delta-time-usage">Delta Time Usage</h2>
+<div class="highlight"><pre><span></span><code><span class="x"># Always multiply movement by delta for frame-independent speed</span>
+<span class="x">velocity.x = speed * delta        # pixels per second</span>
+<span class="x">rotation += angular_speed * delta  # radians per second</span>
+<span class="x">timer += delta                     # seconds</span>
+</code></pre></div>
+<h2 id="quick-code-snippets">Quick Code Snippets</h2>
+<h3 id="basic-movement">Basic Movement</h3>
+<div class="highlight"><pre><span></span><code><span class="x">func _physics_process(delta):</span>
+<span class="x">    var direction = Input.get_vector(&quot;left&quot;, &quot;right&quot;, &quot;up&quot;, &quot;down&quot;)</span>
+<span class="x">    velocity = direction * speed</span>
+<span class="x">    move_and_slide()</span>
+</code></pre></div>
+<h3 id="platformer-movement">Platformer Movement</h3>
+<div class="highlight"><pre><span></span><code><span class="x">func _physics_process(delta):</span>
+<span class="x">    if not is_on_floor():</span>
+<span class="x">        velocity.y += gravity * delta</span>
+
+<span class="x">    var input = Input.get_axis(&quot;left&quot;, &quot;right&quot;)</span>
+<span class="x">    velocity.x = input * speed</span>
+
+<span class="x">    if Input.is_action_just_pressed(&quot;jump&quot;) and is_on_floor():</span>
+<span class="x">        velocity.y = jump_velocity</span>
+
+<span class="x">    move_and_slide()</span>
+</code></pre></div>
+<h3 id="follow-mouse">Follow Mouse</h3>
+<div class="highlight"><pre><span></span><code><span class="x">func _process(delta):</span>
+<span class="x">    global_position = get_global_mouse_position()</span>
+</code></pre></div>
+<h3 id="look-at-target">Look At Target</h3>
+<div class="highlight"><pre><span></span><code><span class="x">func _process(delta):</span>
+<span class="x">    look_at(target.global_position)</span>
+</code></pre></div>
+<h3 id="spawn-object">Spawn Object</h3>
+<div class="highlight"><pre><span></span><code><span class="x">func spawn_object():</span>
+<span class="x">    var instance = preload(&quot;res://object.tscn&quot;).instantiate()</span>
+<span class="x">    instance.position = spawn_position</span>
+<span class="x">    get_parent().add_child(instance)</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": ".", "features": ["navigation.instant", "navigation.tabs", "content.code.copy", "content.code.annotate"], "search": "assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>

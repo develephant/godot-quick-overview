@@ -1,0 +1,2455 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../resource/custom_resources_tres/">
+      
+      
+        <link rel="next" href="../modding_system_theory/">
+      
+      
+      <link rel="icon" href="../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>UGC Concepts - Godot 4 Rapid Reference</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#user-generated-content-ugc-in-godot-4" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Godot 4 Rapid Reference" class="md-header__button md-logo" aria-label="Godot 4 Rapid Reference" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Godot 4 Rapid Reference
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              UGC Concepts
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Rapid Reference
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../project/game_boot/" class="md-tabs__link">
+          
+  
+  
+  Project
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../scene/node_vs_refcounted/" class="md-tabs__link">
+          
+  
+  
+  Scene
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../class/custom_classes/" class="md-tabs__link">
+          
+  
+  
+  Class
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../signals/signal/" class="md-tabs__link">
+          
+  
+  
+  Signal
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tween/tweening_2d/" class="md-tabs__link">
+          
+  
+  
+  Tween
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ui/basic_ui/" class="md-tabs__link">
+          
+  
+  
+  UI
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../data/save_and_load/" class="md-tabs__link">
+          
+  
+  
+  Data
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../resource/custom_resources_tres/" class="md-tabs__link">
+          
+  
+  
+  Resource
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Modding
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../more/working_with_groups/" class="md-tabs__link">
+          
+  
+  
+  More
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Godot 4 Rapid Reference" class="md-nav__button md-logo" aria-label="Godot 4 Rapid Reference" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Godot 4 Rapid Reference
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Rapid Reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Project
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Project
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project/game_boot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Game Boot
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project/project_structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Structure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Scene
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Scene
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scene/node_vs_refcounted/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Node vs Ref
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scene/scene_visual_elements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Visual Elements
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Class
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Class
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../class/custom_classes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Custom
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../class/class_instances/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instances
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../class/objects_and_custom_objects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Objects
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../class/typing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Type Hints
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Signal
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Signal
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../signals/signal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Usage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../signals/collision_signals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Collision
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tween
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Tween
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tween/tweening_2d/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tween 2D
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tween/movement_types_2d/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Movment Type
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    UI
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            UI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/basic_ui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Basics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/input_events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Input
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Data
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Data
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/save_and_load/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Save/Load
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Resource
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Resource
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resource/custom_resources_tres/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Custom .tres
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Modding
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Modding
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    UGC Concepts
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    UGC Concepts
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-resource-files-tres-res" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Resource Files (.tres, .res)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Resource Files (.tres, .res)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-can-be-loaded" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Can Be Loaded
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-load" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Load
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specs-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specs &amp; Limitations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-json-data-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. JSON Data Files
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. JSON Data Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-can-be-loaded_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Can Be Loaded
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-load_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Load
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specs-limitations_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specs &amp; Limitations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-image-files-runtime-loading" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Image Files (Runtime Loading)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Image Files (Runtime Loading)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#supported-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported Formats
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-load_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Load
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specs-limitations_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specs &amp; Limitations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-gdscript-files-gd-advanced" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. GDScript Files (.gd) - ADVANCED
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. GDScript Files (.gd) - ADVANCED">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#security-warning" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Security Warning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-load-if-you-must" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Load (If You Must)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-its-acceptable" class="md-nav__link">
+    <span class="md-ellipsis">
+      When It's Acceptable
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-pckzip-archives-mod-packs" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. PCK/ZIP Archives (Mod Packs)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. PCK/ZIP Archives (Mod Packs)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-they-are" class="md-nav__link">
+    <span class="md-ellipsis">
+      What They Are
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-load_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Load
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specs-limitations_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specs &amp; Limitations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-directory-locations" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Directory Locations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="User Directory Locations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#where-files-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where Files Go
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#platform-specific-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      Platform-Specific Paths
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete-ugc-system-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complete UGC System Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dos" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Do's
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#donts" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ Don'ts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Levels
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-approach-for-beginners" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommended Approach for Beginners
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modding_system_theory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    System Theory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    More
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            More
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../more/working_with_groups/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Groups
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../more/helpers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Helpers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-resource-files-tres-res" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Resource Files (.tres, .res)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Resource Files (.tres, .res)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-can-be-loaded" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Can Be Loaded
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-load" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Load
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specs-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specs &amp; Limitations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-json-data-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. JSON Data Files
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. JSON Data Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-can-be-loaded_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Can Be Loaded
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-load_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Load
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specs-limitations_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specs &amp; Limitations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-image-files-runtime-loading" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Image Files (Runtime Loading)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Image Files (Runtime Loading)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#supported-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported Formats
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-load_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Load
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specs-limitations_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specs &amp; Limitations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-gdscript-files-gd-advanced" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. GDScript Files (.gd) - ADVANCED
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. GDScript Files (.gd) - ADVANCED">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#security-warning" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Security Warning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-load-if-you-must" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Load (If You Must)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-its-acceptable" class="md-nav__link">
+    <span class="md-ellipsis">
+      When It's Acceptable
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-pckzip-archives-mod-packs" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. PCK/ZIP Archives (Mod Packs)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. PCK/ZIP Archives (Mod Packs)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-they-are" class="md-nav__link">
+    <span class="md-ellipsis">
+      What They Are
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-load_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Load
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specs-limitations_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specs &amp; Limitations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-directory-locations" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Directory Locations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="User Directory Locations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#where-files-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where Files Go
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#platform-specific-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      Platform-Specific Paths
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete-ugc-system-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complete UGC System Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dos" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Do's
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#donts" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ Don'ts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Levels
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-approach-for-beginners" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommended Approach for Beginners
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="user-generated-content-ugc-in-godot-4">User-Generated Content (UGC) in Godot 4</h1>
+<h2 id="overview">Overview</h2>
+<p>Godot supports loading user-generated content through multiple methods, each with different capabilities and security considerations.</p>
+<hr />
+<h2 id="1-resource-files-tres-res">1. Resource Files (.tres, .res)</h2>
+<h3 id="what-can-be-loaded">What Can Be Loaded</h3>
+<ul>
+<li>Custom resources (weapon stats, character data, etc.)</li>
+<li>Scenes (.tscn, .scn)</li>
+<li>Images, audio, 3D models</li>
+<li>Any resource type Godot supports</li>
+</ul>
+<h3 id="how-to-load">How to Load</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Load a user-created weapon</span>
+<span class="k">var</span><span class="w"> </span><span class="n">weapon</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">load</span><span class="p">(</span><span class="s2">&quot;user://mods/custom_weapon.tres&quot;</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">WeaponData</span>
+
+<span class="c1"># Load a custom level scene</span>
+<span class="k">var</span><span class="w"> </span><span class="n">level_scene</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">load</span><span class="p">(</span><span class="s2">&quot;user://levels/user_level.tscn&quot;</span><span class="p">)</span>
+<span class="k">var</span><span class="w"> </span><span class="n">level_instance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">level_scene</span><span class="o">.</span><span class="n">instantiate</span><span class="p">()</span>
+<span class="n">add_child</span><span class="p">(</span><span class="n">level_instance</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="specs-limitations">Specs &amp; Limitations</h3>
+<ul>
+<li>✅ <strong>Safe</strong> - Can't execute arbitrary code</li>
+<li>✅ <strong>Easy to create</strong> - Users can make .tres files in editor</li>
+<li>❌ <strong>Requires Godot editor</strong> - Users need Godot to create content</li>
+<li>📁 <strong>File location</strong> - <code>user://</code> maps to OS-specific directory</li>
+</ul>
+<hr />
+<h2 id="2-json-data-files">2. JSON Data Files</h2>
+<h3 id="what-can-be-loaded_1">What Can Be Loaded</h3>
+<ul>
+<li>Character stats</li>
+<li>Level configurations</li>
+<li>Item databases</li>
+<li>Quest data</li>
+<li>Any structured data</li>
+</ul>
+<h3 id="how-to-load_1">How to Load</h3>
+<div class="highlight"><pre><span></span><code><span class="k">func</span><span class="w"> </span><span class="n">load_user_item</span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nb nb-Type">Dictionary</span><span class="p">:</span>
+<span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FileAccess</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;user://items/sword.json&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">FileAccess</span><span class="o">.</span><span class="n">READ</span><span class="p">)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">file</span><span class="p">:</span>
+<span class="w">        </span><span class="k">var</span><span class="w"> </span><span class="n">json_string</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="o">.</span><span class="n">get_as_text</span><span class="p">()</span>
+<span class="w">        </span><span class="k">var</span><span class="w"> </span><span class="n">json</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">JSON</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
+<span class="w">        </span><span class="k">var</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">json</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">json_string</span><span class="p">)</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">OK</span><span class="p">:</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">json</span><span class="o">.</span><span class="n">data</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{}</span>
+
+<span class="c1"># Example JSON file:</span>
+<span class="c1"># {</span>
+<span class="c1">#   &quot;name&quot;: &quot;Flaming Sword&quot;,</span>
+<span class="c1">#   &quot;damage&quot;: 50,</span>
+<span class="c1">#   &quot;element&quot;: &quot;fire&quot;</span>
+<span class="c1"># }</span>
+</code></pre></div>
+<h3 id="specs-limitations_1">Specs &amp; Limitations</h3>
+<ul>
+<li>✅ <strong>Very safe</strong> - Plain text data only</li>
+<li>✅ <strong>User-friendly</strong> - Can edit in any text editor</li>
+<li>✅ <strong>Cross-platform compatible</strong></li>
+<li>❌ <strong>No visual data</strong> - Can't store scenes/images directly</li>
+<li>📝 <strong>Format</strong> - Standard JSON format</li>
+</ul>
+<hr />
+<h2 id="3-image-files-runtime-loading">3. Image Files (Runtime Loading)</h2>
+<h3 id="supported-formats">Supported Formats</h3>
+<ul>
+<li>PNG</li>
+<li>JPG/JPEG</li>
+<li>WebP</li>
+<li>BMP (limited support)</li>
+</ul>
+<h3 id="how-to-load_2">How to Load</h3>
+<div class="highlight"><pre><span></span><code><span class="k">func</span><span class="w"> </span><span class="n">load_user_texture</span><span class="p">(</span><span class="n">path</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">String</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">ImageTexture</span><span class="p">:</span>
+<span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">image</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Image</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
+<span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">image</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">OK</span><span class="p">:</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">ImageTexture</span><span class="o">.</span><span class="n">create_from_image</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+<span class="w">    </span><span class="k">else</span><span class="p">:</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Failed to load image: &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">path</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb nb-Type">null</span>
+
+<span class="c1"># Usage</span>
+<span class="k">var</span><span class="w"> </span><span class="n">custom_icon</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">load_user_texture</span><span class="p">(</span><span class="s2">&quot;user://textures/custom_icon.png&quot;</span><span class="p">)</span>
+<span class="o">$</span><span class="n">Sprite2D</span><span class="o">.</span><span class="n">texture</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">custom_icon</span>
+</code></pre></div>
+<h3 id="specs-limitations_2">Specs &amp; Limitations</h3>
+<ul>
+<li>✅ <strong>Safe</strong> - Image data only</li>
+<li>✅ <strong>Standard formats</strong> - Users can use any image editor</li>
+<li>⚠️ <strong>Size limits</strong> - Large images use more memory</li>
+<li>📏 <strong>Recommended max</strong> - 4096x4096 for textures</li>
+</ul>
+<hr />
+<h2 id="4-gdscript-files-gd-advanced">4. GDScript Files (.gd) - ADVANCED</h2>
+<h3 id="security-warning">⚠️ Security Warning</h3>
+<p>Loading user GDScript is <strong>DANGEROUS</strong> - it can execute arbitrary code on the user's machine!</p>
+<h3 id="how-to-load-if-you-must">How to Load (If You Must)</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># DON&#39;T DO THIS with untrusted content!</span>
+<span class="k">var</span><span class="w"> </span><span class="n">script</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">load</span><span class="p">(</span><span class="s2">&quot;user://mods/custom_behavior.gd&quot;</span><span class="p">)</span>
+<span class="k">var</span><span class="w"> </span><span class="n">custom_object</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">script</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="when-its-acceptable">When It's Acceptable</h3>
+<ul>
+<li>✅ <strong>Local mods only</strong> (not downloaded from internet)</li>
+<li>✅ <strong>Single-player games</strong></li>
+<li>✅ <strong>Developer tools</strong></li>
+<li>❌ <strong>Never for multiplayer</strong> (major security risk)</li>
+<li>❌ <strong>Never from untrusted sources</strong></li>
+</ul>
+<hr />
+<h2 id="5-pckzip-archives-mod-packs">5. PCK/ZIP Archives (Mod Packs)</h2>
+<h3 id="what-they-are">What They Are</h3>
+<ul>
+<li><strong>PCK</strong> - Godot's packed scene format</li>
+<li>Can contain multiple resources bundled together</li>
+</ul>
+<h3 id="how-to-load_3">How to Load</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Load a mod pack</span>
+<span class="n">ProjectSettings</span><span class="o">.</span><span class="n">load_resource_pack</span><span class="p">(</span><span class="s2">&quot;user://mods/weapons_pack.pck&quot;</span><span class="p">)</span>
+
+<span class="c1"># Now you can access resources from the pack</span>
+<span class="k">var</span><span class="w"> </span><span class="n">sword</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">load</span><span class="p">(</span><span class="s2">&quot;res://weapons/fire_sword.tres&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="specs-limitations_3">Specs &amp; Limitations</h3>
+<ul>
+<li>✅ <strong>Efficient</strong> - Multiple files in one archive</li>
+<li>✅ <strong>Safe</strong> - Pre-compiled resources</li>
+<li>⚠️ <strong>Requires export</strong> - Users need to export PCK from Godot</li>
+<li>📦 <strong>Use case</strong> - Best for complex mod packs</li>
+</ul>
+<hr />
+<h2 id="user-directory-locations">User Directory Locations</h2>
+<h3 id="where-files-go">Where Files Go</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Get the user data directory</span>
+<span class="k">var</span><span class="w"> </span><span class="n">user_path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OS</span><span class="o">.</span><span class="n">get_user_data_dir</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">user_path</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="platform-specific-paths">Platform-Specific Paths</h3>
+<table>
+<thead>
+<tr>
+<th>Platform</th>
+<th>Path</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Windows</strong></td>
+<td><code>%APPDATA%\Godot\app_userdata\[project_name]</code></td>
+</tr>
+<tr>
+<td><strong>Linux</strong></td>
+<td><code>~/.local/share/godot/app_userdata/[project_name]</code></td>
+</tr>
+<tr>
+<td><strong>macOS</strong></td>
+<td><code>~/Library/Application Support/Godot/app_userdata/[project_name]</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="complete-ugc-system-example">Complete UGC System Example</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># ugc_manager.gd</span>
+<span class="k">class_name</span><span class="w"> </span><span class="n">UGCManager</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="n">Node</span>
+
+<span class="k">const</span><span class="w"> </span><span class="n">UGC_DIR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;user://user_content/&quot;</span>
+
+<span class="k">func</span><span class="w"> </span><span class="n">_ready</span><span class="p">():</span>
+<span class="w">    </span><span class="c1"># Create directory if it doesn&#39;t exist</span>
+<span class="w">    </span><span class="n">DirAccess</span><span class="o">.</span><span class="n">make_dir_recursive_absolute</span><span class="p">(</span><span class="n">UGC_DIR</span><span class="p">)</span>
+
+<span class="k">func</span><span class="w"> </span><span class="n">load_all_custom_weapons</span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nb nb-Type">Array</span><span class="p">[</span><span class="n">WeaponData</span><span class="p">]:</span>
+<span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">weapons</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">Array</span><span class="p">[</span><span class="n">WeaponData</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[]</span>
+<span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">dir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DirAccess</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">UGC_DIR</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;weapons/&quot;</span><span class="p">)</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">dir</span><span class="p">:</span>
+<span class="w">        </span><span class="n">dir</span><span class="o">.</span><span class="n">list_dir_begin</span><span class="p">()</span>
+<span class="w">        </span><span class="k">var</span><span class="w"> </span><span class="n">file_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dir</span><span class="o">.</span><span class="n">get_next</span><span class="p">()</span>
+
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="n">file_name</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">:</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="n">file_name</span><span class="o">.</span><span class="n">ends_with</span><span class="p">(</span><span class="s2">&quot;.tres&quot;</span><span class="p">):</span>
+<span class="w">                </span><span class="k">var</span><span class="w"> </span><span class="n">weapon</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">load</span><span class="p">(</span><span class="n">UGC_DIR</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;weapons/&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">file_name</span><span class="p">)</span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="n">weapon</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">WeaponData</span><span class="p">:</span>
+<span class="w">                    </span><span class="n">weapons</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">weapon</span><span class="p">)</span>
+<span class="w">            </span><span class="n">file_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dir</span><span class="o">.</span><span class="n">get_next</span><span class="p">()</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">weapons</span>
+
+<span class="k">func</span><span class="w"> </span><span class="n">save_custom_level</span><span class="p">(</span><span class="n">level_data</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">Dictionary</span><span class="p">,</span><span class="w"> </span><span class="n">level_name</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">String</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nb nb-Type">void</span><span class="p">:</span>
+<span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FileAccess</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">UGC_DIR</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;levels/&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">level_name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;.json&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">FileAccess</span><span class="o">.</span><span class="n">WRITE</span><span class="p">)</span>
+<span class="w">    </span><span class="n">file</span><span class="o">.</span><span class="n">store_string</span><span class="p">(</span><span class="n">JSON</span><span class="o">.</span><span class="n">stringify</span><span class="p">(</span><span class="n">level_data</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">))</span>
+<span class="w">    </span><span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="k">func</span><span class="w"> </span><span class="n">load_custom_level</span><span class="p">(</span><span class="n">level_name</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">String</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nb nb-Type">Dictionary</span><span class="p">:</span>
+<span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FileAccess</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">UGC_DIR</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;levels/&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">level_name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;.json&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">FileAccess</span><span class="o">.</span><span class="n">READ</span><span class="p">)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">file</span><span class="p">:</span>
+<span class="w">        </span><span class="k">var</span><span class="w"> </span><span class="n">json</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">JSON</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
+<span class="w">        </span><span class="n">json</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">file</span><span class="o">.</span><span class="n">get_as_text</span><span class="p">())</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">json</span><span class="o">.</span><span class="n">data</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{}</span>
+</code></pre></div>
+<hr />
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="dos">✅ Do's</h3>
+<ul>
+<li><strong>Validate all loaded data</strong> - Check types and ranges</li>
+<li><strong>Use <code>user://</code> path</strong> - OS-independent file access</li>
+<li><strong>Create clear documentation</strong> - Tell users what formats are supported</li>
+<li><strong>Implement file size limits</strong> - Prevent memory issues</li>
+<li><strong>Test with malformed data</strong> - Handle errors gracefully</li>
+<li><strong>Use JSON for configuration</strong> - Safest option</li>
+<li><strong>Provide example files</strong> - Help users understand format</li>
+</ul>
+<h3 id="donts">❌ Don'ts</h3>
+<ul>
+<li><strong>Never load .gd scripts from untrusted sources</strong></li>
+<li><strong>Don't assume files exist</strong> - Always check</li>
+<li><strong>Don't load unlimited file sizes</strong> - Memory overflow risk</li>
+<li><strong>Don't skip validation</strong> - Bad data can crash your game</li>
+<li><strong>Don't use <code>res://</code> for UGC</strong> - Reserved for game files</li>
+</ul>
+<hr />
+<h2 id="security-levels">Security Levels</h2>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Safety</th>
+<th>User-Friendliness</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>JSON</strong></td>
+<td>🟢 Very Safe</td>
+<td>🟢 Easy</td>
+<td>Stats, configs</td>
+</tr>
+<tr>
+<td><strong>.tres Resources</strong></td>
+<td>🟢 Safe</td>
+<td>🟡 Medium</td>
+<td>Items, weapons</td>
+</tr>
+<tr>
+<td><strong>Images</strong></td>
+<td>🟢 Safe</td>
+<td>🟢 Easy</td>
+<td>Custom textures</td>
+</tr>
+<tr>
+<td><strong>.tscn Scenes</strong></td>
+<td>🟡 Mostly Safe</td>
+<td>🟡 Medium</td>
+<td>Custom levels</td>
+</tr>
+<tr>
+<td><strong>PCK Archives</strong></td>
+<td>🟡 Mostly Safe</td>
+<td>🔴 Hard</td>
+<td>Mod packs</td>
+</tr>
+<tr>
+<td><strong>GDScript</strong></td>
+<td>🔴 DANGEROUS</td>
+<td>🟡 Medium</td>
+<td>Dev tools only</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="recommended-approach-for-beginners">Recommended Approach for Beginners</h2>
+<ol>
+<li><strong>Start with JSON</strong> for data (stats, configs)</li>
+<li><strong>Add image loading</strong> for custom textures/icons</li>
+<li><strong>Consider .tres resources</strong> if you want rich data</li>
+<li><strong>Avoid GDScript loading</strong> unless absolutely necessary</li>
+</ol>
+<p>This gives users flexibility while keeping your game secure! 🎮</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>
