@@ -1,3 +1,3 @@
-# Godot - rapid overview
+# Godot 4 - Rapid Reference
 
-A couple of generated documents with examples.
+[View the Site](https://develephant.github.io/godot-quick-overview/)
