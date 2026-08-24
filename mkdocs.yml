@@ -1,0 +1,61 @@
+site_name: Godot 4 Rapid Reference
+docs_dir: docs-src
+site_dir: docs
+nav:
+  - "Rapid Reference": index.md
+  - Project:
+    - "Game Boot": project/game_boot.md
+    - "Structure": project/project_structure.md
+  - Scene:
+    - "Node vs Ref": scene/node_vs_refcounted.md
+    - "Visual Elements": scene/scene_visual_elements.md
+    - "Scene Manager": scene/scene_manager.md 
+  - Class:
+    - "Custom": class/custom_classes.md
+    - "Instances": class/class_instances.md
+    - "Objects": class/objects_and_custom_objects.md
+    - "Type Hints": class/typing.md
+  - Signal: 
+    - "Usage": signals/signal.md
+    - "Collision": signals/collision_signals.md
+  - Tween:
+    - "Tween 2D": tween/tweening_2d.md
+    - "Movment Type": tween/movement_types_2d.md
+  - UI:
+    - "Basics": ui/basic_ui.md
+    - "Input": ui/input_events.md
+  - Data:
+    - "Save/Load": data/save_and_load.md
+  - Resource:
+    - "Custom .tres": resource/custom_resources_tres.md
+  - Modding:
+    - "UGC Concepts": modding/ugc_create_and_load.md
+    - "System Theory": modding/modding_system_theory.md
+  - More:
+    - "Groups": more/working_with_groups.md
+    - "Helpers": more/helpers.md
+theme:
+  name: material
+  language: en
+  # Path to your site logo (relative to docs_dir)
+  logo: ""
+  # Favicon / site icon (relative to docs_dir)
+  favicon: images/favicon.ico
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - content.code.copy
+    - content.code.annotate
+  palette:
+    - scheme: slate
+      primary: blue
+      accent: indigo
+plugins:
+  - search
+markdown_extensions:
+  - admonition
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.betterem
+  - pymdownx.tilde
