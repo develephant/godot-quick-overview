@@ -46,9 +46,9 @@ theme:
   name: material
   language: en
   # Path to your site logo (relative to docs_dir)
-  logo: ""
+  logo: images/godot-icon.svg
   # Favicon / site icon (relative to docs_dir)
-  favicon: images/favicon.ico
+  favicon: images/godot-icon.svg
   features:
     - navigation.instant
     - navigation.tabs
