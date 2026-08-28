@@ -24,8 +24,10 @@ nav:
   - UI:
     - "Basics": ui/basic_ui.md
     - "Input": ui/input_events.md
+    - "Drag and Drop": ui/drag_and_drop.md
   - Data:
     - "Save/Load": data/save_and_load.md
+    - "Working with Data": data/working_with_data.md
   - Resource:
     - "Custom .tres": resource/custom_resources_tres.md
   - Files:
@@ -37,6 +39,8 @@ nav:
     - "System Theory": modding/modding_system_theory.md
   - More:
     - "Groups": more/working_with_groups.md
+    - "GraphEdit": more/graph_edit.md
+    - "Visual Effects": more/visual_effects.md
     - "Helpers": more/helpers.md
 theme:
   name: material

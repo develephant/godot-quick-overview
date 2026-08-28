@@ -1,0 +1,3095 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../class_instances/">
+      
+      
+        <link rel="next" href="../typing/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Objects - Godot 4 Rapid Reference</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#objects-in-godot-4" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Godot 4 Rapid Reference" class="md-header__button md-logo" aria-label="Godot 4 Rapid Reference" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Godot 4 Rapid Reference
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Objects
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Rapid Reference
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../project/game_boot/" class="md-tabs__link">
+          
+  
+  
+  Project
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../scene/node_vs_refcounted/" class="md-tabs__link">
+          
+  
+  
+  Scene
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../custom_classes/" class="md-tabs__link">
+          
+  
+  
+  Class
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../signals/signal/" class="md-tabs__link">
+          
+  
+  
+  Signal
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tween/tweening_2d/" class="md-tabs__link">
+          
+  
+  
+  Tween
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ui/basic_ui/" class="md-tabs__link">
+          
+  
+  
+  UI
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../data/save_and_load/" class="md-tabs__link">
+          
+  
+  
+  Data
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../resource/custom_resources_tres/" class="md-tabs__link">
+          
+  
+  
+  Resource
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../files/file_io/" class="md-tabs__link">
+          
+  
+  
+  Files
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../modding/ugc_create_and_load/" class="md-tabs__link">
+          
+  
+  
+  Modding
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../more/working_with_groups/" class="md-tabs__link">
+          
+  
+  
+  More
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Godot 4 Rapid Reference" class="md-nav__button md-logo" aria-label="Godot 4 Rapid Reference" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Godot 4 Rapid Reference
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rapid Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Project
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project/game_boot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Game Boot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project/project_structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Structure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scene
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Scene
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scene/node_vs_refcounted/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Node vs Ref
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scene/scene_visual_elements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visual Elements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scene/scene_manager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scene Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Class
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Class
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../custom_classes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Custom
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class_instances/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instances
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Objects
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Objects
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#built-in-object-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Built-in Object Types
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#object-vs-refcounted-vs-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Object vs RefCounted vs Node
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-custom-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating Custom Objects
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating Custom Objects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-data-object-refcounted" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom Data Object (RefCounted)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-logic-object-refcounted" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom Logic Object (RefCounted)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-state-machine-refcounted" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom State Machine (RefCounted)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-resource-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom Resource Object
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-cases-for-custom-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use Cases for Custom Objects
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Use Cases for Custom Objects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-inventory-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Inventory System
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-dialogue-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Dialogue System
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-saveload-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Save/Load System
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-damage-calculator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Damage Calculator
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advantages-of-custom-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advantages of Custom Objects
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advantages of Custom Objects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-separation-of-concerns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Separation of Concerns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-reusability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Reusability
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-testability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Testability
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-memory-efficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Memory Efficiency
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-type-safety" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Type Safety
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-to-create-custom-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to Create Custom Objects
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-not-to-create-custom-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When NOT to Create Custom Objects
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hints-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hints &amp; Tips
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../typing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Type Hints
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Signal
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Signal
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../signals/signal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Usage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../signals/collision_signals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Collision
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tween
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tween
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tween/tweening_2d/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tween 2D
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tween/movement_types_2d/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Movment Type
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UI
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UI
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/basic_ui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Basics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/input_events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/drag_and_drop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Drag and Drop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Data
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/save_and_load/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Save/Load
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/working_with_data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Working with Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resource
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Resource
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resource/custom_resources_tres/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Custom .tres
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Files
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Files
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../files/file_io/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    File IO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../files/file_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../files/user_files/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Files
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modding
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Modding
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modding/ugc_create_and_load/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UGC Concepts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modding/modding_system_theory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Theory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    More
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    More
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../more/working_with_groups/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Groups
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../more/graph_edit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GraphEdit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../more/visual_effects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visual Effects
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../more/helpers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Helpers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#built-in-object-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Built-in Object Types
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#object-vs-refcounted-vs-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Object vs RefCounted vs Node
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-custom-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating Custom Objects
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating Custom Objects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-data-object-refcounted" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom Data Object (RefCounted)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-logic-object-refcounted" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom Logic Object (RefCounted)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-state-machine-refcounted" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom State Machine (RefCounted)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-resource-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom Resource Object
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-cases-for-custom-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use Cases for Custom Objects
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Use Cases for Custom Objects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-inventory-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Inventory System
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-dialogue-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Dialogue System
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-saveload-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Save/Load System
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-damage-calculator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Damage Calculator
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advantages-of-custom-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advantages of Custom Objects
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advantages of Custom Objects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-separation-of-concerns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Separation of Concerns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-reusability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Reusability
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-testability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Testability
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-memory-efficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Memory Efficiency
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-type-safety" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Type Safety
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-to-create-custom-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to Create Custom Objects
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-not-to-create-custom-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When NOT to Create Custom Objects
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hints-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hints &amp; Tips
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="objects-in-godot-4">Objects in Godot 4</h1>
+<h2 id="built-in-object-types">Built-in Object Types</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># ============================================</span>
+<span class="c1"># OBJECT - Base class for everything</span>
+<span class="c1"># ============================================</span>
+<span class="c1"># Object is the root class that everything inherits from</span>
+<span class="c1"># You rarely use Object directly</span>
+
+<span class="c1"># ============================================</span>
+<span class="c1"># REFCOUNTED - Memory-managed objects</span>
+<span class="c1"># ============================================</span>
+<span class="c1"># Automatically deleted when no longer referenced</span>
+<span class="c1"># Use for data containers and logic classes</span>
+
+<span class="k">class_name</span><span class="w"> </span><span class="n">InventorySystem</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="n">RefCounted</span>
+
+<span class="k">var</span><span class="w"> </span><span class="n">items</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">Array</span><span class="p">[</span><span class="n">Item</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[]</span>
+<span class="k">var</span><span class="w"> </span><span class="n">max_slots</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span>
+
+<span class="k">func</span><span class="w"> </span><span class="n">add_item</span><span class="p">(</span><span class="n">item</span><span class="p">:</span><span class="w"> </span><span class="n">Item</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nb nb-Type">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">items</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">max_slots</span><span class="p">:</span>
+<span class="w">        </span><span class="n">items</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="bp">true</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="bp">false</span>
+
+<span class="c1"># Usage:</span>
+<span class="k">var</span><span class="w"> </span><span class="n">inventory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">InventorySystem</span><span class="o">.</span><span class="n">new</span><span class="p">()</span><span class="w">  </span><span class="c1"># Created</span>
+<span class="n">inventory</span><span class="o">.</span><span class="n">add_item</span><span class="p">(</span><span class="n">sword</span><span class="p">)</span>
+<span class="n">inventory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb nb-Type">null</span><span class="w">  </span><span class="c1"># Automatically freed when no references exist</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># ============================================</span>
+<span class="c1"># NODE - Scene tree objects</span>
+<span class="c1"># ============================================</span>
+<span class="c1"># Part of the scene tree, has lifecycle methods</span>
+<span class="c1"># Can have parent/children relationships</span>
+
+<span class="k">class_name</span><span class="w"> </span><span class="n">GameController</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="n">Node</span>
+
+<span class="k">func</span><span class="w"> </span><span class="n">_ready</span><span class="p">():</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Node entered scene tree&quot;</span><span class="p">)</span>
+
+<span class="k">func</span><span class="w"> </span><span class="n">_process</span><span class="p">(</span><span class="n">delta</span><span class="p">):</span>
+<span class="w">    </span><span class="c1"># Called every frame</span>
+<span class="w">    </span><span class="k">pass</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># ============================================</span>
+<span class="c1"># RESOURCE - Serializable data</span>
+<span class="c1"># ============================================</span>
+<span class="c1"># Can be saved to .tres files</span>
+<span class="c1"># Shared between instances by default</span>
+
+<span class="k">class_name</span><span class="w"> </span><span class="n">ItemData</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="n">Resource</span>
+
+<span class="err">@</span><span class="k">export</span><span class="w"> </span><span class="k">var</span><span class="w"> </span><span class="n">item_name</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">String</span>
+<span class="err">@</span><span class="k">export</span><span class="w"> </span><span class="k">var</span><span class="w"> </span><span class="n">icon</span><span class="p">:</span><span class="w"> </span><span class="n">Texture2D</span>
+<span class="err">@</span><span class="k">export</span><span class="w"> </span><span class="k">var</span><span class="w"> </span><span class="n">value</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">int</span>
+
+<span class="c1"># Save as item_sword.tres and reuse everywhere</span>
+</code></pre></div>
+<h2 id="object-vs-refcounted-vs-node">Object vs RefCounted vs Node</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Memory</th>
+<th>Scene Tree</th>
+<th>Lifecycle</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Object</code></td>
+<td>Manual</td>
+<td>No</td>
+<td>Manual</td>
+<td>Rarely used directly</td>
+</tr>
+<tr>
+<td><code>RefCounted</code></td>
+<td>Auto</td>
+<td>No</td>
+<td>Reference counting</td>
+<td>Data, logic, utilities</td>
+</tr>
+<tr>
+<td><code>Node</code></td>
+<td>Manual*</td>
+<td>Yes</td>
+<td>_ready, _process, etc</td>
+<td>Game objects, scenes</td>
+</tr>
+<tr>
+<td><code>Resource</code></td>
+<td>Auto</td>
+<td>No</td>
+<td>Reference counting</td>
+<td>Reusable data templates</td>
+</tr>
+</tbody>
+</table>
+<p>*Nodes are freed when removed from tree or parent is freed</p>
+<h2 id="creating-custom-objects">Creating Custom Objects</h2>
+<h3 id="custom-data-object-refcounted">Custom Data Object (RefCounted)</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># ============================================</span>
+<span class="c1"># USE CASE: Pure data container</span>
+<span class="c1"># ============================================</span>
+<span class="k">class_name</span><span class="w"> </span><span class="n">QuestData</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="n">RefCounted</span>
+
+<span class="k">var</span><span class="w"> </span><span class="n">quest_id</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">String</span>
+<span class="k">var</span><span class="w"> </span><span class="n">title</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">String</span>
+<span class="k">var</span><span class="w"> </span><span class="n">description</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">String</span>
+<span class="k">var</span><span class="w"> </span><span class="n">objectives</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">Array</span><span class="p">[</span><span class="nb nb-Type">String</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[]</span>
+<span class="k">var</span><span class="w"> </span><span class="n">is_completed</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">bool</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">false</span>
+<span class="k">var</span><span class="w"> </span><span class="n">reward_gold</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+
+<span class="k">func</span><span class="w"> </span><span class="n">_init</span><span class="p">(</span><span class="n">id</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">String</span><span class="p">,</span><span class="w"> </span><span class="n">quest_title</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">String</span><span class="p">):</span>
+<span class="w">    </span><span class="n">quest_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">id</span>
+<span class="w">    </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">quest_title</span>
+
+<span class="k">func</span><span class="w"> </span><span class="n">complete</span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nb nb-Type">void</span><span class="p">:</span>
+<span class="w">    </span><span class="n">is_completed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">true</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Quest completed: &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">title</span><span class="p">)</span>
+
+<span class="k">func</span><span class="w"> </span><span class="n">add_objective</span><span class="p">(</span><span class="n">objective</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">String</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nb nb-Type">void</span><span class="p">:</span>
+<span class="w">    </span><span class="n">objectives</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">objective</span><span class="p">)</span>
+
+<span class="c1"># ADVANTAGE: Lightweight, no scene tree overhead</span>
+<span class="c1"># USAGE: When you need structured data without visuals</span>
+
+<span class="c1"># Example:</span>
+<span class="k">var</span><span class="w"> </span><span class="n">quest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QuestData</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;quest_001&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Save the Village&quot;</span><span class="p">)</span>
+<span class="n">quest</span><span class="o">.</span><span class="n">add_objective</span><span class="p">(</span><span class="s2">&quot;Defeat 10 goblins&quot;</span><span class="p">)</span>
+<span class="n">quest</span><span class="o">.</span><span class="n">add_objective</span><span class="p">(</span><span class="s2">&quot;Return to elder&quot;</span><span class="p">)</span>
+<span class="n">quest</span><span class="o">.</span><span class="n">reward_gold</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span>
+</code></pre></div>
+<h3 id="custom-logic-object-refcounted">Custom Logic Object (RefCounted)</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># ============================================</span>
+<span class="c1"># USE CASE: Reusable logic/algorithms</span>
+<span class="c1"># ============================================</span>
+<span class="k">class_name</span><span class="w"> </span><span class="n">PathfindingHelper</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="n">RefCounted</span>
+
+<span class="k">func</span><span class="w"> </span><span class="n">find_path</span><span class="p">(</span><span class="n">start</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">Vector2</span><span class="p">,</span><span class="w"> </span><span class="n">end</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">Vector2</span><span class="p">,</span><span class="w"> </span><span class="n">obstacles</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">Array</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nb nb-Type">Array</span><span class="p">[</span><span class="nb nb-Type">Vector2</span><span class="p">]:</span>
+<span class="w">    </span><span class="c1"># Pathfinding algorithm here</span>
+<span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">path</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">Array</span><span class="p">[</span><span class="nb nb-Type">Vector2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[]</span>
+<span class="w">    </span><span class="c1"># ... calculate path</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">path</span>
+
+<span class="k">func</span><span class="w"> </span><span class="n">get_nearest_point</span><span class="p">(</span><span class="n">position</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">Vector2</span><span class="p">,</span><span class="w"> </span><span class="n">points</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">Array</span><span class="p">[</span><span class="nb nb-Type">Vector2</span><span class="p">])</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nb nb-Type">Vector2</span><span class="p">:</span>
+<span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">nearest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">points</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">min_distance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">position</span><span class="o">.</span><span class="n">distance_to</span><span class="p">(</span><span class="n">nearest</span><span class="p">)</span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">point</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">points</span><span class="p">:</span>
+<span class="w">        </span><span class="k">var</span><span class="w"> </span><span class="n">distance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">position</span><span class="o">.</span><span class="n">distance_to</span><span class="p">(</span><span class="n">point</span><span class="p">)</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">distance</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">min_distance</span><span class="p">:</span>
+<span class="w">            </span><span class="n">min_distance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">distance</span>
+<span class="w">            </span><span class="n">nearest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">point</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">nearest</span>
+
+<span class="c1"># ADVANTAGE: No scene tree dependency, easy to test</span>
+<span class="c1"># USAGE: Utilities, algorithms, math helpers</span>
+
+<span class="c1"># Example:</span>
+<span class="k">var</span><span class="w"> </span><span class="n">pathfinder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PathfindingHelper</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
+<span class="k">var</span><span class="w"> </span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pathfinder</span><span class="o">.</span><span class="n">find_path</span><span class="p">(</span><span class="n">player_pos</span><span class="p">,</span><span class="w"> </span><span class="n">enemy_pos</span><span class="p">,</span><span class="w"> </span><span class="n">walls</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="custom-state-machine-refcounted">Custom State Machine (RefCounted)</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># ============================================</span>
+<span class="c1"># USE CASE: State management without Node overhead</span>
+<span class="c1"># ============================================</span>
+<span class="k">class_name</span><span class="w"> </span><span class="n">StateMachine</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="n">RefCounted</span>
+
+<span class="k">signal</span><span class="w"> </span><span class="n">state_changed</span><span class="p">(</span><span class="n">old_state</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">String</span><span class="p">,</span><span class="w"> </span><span class="n">new_state</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">String</span><span class="p">)</span>
+
+<span class="k">var</span><span class="w"> </span><span class="n">current_state</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<span class="k">var</span><span class="w"> </span><span class="n">states</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">Dictionary</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{}</span>
+
+<span class="k">func</span><span class="w"> </span><span class="n">add_state</span><span class="p">(</span><span class="n">state_name</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">String</span><span class="p">,</span><span class="w"> </span><span class="n">enter_func</span><span class="p">:</span><span class="w"> </span><span class="n">Callable</span><span class="p">,</span><span class="w"> </span><span class="n">exit_func</span><span class="p">:</span><span class="w"> </span><span class="n">Callable</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nb nb-Type">void</span><span class="p">:</span>
+<span class="w">    </span><span class="n">states</span><span class="p">[</span><span class="n">state_name</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="s2">&quot;enter&quot;</span><span class="p">:</span><span class="w"> </span><span class="n">enter_func</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;exit&quot;</span><span class="p">:</span><span class="w"> </span><span class="n">exit_func</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="k">func</span><span class="w"> </span><span class="n">change_state</span><span class="p">(</span><span class="n">new_state</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">String</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nb nb-Type">void</span><span class="p">:</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">states</span><span class="o">.</span><span class="n">has</span><span class="p">(</span><span class="n">new_state</span><span class="p">):</span>
+<span class="w">        </span><span class="n">push_error</span><span class="p">(</span><span class="s2">&quot;State doesn&#39;t exist: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">new_state</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span>
+
+<span class="w">    </span><span class="c1"># Exit current state</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">current_state</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">states</span><span class="p">[</span><span class="n">current_state</span><span class="p">]</span><span class="o">.</span><span class="n">has</span><span class="p">(</span><span class="s2">&quot;exit&quot;</span><span class="p">):</span>
+<span class="w">        </span><span class="n">states</span><span class="p">[</span><span class="n">current_state</span><span class="p">][</span><span class="s2">&quot;exit&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">call</span><span class="p">()</span>
+
+<span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">old_state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">current_state</span>
+<span class="w">    </span><span class="n">current_state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">new_state</span>
+
+<span class="w">    </span><span class="c1"># Enter new state</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">states</span><span class="p">[</span><span class="n">new_state</span><span class="p">]</span><span class="o">.</span><span class="n">has</span><span class="p">(</span><span class="s2">&quot;enter&quot;</span><span class="p">):</span>
+<span class="w">        </span><span class="n">states</span><span class="p">[</span><span class="n">new_state</span><span class="p">][</span><span class="s2">&quot;enter&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">call</span><span class="p">()</span>
+
+<span class="w">    </span><span class="n">state_changed</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="n">old_state</span><span class="p">,</span><span class="w"> </span><span class="n">new_state</span><span class="p">)</span>
+
+<span class="c1"># ADVANTAGE: Lightweight, reusable across different nodes</span>
+<span class="c1"># USAGE: AI states, animation states, game states</span>
+
+<span class="c1"># Example:</span>
+<span class="k">class_name</span><span class="w"> </span><span class="n">Enemy</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="n">CharacterBody2D</span>
+
+<span class="k">var</span><span class="w"> </span><span class="n">state_machine</span><span class="p">:</span><span class="w"> </span><span class="n">StateMachine</span>
+
+<span class="k">func</span><span class="w"> </span><span class="n">_ready</span><span class="p">():</span>
+<span class="w">    </span><span class="n">state_machine</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StateMachine</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
+<span class="w">    </span><span class="n">state_machine</span><span class="o">.</span><span class="n">add_state</span><span class="p">(</span><span class="s2">&quot;idle&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">_enter_idle</span><span class="p">,</span><span class="w"> </span><span class="n">_exit_idle</span><span class="p">)</span>
+<span class="w">    </span><span class="n">state_machine</span><span class="o">.</span><span class="n">add_state</span><span class="p">(</span><span class="s2">&quot;chase&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">_enter_chase</span><span class="p">,</span><span class="w"> </span><span class="n">_exit_chase</span><span class="p">)</span>
+<span class="w">    </span><span class="n">state_machine</span><span class="o">.</span><span class="n">add_state</span><span class="p">(</span><span class="s2">&quot;attack&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">_enter_attack</span><span class="p">,</span><span class="w"> </span><span class="n">_exit_attack</span><span class="p">)</span>
+<span class="w">    </span><span class="n">state_machine</span><span class="o">.</span><span class="n">change_state</span><span class="p">(</span><span class="s2">&quot;idle&quot;</span><span class="p">)</span>
+
+<span class="k">func</span><span class="w"> </span><span class="n">_enter_idle</span><span class="p">():</span><span class="w"> </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Now idle&quot;</span><span class="p">)</span>
+<span class="k">func</span><span class="w"> </span><span class="n">_exit_idle</span><span class="p">():</span><span class="w"> </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Leaving idle&quot;</span><span class="p">)</span>
+<span class="k">func</span><span class="w"> </span><span class="n">_enter_chase</span><span class="p">():</span><span class="w"> </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Now chasing&quot;</span><span class="p">)</span>
+<span class="k">func</span><span class="w"> </span><span class="n">_exit_chase</span><span class="p">():</span><span class="w"> </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Stop chasing&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="custom-resource-object">Custom Resource Object</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># ============================================</span>
+<span class="c1"># USE CASE: Reusable data templates</span>
+<span class="c1"># ============================================</span>
+<span class="k">class_name</span><span class="w"> </span><span class="n">EnemyStats</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="n">Resource</span>
+
+<span class="err">@</span><span class="n">export_group</span><span class="p">(</span><span class="s2">&quot;Basic Info&quot;</span><span class="p">)</span>
+<span class="err">@</span><span class="k">export</span><span class="w"> </span><span class="k">var</span><span class="w"> </span><span class="n">enemy_name</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Goblin&quot;</span>
+<span class="err">@</span><span class="k">export</span><span class="w"> </span><span class="k">var</span><span class="w"> </span><span class="n">sprite</span><span class="p">:</span><span class="w"> </span><span class="n">Texture2D</span>
+
+<span class="err">@</span><span class="n">export_group</span><span class="p">(</span><span class="s2">&quot;Stats&quot;</span><span class="p">)</span>
+<span class="err">@</span><span class="k">export</span><span class="w"> </span><span class="k">var</span><span class="w"> </span><span class="n">max_health</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">50</span>
+<span class="err">@</span><span class="k">export</span><span class="w"> </span><span class="k">var</span><span class="w"> </span><span class="n">move_speed</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">float</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">100.0</span>
+<span class="err">@</span><span class="k">export</span><span class="w"> </span><span class="k">var</span><span class="w"> </span><span class="n">damage</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span>
+
+<span class="err">@</span><span class="n">export_group</span><span class="p">(</span><span class="s2">&quot;Drops&quot;</span><span class="p">)</span>
+<span class="err">@</span><span class="k">export</span><span class="w"> </span><span class="k">var</span><span class="w"> </span><span class="n">gold_drop</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span>
+<span class="err">@</span><span class="k">export</span><span class="w"> </span><span class="k">var</span><span class="w"> </span><span class="n">experience</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">50</span>
+
+<span class="c1"># ADVANTAGE: Create .tres files, share between enemies</span>
+<span class="c1"># USAGE: When you need multiple instances with different values</span>
+
+<span class="c1"># Create goblin_stats.tres, orc_stats.tres, etc.</span>
+<span class="c1"># Then in enemy script:</span>
+
+<span class="k">class_name</span><span class="w"> </span><span class="n">Enemy</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="n">CharacterBody2D</span>
+
+<span class="err">@</span><span class="k">export</span><span class="w"> </span><span class="k">var</span><span class="w"> </span><span class="n">stats</span><span class="p">:</span><span class="w"> </span><span class="n">EnemyStats</span>
+
+<span class="k">var</span><span class="w"> </span><span class="n">current_health</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">int</span>
+
+<span class="k">func</span><span class="w"> </span><span class="n">_ready</span><span class="p">():</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">stats</span><span class="p">:</span>
+<span class="w">        </span><span class="n">current_health</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stats</span><span class="o">.</span><span class="n">max_health</span>
+<span class="w">        </span><span class="o">$</span><span class="n">Sprite2D</span><span class="o">.</span><span class="n">texture</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stats</span><span class="o">.</span><span class="n">sprite</span>
+</code></pre></div>
+<h2 id="use-cases-for-custom-objects">Use Cases for Custom Objects</h2>
+<h3 id="1-inventory-system">1. Inventory System</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># ============================================</span>
+<span class="c1"># INVENTORY SYSTEM - RefCounted</span>
+<span class="c1"># ============================================</span>
+<span class="k">class_name</span><span class="w"> </span><span class="n">Inventory</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="n">RefCounted</span>
+
+<span class="k">signal</span><span class="w"> </span><span class="n">item_added</span><span class="p">(</span><span class="n">item</span><span class="p">:</span><span class="w"> </span><span class="n">Item</span><span class="p">)</span>
+<span class="k">signal</span><span class="w"> </span><span class="n">item_removed</span><span class="p">(</span><span class="n">item</span><span class="p">:</span><span class="w"> </span><span class="n">Item</span><span class="p">)</span>
+
+<span class="k">var</span><span class="w"> </span><span class="n">items</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">Array</span><span class="p">[</span><span class="n">Item</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[]</span>
+<span class="k">var</span><span class="w"> </span><span class="n">max_capacity</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span>
+
+<span class="k">func</span><span class="w"> </span><span class="n">add_item</span><span class="p">(</span><span class="n">item</span><span class="p">:</span><span class="w"> </span><span class="n">Item</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nb nb-Type">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">items</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">max_capacity</span><span class="p">:</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="bp">false</span>
+
+<span class="w">    </span><span class="n">items</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+<span class="w">    </span><span class="n">item_added</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="bp">true</span>
+
+<span class="k">func</span><span class="w"> </span><span class="n">remove_item</span><span class="p">(</span><span class="n">item</span><span class="p">:</span><span class="w"> </span><span class="n">Item</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nb nb-Type">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">items</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+<span class="w">        </span><span class="n">items</span><span class="o">.</span><span class="n">remove_at</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+<span class="w">        </span><span class="n">item_removed</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="bp">true</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="bp">false</span>
+
+<span class="k">func</span><span class="w"> </span><span class="n">has_item</span><span class="p">(</span><span class="n">item_name</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">String</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nb nb-Type">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">items</span><span class="p">:</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">item</span><span class="o">.</span><span class="n">item_name</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">item_name</span><span class="p">:</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="bp">true</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="bp">false</span>
+
+<span class="k">func</span><span class="w"> </span><span class="n">get_total_weight</span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nb nb-Type">float</span><span class="p">:</span>
+<span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">weight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">items</span><span class="p">:</span>
+<span class="w">        </span><span class="n">weight</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">item</span><span class="o">.</span><span class="n">weight</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">weight</span>
+
+<span class="c1"># WHY CUSTOM: Encapsulates inventory logic, easy to test</span>
+</code></pre></div>
+<h3 id="2-dialogue-system">2. Dialogue System</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># ============================================</span>
+<span class="c1"># DIALOGUE DATA - Resource</span>
+<span class="c1"># ============================================</span>
+<span class="k">class_name</span><span class="w"> </span><span class="n">DialogueData</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="n">Resource</span>
+
+<span class="err">@</span><span class="k">export</span><span class="w"> </span><span class="k">var</span><span class="w"> </span><span class="n">lines</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">Array</span><span class="p">[</span><span class="nb nb-Type">String</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[]</span>
+<span class="err">@</span><span class="k">export</span><span class="w"> </span><span class="k">var</span><span class="w"> </span><span class="n">speaker_name</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<span class="err">@</span><span class="k">export</span><span class="w"> </span><span class="k">var</span><span class="w"> </span><span class="n">portrait</span><span class="p">:</span><span class="w"> </span><span class="n">Texture2D</span>
+
+<span class="c1"># ============================================</span>
+<span class="c1"># DIALOGUE MANAGER - RefCounted</span>
+<span class="c1"># ============================================</span>
+<span class="k">class_name</span><span class="w"> </span><span class="n">DialogueManager</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="n">RefCounted</span>
+
+<span class="k">signal</span><span class="w"> </span><span class="n">dialogue_started</span><span class="p">(</span><span class="n">data</span><span class="p">:</span><span class="w"> </span><span class="n">DialogueData</span><span class="p">)</span>
+<span class="k">signal</span><span class="w"> </span><span class="n">line_changed</span><span class="p">(</span><span class="n">line</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">String</span><span class="p">,</span><span class="w"> </span><span class="n">index</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">int</span><span class="p">)</span>
+<span class="k">signal</span><span class="w"> </span><span class="n">dialogue_ended</span>
+
+<span class="k">var</span><span class="w"> </span><span class="n">current_dialogue</span><span class="p">:</span><span class="w"> </span><span class="n">DialogueData</span>
+<span class="k">var</span><span class="w"> </span><span class="n">current_line_index</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+
+<span class="k">func</span><span class="w"> </span><span class="n">start_dialogue</span><span class="p">(</span><span class="n">data</span><span class="p">:</span><span class="w"> </span><span class="n">DialogueData</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nb nb-Type">void</span><span class="p">:</span>
+<span class="w">    </span><span class="n">current_dialogue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data</span>
+<span class="w">    </span><span class="n">current_line_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">    </span><span class="n">dialogue_started</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="w">    </span><span class="n">line_changed</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">lines</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+
+<span class="k">func</span><span class="w"> </span><span class="n">next_line</span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nb nb-Type">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="n">current_line_index</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">current_line_index</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">current_dialogue</span><span class="o">.</span><span class="n">lines</span><span class="o">.</span><span class="n">size</span><span class="p">():</span>
+<span class="w">        </span><span class="n">dialogue_ended</span><span class="o">.</span><span class="n">emit</span><span class="p">()</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="bp">false</span>
+
+<span class="w">    </span><span class="n">line_changed</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="n">current_dialogue</span><span class="o">.</span><span class="n">lines</span><span class="p">[</span><span class="n">current_line_index</span><span class="p">],</span><span class="w"> </span><span class="n">current_line_index</span><span class="p">)</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="bp">true</span>
+
+<span class="c1"># WHY CUSTOM: Separates dialogue data from UI logic</span>
+</code></pre></div>
+<h3 id="3-saveload-system">3. Save/Load System</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># ============================================</span>
+<span class="c1"># SAVE DATA - RefCounted</span>
+<span class="c1"># ============================================</span>
+<span class="k">class_name</span><span class="w"> </span><span class="n">SaveData</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="n">RefCounted</span>
+
+<span class="k">var</span><span class="w"> </span><span class="n">player_position</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">Vector2</span>
+<span class="k">var</span><span class="w"> </span><span class="n">player_health</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">int</span>
+<span class="k">var</span><span class="w"> </span><span class="n">player_gold</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">int</span>
+<span class="k">var</span><span class="w"> </span><span class="n">inventory_items</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">Array</span><span class="p">[</span><span class="nb nb-Type">String</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[]</span>
+<span class="k">var</span><span class="w"> </span><span class="n">completed_quests</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">Array</span><span class="p">[</span><span class="nb nb-Type">String</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[]</span>
+<span class="k">var</span><span class="w"> </span><span class="n">current_level</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">String</span>
+
+<span class="k">func</span><span class="w"> </span><span class="n">to_dict</span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nb nb-Type">Dictionary</span><span class="p">:</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="s2">&quot;player_position&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="s2">&quot;x&quot;</span><span class="p">:</span><span class="w"> </span><span class="n">player_position</span><span class="o">.</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;y&quot;</span><span class="p">:</span><span class="w"> </span><span class="n">player_position</span><span class="o">.</span><span class="n">y</span><span class="p">},</span>
+<span class="w">        </span><span class="s2">&quot;player_health&quot;</span><span class="p">:</span><span class="w"> </span><span class="n">player_health</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;player_gold&quot;</span><span class="p">:</span><span class="w"> </span><span class="n">player_gold</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;inventory_items&quot;</span><span class="p">:</span><span class="w"> </span><span class="n">inventory_items</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;completed_quests&quot;</span><span class="p">:</span><span class="w"> </span><span class="n">completed_quests</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;current_level&quot;</span><span class="p">:</span><span class="w"> </span><span class="n">current_level</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="k">func</span><span class="w"> </span><span class="n">from_dict</span><span class="p">(</span><span class="n">data</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">Dictionary</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nb nb-Type">void</span><span class="p">:</span>
+<span class="w">    </span><span class="n">player_position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb nb-Type">Vector2</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">player_position</span><span class="o">.</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="o">.</span><span class="n">player_position</span><span class="o">.</span><span class="n">y</span><span class="p">)</span>
+<span class="w">    </span><span class="n">player_health</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data</span><span class="o">.</span><span class="n">player_health</span>
+<span class="w">    </span><span class="n">player_gold</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data</span><span class="o">.</span><span class="n">player_gold</span>
+<span class="w">    </span><span class="n">inventory_items</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data</span><span class="o">.</span><span class="n">inventory_items</span>
+<span class="w">    </span><span class="n">completed_quests</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data</span><span class="o">.</span><span class="n">completed_quests</span>
+<span class="w">    </span><span class="n">current_level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data</span><span class="o">.</span><span class="n">current_level</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># ============================================</span>
+<span class="c1"># SAVE MANAGER - RefCounted</span>
+<span class="c1"># ============================================</span>
+<span class="k">class_name</span><span class="w"> </span><span class="n">SaveManager</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="n">RefCounted</span>
+
+<span class="k">const</span><span class="w"> </span><span class="n">SAVE_PATH</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;user://savegame.json&quot;</span>
+
+<span class="k">func</span><span class="w"> </span><span class="n">save_game</span><span class="p">(</span><span class="n">save_data</span><span class="p">:</span><span class="w"> </span><span class="n">SaveData</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nb nb-Type">void</span><span class="p">:</span>
+<span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FileAccess</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">SAVE_PATH</span><span class="p">,</span><span class="w"> </span><span class="n">FileAccess</span><span class="o">.</span><span class="n">WRITE</span><span class="p">)</span>
+<span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">json</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">JSON</span><span class="o">.</span><span class="n">stringify</span><span class="p">(</span><span class="n">save_data</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span>
+<span class="w">    </span><span class="n">file</span><span class="o">.</span><span class="n">store_string</span><span class="p">(</span><span class="n">json</span><span class="p">)</span>
+<span class="w">    </span><span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="k">func</span><span class="w"> </span><span class="n">load_game</span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">SaveData</span><span class="p">:</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">FileAccess</span><span class="o">.</span><span class="n">file_exists</span><span class="p">(</span><span class="n">SAVE_PATH</span><span class="p">):</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb nb-Type">null</span>
+
+<span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FileAccess</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">SAVE_PATH</span><span class="p">,</span><span class="w"> </span><span class="n">FileAccess</span><span class="o">.</span><span class="n">READ</span><span class="p">)</span>
+<span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">json</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="o">.</span><span class="n">get_as_text</span><span class="p">()</span>
+<span class="w">    </span><span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">JSON</span><span class="o">.</span><span class="n">parse_string</span><span class="p">(</span><span class="n">json</span><span class="p">)</span>
+<span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">save_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SaveData</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
+<span class="w">    </span><span class="n">save_data</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">save_data</span>
+
+<span class="c1"># WHY CUSTOM: Centralized save logic, easy to modify format</span>
+</code></pre></div>
+<h3 id="4-damage-calculator">4. Damage Calculator</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># ============================================</span>
+<span class="c1"># DAMAGE CALCULATOR - RefCounted</span>
+<span class="c1"># ============================================</span>
+<span class="k">class_name</span><span class="w"> </span><span class="n">DamageCalculator</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="n">RefCounted</span>
+
+<span class="k">enum</span><span class="w"> </span><span class="n">DamageType</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">PHYSICAL</span><span class="p">,</span><span class="w"> </span><span class="n">FIRE</span><span class="p">,</span><span class="w"> </span><span class="n">ICE</span><span class="p">,</span><span class="w"> </span><span class="n">POISON</span><span class="w"> </span><span class="p">}</span>
+
+<span class="k">func</span><span class="w"> </span><span class="n">calculate_damage</span><span class="p">(</span><span class="n">base_damage</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">int</span><span class="p">,</span><span class="w"> </span><span class="n">attacker_stats</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">Dictionary</span><span class="p">,</span><span class="w"> </span><span class="n">defender_stats</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">Dictionary</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nb nb-Type">int</span><span class="p">:</span>
+<span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">damage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">base_damage</span>
+
+<span class="w">    </span><span class="c1"># Apply attack modifier</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">attacker_stats</span><span class="o">.</span><span class="n">has</span><span class="p">(</span><span class="s2">&quot;attack&quot;</span><span class="p">):</span>
+<span class="w">        </span><span class="n">damage</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">attacker_stats</span><span class="o">.</span><span class="n">attack</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.5</span>
+
+<span class="w">    </span><span class="c1"># Apply defense reduction</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">defender_stats</span><span class="o">.</span><span class="n">has</span><span class="p">(</span><span class="s2">&quot;defense&quot;</span><span class="p">):</span>
+<span class="w">        </span><span class="n">damage</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">defender_stats</span><span class="o">.</span><span class="n">defense</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.3</span>
+
+<span class="w">    </span><span class="c1"># Random variance</span>
+<span class="w">    </span><span class="n">damage</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="n">randf_range</span><span class="p">(</span><span class="mf">0.9</span><span class="p">,</span><span class="w"> </span><span class="mf">1.1</span><span class="p">)</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nb nb-Type">int</span><span class="p">(</span><span class="n">damage</span><span class="p">))</span>
+
+<span class="k">func</span><span class="w"> </span><span class="n">calculate_critical</span><span class="p">(</span><span class="n">damage</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">int</span><span class="p">,</span><span class="w"> </span><span class="n">crit_chance</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">float</span><span class="p">,</span><span class="w"> </span><span class="n">crit_multiplier</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">float</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nb nb-Type">int</span><span class="p">:</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nb">randf</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">crit_chance</span><span class="p">:</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb nb-Type">int</span><span class="p">(</span><span class="n">damage</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">crit_multiplier</span><span class="p">)</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">damage</span>
+
+<span class="k">func</span><span class="w"> </span><span class="n">apply_resistance</span><span class="p">(</span><span class="n">damage</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">int</span><span class="p">,</span><span class="w"> </span><span class="n">damage_type</span><span class="p">:</span><span class="w"> </span><span class="n">DamageType</span><span class="p">,</span><span class="w"> </span><span class="n">resistances</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">Dictionary</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nb nb-Type">int</span><span class="p">:</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">resistances</span><span class="o">.</span><span class="n">has</span><span class="p">(</span><span class="n">damage_type</span><span class="p">):</span>
+<span class="w">        </span><span class="k">var</span><span class="w"> </span><span class="n">resistance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">resistances</span><span class="p">[</span><span class="n">damage_type</span><span class="p">]</span>
+<span class="w">        </span><span class="n">damage</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="p">(</span><span class="mf">1.0</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">resistance</span><span class="p">)</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb nb-Type">int</span><span class="p">(</span><span class="n">damage</span><span class="p">)</span>
+
+<span class="c1"># WHY CUSTOM: Complex calculations isolated, easy to balance/test</span>
+</code></pre></div>
+<h2 id="advantages-of-custom-objects">Advantages of Custom Objects</h2>
+<h3 id="1-separation-of-concerns">1. <strong>Separation of Concerns</strong></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Without custom objects - everything in one script</span>
+<span class="k">extends</span><span class="w"> </span><span class="n">CharacterBody2D</span>
+<span class="c1"># 500+ lines of movement, inventory, combat, quests, etc.</span>
+
+<span class="c1"># With custom objects - organized</span>
+<span class="k">extends</span><span class="w"> </span><span class="n">CharacterBody2D</span>
+<span class="k">var</span><span class="w"> </span><span class="n">inventory</span><span class="p">:</span><span class="w"> </span><span class="n">Inventory</span>
+<span class="k">var</span><span class="w"> </span><span class="n">quest_log</span><span class="p">:</span><span class="w"> </span><span class="n">QuestLog</span>
+<span class="k">var</span><span class="w"> </span><span class="n">combat_stats</span><span class="p">:</span><span class="w"> </span><span class="n">CombatStats</span>
+<span class="c1"># Each system is separate and manageable</span>
+</code></pre></div>
+<h3 id="2-reusability">2. <strong>Reusability</strong></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Create once, use everywhere</span>
+<span class="k">var</span><span class="w"> </span><span class="n">player_inventory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Inventory</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="w">  </span><span class="c1"># 20 slots</span>
+<span class="k">var</span><span class="w"> </span><span class="n">chest_inventory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Inventory</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="w">   </span><span class="c1"># 10 slots</span>
+<span class="k">var</span><span class="w"> </span><span class="n">shop_inventory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Inventory</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="w">    </span><span class="c1"># 50 slots</span>
+</code></pre></div>
+<h3 id="3-testability">3. <strong>Testability</strong></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Easy to test without running entire game</span>
+<span class="k">var</span><span class="w"> </span><span class="n">inventory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Inventory</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
+<span class="nb">assert</span><span class="p">(</span><span class="n">inventory</span><span class="o">.</span><span class="n">add_item</span><span class="p">(</span><span class="n">sword</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="bp">true</span><span class="p">)</span>
+<span class="nb">assert</span><span class="p">(</span><span class="n">inventory</span><span class="o">.</span><span class="n">items</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="4-memory-efficiency">4. <strong>Memory Efficiency</strong></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Resource shared between instances</span>
+<span class="err">@</span><span class="k">export</span><span class="w"> </span><span class="k">var</span><span class="w"> </span><span class="n">enemy_stats</span><span class="p">:</span><span class="w"> </span><span class="n">EnemyStats</span><span class="w">  </span><span class="c1"># Points to same .tres file</span>
+<span class="c1"># All goblins share goblin_stats.tres - one copy in memory</span>
+</code></pre></div>
+<h3 id="5-type-safety">5. <strong>Type Safety</strong></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Without custom object</span>
+<span class="k">var</span><span class="w"> </span><span class="n">player_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Hero&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;health&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;glod&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="w">  </span><span class="c1"># Typo! Hard to find</span>
+<span class="p">}</span>
+
+<span class="c1"># With custom object</span>
+<span class="k">var</span><span class="w"> </span><span class="n">player_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PlayerData</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
+<span class="n">player_data</span><span class="o">.</span><span class="n">glod</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">50</span><span class="w">  </span><span class="c1"># Compile error - catches typo</span>
+</code></pre></div>
+<h2 id="when-to-create-custom-objects">When to Create Custom Objects</h2>
+<table>
+<thead>
+<tr>
+<th>Create Custom Object When...</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data needs structure</td>
+<td>PlayerData, QuestData, SaveData</td>
+</tr>
+<tr>
+<td>Logic is reusable</td>
+<td>PathfindingHelper, DamageCalculator</td>
+</tr>
+<tr>
+<td>System is complex</td>
+<td>Inventory, DialogueManager</td>
+</tr>
+<tr>
+<td>Need multiple variants</td>
+<td>EnemyStats (goblin.tres, orc.tres)</td>
+</tr>
+<tr>
+<td>Want to serialize data</td>
+<td>Save system, level data</td>
+</tr>
+<tr>
+<td>Reduce Node overhead</td>
+<td>State machine, timers, counters</td>
+</tr>
+</tbody>
+</table>
+<h2 id="when-not-to-create-custom-objects">When NOT to Create Custom Objects</h2>
+<table>
+<thead>
+<tr>
+<th>Use Built-in When...</th>
+<th>Use Node When...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Simple data (use Dictionary)</td>
+<td>Needs visual representation</td>
+</tr>
+<tr>
+<td>One-time use (inline code)</td>
+<td>Needs scene tree access</td>
+</tr>
+<tr>
+<td>Godot has it (Timer, etc.)</td>
+<td>Needs signals to UI</td>
+</tr>
+</tbody>
+</table>
+<h2 id="hints-tips">Hints &amp; Tips</h2>
+<ul>
+<li>Start simple with built-in types</li>
+<li>Extract to custom objects when code gets complex</li>
+<li>Use <code>RefCounted</code> for pure logic/data</li>
+<li>Use <code>Resource</code> for reusable templates</li>
+<li>Use <code>Node</code> only when scene tree is needed</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tabs", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

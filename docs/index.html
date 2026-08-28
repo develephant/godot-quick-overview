@@ -10,25 +10,30 @@
       
       
       
-        <link rel="next" href="project/game_boot/">
+        <link rel="next" href="./project/game_boot/">
       
       
         
       
       
-      <link rel="icon" href="images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <link rel="icon" href="./images/favicon.ico">
+      <meta name="generator" content="zensical-0.0.57">
     
     
       
-        <title>Godot 4 Rapid Reference</title>
+        <title>Godot 4 - 2D Rapid Reference - Godot 4 Rapid Reference</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      <link rel="stylesheet" href="./assets/stylesheets/modern/main.5da3a30f.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="./assets/stylesheets/modern/palette.812a03bb.min.css">
       
       
 
@@ -42,12 +47,12 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL(".",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
 
@@ -68,7 +73,7 @@
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer"></label>
+    <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
     <div data-md-component="skip">
       
         
@@ -86,15 +91,15 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Godot 4 Rapid Reference" class="md-header__button md-logo" aria-label="Godot 4 Rapid Reference" data-md-component="logo">
+    <a href="" title="Godot 4 Rapid Reference" class="md-header__button md-logo" aria-label="Godot 4 Rapid Reference" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
 
     </a>
-    <label class="md-header__button md-icon" for="__drawer">
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navigation">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -106,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Rapid Reference
+              Godot 4 - 2D Rapid Reference
             
           </span>
         </div>
@@ -119,7 +124,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
     
   
 </form>
@@ -132,45 +137,20 @@
     
       
       
-        <label class="md-header__button md-icon" for="__search">
+        <label class="md-header__button md-icon" for="__search" aria-label="Search">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
         </label>
-        <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
 </div>
       
     
-    
+    <div class="md-header__source">
+      
+    </div>
   </nav>
   
 </header>
@@ -193,11 +173,8 @@
   
   
     <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+      <a href="" class="md-tabs__link">
         
-  
-  
-    
   
   Rapid Reference
 
@@ -212,11 +189,13 @@
   
   
     
+      
+    
+    
     
       <li class="md-tabs__item">
-        <a href="project/game_boot/" class="md-tabs__link">
+        <a href="./project/game_boot/" class="md-tabs__link">
           
-  
   
   Project
 
@@ -232,11 +211,13 @@
   
   
     
+      
+    
+    
     
       <li class="md-tabs__item">
-        <a href="scene/node_vs_refcounted/" class="md-tabs__link">
+        <a href="./scene/node_vs_refcounted/" class="md-tabs__link">
           
-  
   
   Scene
 
@@ -252,11 +233,13 @@
   
   
     
+      
+    
+    
     
       <li class="md-tabs__item">
-        <a href="class/custom_classes/" class="md-tabs__link">
+        <a href="./class/custom_classes/" class="md-tabs__link">
           
-  
   
   Class
 
@@ -272,11 +255,13 @@
   
   
     
+      
+    
+    
     
       <li class="md-tabs__item">
-        <a href="signals/signal/" class="md-tabs__link">
+        <a href="./signals/signal/" class="md-tabs__link">
           
-  
   
   Signal
 
@@ -292,11 +277,13 @@
   
   
     
+      
+    
+    
     
       <li class="md-tabs__item">
-        <a href="tween/tweening_2d/" class="md-tabs__link">
+        <a href="./tween/tweening_2d/" class="md-tabs__link">
           
-  
   
   Tween
 
@@ -312,11 +299,13 @@
   
   
     
+      
+    
+    
     
       <li class="md-tabs__item">
-        <a href="ui/basic_ui/" class="md-tabs__link">
+        <a href="./ui/basic_ui/" class="md-tabs__link">
           
-  
   
   UI
 
@@ -332,11 +321,13 @@
   
   
     
+      
+    
+    
     
       <li class="md-tabs__item">
-        <a href="data/save_and_load/" class="md-tabs__link">
+        <a href="./data/save_and_load/" class="md-tabs__link">
           
-  
   
   Data
 
@@ -352,11 +343,13 @@
   
   
     
+      
+    
+    
     
       <li class="md-tabs__item">
-        <a href="resource/custom_resources_tres/" class="md-tabs__link">
+        <a href="./resource/custom_resources_tres/" class="md-tabs__link">
           
-  
   
   Resource
 
@@ -372,11 +365,13 @@
   
   
     
+      
+    
+    
     
       <li class="md-tabs__item">
-        <a href="files/file_io/" class="md-tabs__link">
+        <a href="./files/file_io/" class="md-tabs__link">
           
-  
   
   Files
 
@@ -392,11 +387,13 @@
   
   
     
+      
+    
+    
     
       <li class="md-tabs__item">
-        <a href="modding/ugc_create_and_load/" class="md-tabs__link">
+        <a href="./modding/ugc_create_and_load/" class="md-tabs__link">
           
-  
   
   Modding
 
@@ -412,11 +409,13 @@
   
   
     
+      
+    
+    
     
       <li class="md-tabs__item">
-        <a href="more/working_with_groups/" class="md-tabs__link">
+        <a href="./more/working_with_groups/" class="md-tabs__link">
           
-  
   
   More
 
@@ -448,10 +447,10 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Godot 4 Rapid Reference" class="md-nav__button md-logo" aria-label="Godot 4 Rapid Reference" data-md-component="logo">
+    <a href="" title="Godot 4 Rapid Reference" class="md-nav__button md-logo" aria-label="Godot 4 Rapid Reference" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
 
     </a>
     Godot 4 Rapid Reference
@@ -469,7 +468,7 @@
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
       
       
         
@@ -482,8 +481,7 @@
   <span class="md-ellipsis">
     
   
-    Rapid Reference
-  
+  Rapid Reference
 
     
   </span>
@@ -493,15 +491,14 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="." class="md-nav__link md-nav__link--active">
+      <a href="" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    Rapid Reference
-  
+  Rapid Reference
 
     
   </span>
@@ -512,7 +509,8 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
   
@@ -521,16 +519,16 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#core-node-types" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Core Node Types
-      
+      </span>
     </span>
   </a>
   
@@ -539,9 +537,9 @@
         <li class="md-nav__item">
   <a href="#transform-properties-2d" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Transform Properties (2D)
-      
+      </span>
     </span>
   </a>
   
@@ -550,9 +548,9 @@
         <li class="md-nav__item">
   <a href="#visual-properties" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Visual Properties
-      
+      </span>
     </span>
   </a>
   
@@ -561,9 +559,9 @@
         <li class="md-nav__item">
   <a href="#physics-properties-characterbody2d" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Physics Properties (CharacterBody2D)
-      
+      </span>
     </span>
   </a>
   
@@ -572,9 +570,9 @@
         <li class="md-nav__item">
   <a href="#node-functions" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Node Functions
-      
+      </span>
     </span>
   </a>
   
@@ -583,9 +581,9 @@
         <li class="md-nav__item">
   <a href="#characterbody2d-functions" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         CharacterBody2D Functions
-      
+      </span>
     </span>
   </a>
   
@@ -594,9 +592,9 @@
         <li class="md-nav__item">
   <a href="#area2d-signals" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Area2D Signals
-      
+      </span>
     </span>
   </a>
   
@@ -605,9 +603,9 @@
         <li class="md-nav__item">
   <a href="#input-functions" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Input Functions
-      
+      </span>
     </span>
   </a>
   
@@ -616,9 +614,9 @@
         <li class="md-nav__item">
   <a href="#scene-tree-functions" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Scene Tree Functions
-      
+      </span>
     </span>
   </a>
   
@@ -627,9 +625,9 @@
         <li class="md-nav__item">
   <a href="#resource-loading" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Resource Loading
-      
+      </span>
     </span>
   </a>
   
@@ -638,9 +636,9 @@
         <li class="md-nav__item">
   <a href="#vector2-math" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Vector2 Math
-      
+      </span>
     </span>
   </a>
   
@@ -649,9 +647,9 @@
         <li class="md-nav__item">
   <a href="#collision-layers-masks" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Collision Layers &amp; Masks
-      
+      </span>
     </span>
   </a>
   
@@ -660,9 +658,9 @@
         <li class="md-nav__item">
   <a href="#animatedsprite2d" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         AnimatedSprite2D
-      
+      </span>
     </span>
   </a>
   
@@ -671,9 +669,9 @@
         <li class="md-nav__item">
   <a href="#timer-functions" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Timer Functions
-      
+      </span>
     </span>
   </a>
   
@@ -682,9 +680,9 @@
         <li class="md-nav__item">
   <a href="#camera2d" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Camera2D
-      
+      </span>
     </span>
   </a>
   
@@ -693,9 +691,9 @@
         <li class="md-nav__item">
   <a href="#utility-functions" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Utility Functions
-      
+      </span>
     </span>
   </a>
   
@@ -704,9 +702,9 @@
         <li class="md-nav__item">
   <a href="#common-constants" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Common Constants
-      
+      </span>
     </span>
   </a>
   
@@ -715,9 +713,9 @@
         <li class="md-nav__item">
   <a href="#signal-connection" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Signal Connection
-      
+      </span>
     </span>
   </a>
   
@@ -726,9 +724,9 @@
         <li class="md-nav__item">
   <a href="#tween-quick-reference" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Tween Quick Reference
-      
+      </span>
     </span>
   </a>
   
@@ -737,9 +735,9 @@
         <li class="md-nav__item">
   <a href="#common-export-types" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Common @export Types
-      
+      </span>
     </span>
   </a>
   
@@ -748,9 +746,9 @@
         <li class="md-nav__item">
   <a href="#delta-time-usage" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Delta Time Usage
-      
+      </span>
     </span>
   </a>
   
@@ -759,9 +757,9 @@
         <li class="md-nav__item">
   <a href="#quick-code-snippets" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Quick Code Snippets
-      
+      </span>
     </span>
   </a>
   
@@ -771,9 +769,9 @@
           <li class="md-nav__item">
   <a href="#basic-movement" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Basic Movement
-      
+      </span>
     </span>
   </a>
   
@@ -782,9 +780,9 @@
           <li class="md-nav__item">
   <a href="#platformer-movement" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Platformer Movement
-      
+      </span>
     </span>
   </a>
   
@@ -793,9 +791,9 @@
           <li class="md-nav__item">
   <a href="#follow-mouse" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Follow Mouse
-      
+      </span>
     </span>
   </a>
   
@@ -804,9 +802,9 @@
           <li class="md-nav__item">
   <a href="#look-at-target" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Look At Target
-      
+      </span>
     </span>
   </a>
   
@@ -815,9 +813,9 @@
           <li class="md-nav__item">
   <a href="#spawn-object" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Spawn Object
-      
+      </span>
     </span>
   </a>
   
@@ -831,9 +829,9 @@
         <li class="md-nav__item">
   <a href="#new-changed-in-godot-4447" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         New &amp; Changed in Godot 4.4–4.7
-      
+      </span>
     </span>
   </a>
   
@@ -843,9 +841,9 @@
           <li class="md-nav__item">
   <a href="#typed-dictionaries-example-44" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Typed Dictionaries Example (4.4+)
-      
+      </span>
     </span>
   </a>
   
@@ -854,9 +852,9 @@
           <li class="md-nav__item">
   <a href="#tilemaplayer-quick-start-43" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         TileMapLayer Quick Start (4.3+)
-      
+      </span>
     </span>
   </a>
   
@@ -903,8 +901,7 @@
   <span class="md-ellipsis">
     
   
-    Project
-  
+  Project
 
     
   </span>
@@ -919,8 +916,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Project
-  
+  Project
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
@@ -932,15 +928,14 @@
   
   
     <li class="md-nav__item">
-      <a href="project/game_boot/" class="md-nav__link">
+      <a href="./project/game_boot/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Game Boot
-  
+  Game Boot
 
     
   </span>
@@ -960,15 +955,14 @@
   
   
     <li class="md-nav__item">
-      <a href="project/project_structure/" class="md-nav__link">
+      <a href="./project/project_structure/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Structure
-  
+  Structure
 
     
   </span>
@@ -1016,8 +1010,7 @@
   <span class="md-ellipsis">
     
   
-    Scene
-  
+  Scene
 
     
   </span>
@@ -1032,8 +1025,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Scene
-  
+  Scene
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
@@ -1045,15 +1037,14 @@
   
   
     <li class="md-nav__item">
-      <a href="scene/node_vs_refcounted/" class="md-nav__link">
+      <a href="./scene/node_vs_refcounted/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Node vs Ref
-  
+  Node vs Ref
 
     
   </span>
@@ -1073,15 +1064,14 @@
   
   
     <li class="md-nav__item">
-      <a href="scene/scene_visual_elements/" class="md-nav__link">
+      <a href="./scene/scene_visual_elements/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Visual Elements
-  
+  Visual Elements
 
     
   </span>
@@ -1101,15 +1091,14 @@
   
   
     <li class="md-nav__item">
-      <a href="scene/scene_manager/" class="md-nav__link">
+      <a href="./scene/scene_manager/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Scene Manager
-  
+  Scene Manager
 
     
   </span>
@@ -1157,8 +1146,7 @@
   <span class="md-ellipsis">
     
   
-    Class
-  
+  Class
 
     
   </span>
@@ -1173,8 +1161,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Class
-  
+  Class
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
@@ -1186,15 +1173,14 @@
   
   
     <li class="md-nav__item">
-      <a href="class/custom_classes/" class="md-nav__link">
+      <a href="./class/custom_classes/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Custom
-  
+  Custom
 
     
   </span>
@@ -1214,15 +1200,14 @@
   
   
     <li class="md-nav__item">
-      <a href="class/class_instances/" class="md-nav__link">
+      <a href="./class/class_instances/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Instances
-  
+  Instances
 
     
   </span>
@@ -1242,15 +1227,14 @@
   
   
     <li class="md-nav__item">
-      <a href="class/objects_and_custom_objects/" class="md-nav__link">
+      <a href="./class/objects_and_custom_objects/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Objects
-  
+  Objects
 
     
   </span>
@@ -1270,15 +1254,14 @@
   
   
     <li class="md-nav__item">
-      <a href="class/typing/" class="md-nav__link">
+      <a href="./class/typing/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Type Hints
-  
+  Type Hints
 
     
   </span>
@@ -1326,8 +1309,7 @@
   <span class="md-ellipsis">
     
   
-    Signal
-  
+  Signal
 
     
   </span>
@@ -1342,8 +1324,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Signal
-  
+  Signal
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
@@ -1355,15 +1336,14 @@
   
   
     <li class="md-nav__item">
-      <a href="signals/signal/" class="md-nav__link">
+      <a href="./signals/signal/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Usage
-  
+  Usage
 
     
   </span>
@@ -1383,15 +1363,14 @@
   
   
     <li class="md-nav__item">
-      <a href="signals/collision_signals/" class="md-nav__link">
+      <a href="./signals/collision_signals/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Collision
-  
+  Collision
 
     
   </span>
@@ -1439,8 +1418,7 @@
   <span class="md-ellipsis">
     
   
-    Tween
-  
+  Tween
 
     
   </span>
@@ -1455,8 +1433,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Tween
-  
+  Tween
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
@@ -1468,15 +1445,14 @@
   
   
     <li class="md-nav__item">
-      <a href="tween/tweening_2d/" class="md-nav__link">
+      <a href="./tween/tweening_2d/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Tween 2D
-  
+  Tween 2D
 
     
   </span>
@@ -1496,15 +1472,14 @@
   
   
     <li class="md-nav__item">
-      <a href="tween/movement_types_2d/" class="md-nav__link">
+      <a href="./tween/movement_types_2d/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Movment Type
-  
+  Movment Type
 
     
   </span>
@@ -1552,8 +1527,7 @@
   <span class="md-ellipsis">
     
   
-    UI
-  
+  UI
 
     
   </span>
@@ -1568,8 +1542,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    UI
-  
+  UI
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
@@ -1581,15 +1554,14 @@
   
   
     <li class="md-nav__item">
-      <a href="ui/basic_ui/" class="md-nav__link">
+      <a href="./ui/basic_ui/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Basics
-  
+  Basics
 
     
   </span>
@@ -1609,15 +1581,41 @@
   
   
     <li class="md-nav__item">
-      <a href="ui/input_events/" class="md-nav__link">
+      <a href="./ui/input_events/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Input
+  Input
+
+    
+  </span>
   
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./ui/drag_and_drop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Drag and Drop
 
     
   </span>
@@ -1665,8 +1663,7 @@
   <span class="md-ellipsis">
     
   
-    Data
-  
+  Data
 
     
   </span>
@@ -1681,8 +1678,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Data
-  
+  Data
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
@@ -1694,15 +1690,41 @@
   
   
     <li class="md-nav__item">
-      <a href="data/save_and_load/" class="md-nav__link">
+      <a href="./data/save_and_load/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Save/Load
+  Save/Load
+
+    
+  </span>
   
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./data/working_with_data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Working with Data
 
     
   </span>
@@ -1750,8 +1772,7 @@
   <span class="md-ellipsis">
     
   
-    Resource
-  
+  Resource
 
     
   </span>
@@ -1766,8 +1787,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Resource
-  
+  Resource
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
@@ -1779,15 +1799,14 @@
   
   
     <li class="md-nav__item">
-      <a href="resource/custom_resources_tres/" class="md-nav__link">
+      <a href="./resource/custom_resources_tres/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Custom .tres
-  
+  Custom .tres
 
     
   </span>
@@ -1835,8 +1854,7 @@
   <span class="md-ellipsis">
     
   
-    Files
-  
+  Files
 
     
   </span>
@@ -1851,8 +1869,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Files
-  
+  Files
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
@@ -1864,15 +1881,14 @@
   
   
     <li class="md-nav__item">
-      <a href="files/file_io/" class="md-nav__link">
+      <a href="./files/file_io/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    File IO
-  
+  File IO
 
     
   </span>
@@ -1892,15 +1908,14 @@
   
   
     <li class="md-nav__item">
-      <a href="files/file_management/" class="md-nav__link">
+      <a href="./files/file_management/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Management
-  
+  Management
 
     
   </span>
@@ -1920,15 +1935,14 @@
   
   
     <li class="md-nav__item">
-      <a href="files/user_files/" class="md-nav__link">
+      <a href="./files/user_files/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    User Files
-  
+  User Files
 
     
   </span>
@@ -1976,8 +1990,7 @@
   <span class="md-ellipsis">
     
   
-    Modding
-  
+  Modding
 
     
   </span>
@@ -1992,8 +2005,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Modding
-  
+  Modding
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
@@ -2005,15 +2017,14 @@
   
   
     <li class="md-nav__item">
-      <a href="modding/ugc_create_and_load/" class="md-nav__link">
+      <a href="./modding/ugc_create_and_load/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    UGC Concepts
-  
+  UGC Concepts
 
     
   </span>
@@ -2033,15 +2044,14 @@
   
   
     <li class="md-nav__item">
-      <a href="modding/modding_system_theory/" class="md-nav__link">
+      <a href="./modding/modding_system_theory/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    System Theory
-  
+  System Theory
 
     
   </span>
@@ -2089,8 +2099,7 @@
   <span class="md-ellipsis">
     
   
-    More
-  
+  More
 
     
   </span>
@@ -2105,8 +2114,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    More
-  
+  More
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
@@ -2118,15 +2126,14 @@
   
   
     <li class="md-nav__item">
-      <a href="more/working_with_groups/" class="md-nav__link">
+      <a href="./more/working_with_groups/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Groups
-  
+  Groups
 
     
   </span>
@@ -2146,15 +2153,68 @@
   
   
     <li class="md-nav__item">
-      <a href="more/helpers/" class="md-nav__link">
+      <a href="./more/graph_edit/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Helpers
+  GraphEdit
+
+    
+  </span>
   
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./more/visual_effects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Visual Effects
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./more/helpers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Helpers
 
     
   </span>
@@ -2184,10 +2244,24 @@
               
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
   
@@ -2196,16 +2270,16 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#core-node-types" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Core Node Types
-      
+      </span>
     </span>
   </a>
   
@@ -2214,9 +2288,9 @@
         <li class="md-nav__item">
   <a href="#transform-properties-2d" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Transform Properties (2D)
-      
+      </span>
     </span>
   </a>
   
@@ -2225,9 +2299,9 @@
         <li class="md-nav__item">
   <a href="#visual-properties" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Visual Properties
-      
+      </span>
     </span>
   </a>
   
@@ -2236,9 +2310,9 @@
         <li class="md-nav__item">
   <a href="#physics-properties-characterbody2d" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Physics Properties (CharacterBody2D)
-      
+      </span>
     </span>
   </a>
   
@@ -2247,9 +2321,9 @@
         <li class="md-nav__item">
   <a href="#node-functions" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Node Functions
-      
+      </span>
     </span>
   </a>
   
@@ -2258,9 +2332,9 @@
         <li class="md-nav__item">
   <a href="#characterbody2d-functions" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         CharacterBody2D Functions
-      
+      </span>
     </span>
   </a>
   
@@ -2269,9 +2343,9 @@
         <li class="md-nav__item">
   <a href="#area2d-signals" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Area2D Signals
-      
+      </span>
     </span>
   </a>
   
@@ -2280,9 +2354,9 @@
         <li class="md-nav__item">
   <a href="#input-functions" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Input Functions
-      
+      </span>
     </span>
   </a>
   
@@ -2291,9 +2365,9 @@
         <li class="md-nav__item">
   <a href="#scene-tree-functions" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Scene Tree Functions
-      
+      </span>
     </span>
   </a>
   
@@ -2302,9 +2376,9 @@
         <li class="md-nav__item">
   <a href="#resource-loading" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Resource Loading
-      
+      </span>
     </span>
   </a>
   
@@ -2313,9 +2387,9 @@
         <li class="md-nav__item">
   <a href="#vector2-math" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Vector2 Math
-      
+      </span>
     </span>
   </a>
   
@@ -2324,9 +2398,9 @@
         <li class="md-nav__item">
   <a href="#collision-layers-masks" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Collision Layers &amp; Masks
-      
+      </span>
     </span>
   </a>
   
@@ -2335,9 +2409,9 @@
         <li class="md-nav__item">
   <a href="#animatedsprite2d" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         AnimatedSprite2D
-      
+      </span>
     </span>
   </a>
   
@@ -2346,9 +2420,9 @@
         <li class="md-nav__item">
   <a href="#timer-functions" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Timer Functions
-      
+      </span>
     </span>
   </a>
   
@@ -2357,9 +2431,9 @@
         <li class="md-nav__item">
   <a href="#camera2d" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Camera2D
-      
+      </span>
     </span>
   </a>
   
@@ -2368,9 +2442,9 @@
         <li class="md-nav__item">
   <a href="#utility-functions" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Utility Functions
-      
+      </span>
     </span>
   </a>
   
@@ -2379,9 +2453,9 @@
         <li class="md-nav__item">
   <a href="#common-constants" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Common Constants
-      
+      </span>
     </span>
   </a>
   
@@ -2390,9 +2464,9 @@
         <li class="md-nav__item">
   <a href="#signal-connection" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Signal Connection
-      
+      </span>
     </span>
   </a>
   
@@ -2401,9 +2475,9 @@
         <li class="md-nav__item">
   <a href="#tween-quick-reference" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Tween Quick Reference
-      
+      </span>
     </span>
   </a>
   
@@ -2412,9 +2486,9 @@
         <li class="md-nav__item">
   <a href="#common-export-types" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Common @export Types
-      
+      </span>
     </span>
   </a>
   
@@ -2423,9 +2497,9 @@
         <li class="md-nav__item">
   <a href="#delta-time-usage" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Delta Time Usage
-      
+      </span>
     </span>
   </a>
   
@@ -2434,9 +2508,9 @@
         <li class="md-nav__item">
   <a href="#quick-code-snippets" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Quick Code Snippets
-      
+      </span>
     </span>
   </a>
   
@@ -2446,9 +2520,9 @@
           <li class="md-nav__item">
   <a href="#basic-movement" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Basic Movement
-      
+      </span>
     </span>
   </a>
   
@@ -2457,9 +2531,9 @@
           <li class="md-nav__item">
   <a href="#platformer-movement" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Platformer Movement
-      
+      </span>
     </span>
   </a>
   
@@ -2468,9 +2542,9 @@
           <li class="md-nav__item">
   <a href="#follow-mouse" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Follow Mouse
-      
+      </span>
     </span>
   </a>
   
@@ -2479,9 +2553,9 @@
           <li class="md-nav__item">
   <a href="#look-at-target" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Look At Target
-      
+      </span>
     </span>
   </a>
   
@@ -2490,9 +2564,9 @@
           <li class="md-nav__item">
   <a href="#spawn-object" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Spawn Object
-      
+      </span>
     </span>
   </a>
   
@@ -2506,9 +2580,9 @@
         <li class="md-nav__item">
   <a href="#new-changed-in-godot-4447" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         New &amp; Changed in Godot 4.4–4.7
-      
+      </span>
     </span>
   </a>
   
@@ -2518,9 +2592,9 @@
           <li class="md-nav__item">
   <a href="#typed-dictionaries-example-44" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Typed Dictionaries Example (4.4+)
-      
+      </span>
     </span>
   </a>
   
@@ -2529,9 +2603,9 @@
           <li class="md-nav__item">
   <a href="#tilemaplayer-quick-start-43" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         TileMapLayer Quick Start (4.3+)
-      
+      </span>
     </span>
   </a>
   
@@ -2556,8 +2630,6 @@
               <article class="md-content__inner md-typeset">
                 
                   
-
-
 
 <h1 id="godot-4-2d-rapid-reference">Godot 4 - 2D Rapid Reference</h1>
 <h2 id="core-node-types">Core Node Types</h2>
@@ -3289,14 +3361,14 @@
 <h2 id="common-export-types">Common @export Types</h2>
 <div class="highlight"><pre><span></span><code><span class="x">@export var speed: float = 100.0</span>
 <span class="x">@export var health: int = 100</span>
-<span class="x">@export var player_name: String = &quot;Hero&quot;</span>
+<span class="x">@export var player_name: String = "Hero"</span>
 <span class="x">@export var enabled: bool = true</span>
 <span class="x">@export var sprite: Texture2D</span>
 <span class="x">@export var sound: AudioStream</span>
 <span class="x">@export var next_scene: PackedScene</span>
 <span class="x">@export_range(0, 100) var volume: int = 50</span>
-<span class="x">@export_enum(&quot;Easy&quot;, &quot;Medium&quot;, &quot;Hard&quot;) var difficulty: String</span>
-<span class="x">@export_flags(&quot;Run&quot;, &quot;Jump&quot;, &quot;Attack&quot;) var abilities: int</span>
+<span class="x">@export_enum("Easy", "Medium", "Hard") var difficulty: String</span>
+<span class="x">@export_flags("Run", "Jump", "Attack") var abilities: int</span>
 </code></pre></div>
 <h2 id="delta-time-usage">Delta Time Usage</h2>
 <div class="highlight"><pre><span></span><code><span class="x"># Always multiply movement by delta for frame-independent speed</span>
@@ -3307,7 +3379,7 @@
 <h2 id="quick-code-snippets">Quick Code Snippets</h2>
 <h3 id="basic-movement">Basic Movement</h3>
 <div class="highlight"><pre><span></span><code><span class="x">func _physics_process(delta):</span>
-<span class="x">    var direction = Input.get_vector(&quot;left&quot;, &quot;right&quot;, &quot;up&quot;, &quot;down&quot;)</span>
+<span class="x">    var direction = Input.get_vector("left", "right", "up", "down")</span>
 <span class="x">    velocity = direction * speed</span>
 <span class="x">    move_and_slide()</span>
 </code></pre></div>
@@ -3316,10 +3388,10 @@
 <span class="x">    if not is_on_floor():</span>
 <span class="x">        velocity.y += gravity * delta</span>
 
-<span class="x">    var input = Input.get_axis(&quot;left&quot;, &quot;right&quot;)</span>
+<span class="x">    var input = Input.get_axis("left", "right")</span>
 <span class="x">    velocity.x = input * speed</span>
 
-<span class="x">    if Input.is_action_just_pressed(&quot;jump&quot;) and is_on_floor():</span>
+<span class="x">    if Input.is_action_just_pressed("jump") and is_on_floor():</span>
 <span class="x">        velocity.y = jump_velocity</span>
 
 <span class="x">    move_and_slide()</span>
@@ -3334,7 +3406,7 @@
 </code></pre></div>
 <h3 id="spawn-object">Spawn Object</h3>
 <div class="highlight"><pre><span></span><code><span class="x">func spawn_object():</span>
-<span class="x">    var instance = preload(&quot;res://object.tscn&quot;).instantiate()</span>
+<span class="x">    var instance = preload("res://object.tscn").instantiate()</span>
 <span class="x">    instance.position = spawn_position</span>
 <span class="x">    get_parent().add_child(instance)</span>
 </code></pre></div>
@@ -3354,9 +3426,9 @@
 <h3 id="typed-dictionaries-example-44">Typed Dictionaries Example (4.4+)</h3>
 <div class="highlight"><pre><span></span><code><span class="x"># Map enemy IDs to names</span>
 <span class="x">var enemy_names: Dictionary[int, String] = {</span>
-<span class="x">    1: &quot;Goblin&quot;,</span>
-<span class="x">    2: &quot;Orc&quot;,</span>
-<span class="x">    3: &quot;Dragon&quot;</span>
+<span class="x">    1: "Goblin",</span>
+<span class="x">    2: "Orc",</span>
+<span class="x">    3: "Dragon"</span>
 <span class="x">}</span>
 
 <span class="x"># Map positions to scores</span>
@@ -3366,6 +3438,8 @@
 <div class="highlight"><pre><span></span><code><span class="x"># Each layer is its own node; group them under a Node2D for multi-layer maps</span>
 <span class="x"># Use a TileMapLayer node and assign the same TileSet to all layers</span>
 </code></pre></div>
+
+
 
 
 
@@ -3396,8 +3470,8 @@
   
   
     Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
     </a>
   
 </div>
@@ -3415,10 +3489,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.instant", "navigation.tabs", "content.code.copy", "content.code.annotate"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":".","features":["navigation.instant","navigation.tabs","content.code.copy","content.code.annotate"],"search":"./assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="./assets/javascripts/bundle.49251538.min.js"></script>
       
     
   </body>

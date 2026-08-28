@@ -12,25 +12,30 @@
         <link rel="prev" href="../../modding/modding_system_theory/">
       
       
-        <link rel="next" href="../helpers/">
+        <link rel="next" href="../graph_edit/">
       
       
         
       
       
       <link rel="icon" href="../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="zensical-0.0.57">
     
     
       
-        <title>Groups - Godot 4 Rapid Reference</title>
+        <title>Working with Groups - Godot 4 Rapid Reference</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.5da3a30f.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.812a03bb.min.css">
       
       
 
@@ -44,12 +49,12 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
 
@@ -70,7 +75,7 @@
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer"></label>
+    <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
     <div data-md-component="skip">
       
         
@@ -91,12 +96,12 @@
     <a href="../.." title="Godot 4 Rapid Reference" class="md-header__button md-logo" aria-label="Godot 4 Rapid Reference" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
 
     </a>
-    <label class="md-header__button md-icon" for="__drawer">
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navigation">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -108,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Groups
+              Working with Groups
             
           </span>
         </div>
@@ -121,7 +126,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
     
   
 </form>
@@ -134,45 +139,20 @@
     
       
       
-        <label class="md-header__button md-icon" for="__search">
+        <label class="md-header__button md-icon" for="__search" aria-label="Search">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
         </label>
-        <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
 </div>
       
     
-    
+    <div class="md-header__source">
+      
+    </div>
   </nav>
   
 </header>
@@ -196,9 +176,6 @@
       <a href="../.." class="md-tabs__link">
         
   
-  
-    
-  
   Rapid Reference
 
       </a>
@@ -212,11 +189,13 @@
   
   
     
+      
+    
+    
     
       <li class="md-tabs__item">
         <a href="../../project/game_boot/" class="md-tabs__link">
           
-  
   
   Project
 
@@ -232,11 +211,13 @@
   
   
     
+      
+    
+    
     
       <li class="md-tabs__item">
         <a href="../../scene/node_vs_refcounted/" class="md-tabs__link">
           
-  
   
   Scene
 
@@ -252,11 +233,13 @@
   
   
     
+      
+    
+    
     
       <li class="md-tabs__item">
         <a href="../../class/custom_classes/" class="md-tabs__link">
           
-  
   
   Class
 
@@ -272,11 +255,13 @@
   
   
     
+      
+    
+    
     
       <li class="md-tabs__item">
         <a href="../../signals/signal/" class="md-tabs__link">
           
-  
   
   Signal
 
@@ -292,11 +277,13 @@
   
   
     
+      
+    
+    
     
       <li class="md-tabs__item">
         <a href="../../tween/tweening_2d/" class="md-tabs__link">
           
-  
   
   Tween
 
@@ -312,11 +299,13 @@
   
   
     
+      
+    
+    
     
       <li class="md-tabs__item">
         <a href="../../ui/basic_ui/" class="md-tabs__link">
           
-  
   
   UI
 
@@ -332,11 +321,13 @@
   
   
     
+      
+    
+    
     
       <li class="md-tabs__item">
         <a href="../../data/save_and_load/" class="md-tabs__link">
           
-  
   
   Data
 
@@ -352,11 +343,13 @@
   
   
     
+      
+    
+    
     
       <li class="md-tabs__item">
         <a href="../../resource/custom_resources_tres/" class="md-tabs__link">
           
-  
   
   Resource
 
@@ -372,11 +365,13 @@
   
   
     
+      
+    
+    
     
       <li class="md-tabs__item">
         <a href="../../files/file_io/" class="md-tabs__link">
           
-  
   
   Files
 
@@ -392,11 +387,13 @@
   
   
     
+      
+    
+    
     
       <li class="md-tabs__item">
         <a href="../../modding/ugc_create_and_load/" class="md-tabs__link">
           
-  
   
   Modding
 
@@ -414,11 +411,13 @@
   
   
     
+      
+    
+    
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+        <a href="././" class="md-tabs__link">
           
-  
   
   More
 
@@ -453,7 +452,7 @@
     <a href="../.." title="Godot 4 Rapid Reference" class="md-nav__button md-logo" aria-label="Godot 4 Rapid Reference" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
 
     </a>
     Godot 4 Rapid Reference
@@ -475,8 +474,7 @@
   <span class="md-ellipsis">
     
   
-    Rapid Reference
-  
+  Rapid Reference
 
     
   </span>
@@ -516,8 +514,7 @@
   <span class="md-ellipsis">
     
   
-    Project
-  
+  Project
 
     
   </span>
@@ -532,8 +529,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Project
-  
+  Project
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
@@ -552,8 +548,7 @@
   <span class="md-ellipsis">
     
   
-    Game Boot
-  
+  Game Boot
 
     
   </span>
@@ -580,8 +575,7 @@
   <span class="md-ellipsis">
     
   
-    Structure
-  
+  Structure
 
     
   </span>
@@ -629,8 +623,7 @@
   <span class="md-ellipsis">
     
   
-    Scene
-  
+  Scene
 
     
   </span>
@@ -645,8 +638,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Scene
-  
+  Scene
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
@@ -665,8 +657,7 @@
   <span class="md-ellipsis">
     
   
-    Node vs Ref
-  
+  Node vs Ref
 
     
   </span>
@@ -693,8 +684,7 @@
   <span class="md-ellipsis">
     
   
-    Visual Elements
-  
+  Visual Elements
 
     
   </span>
@@ -721,8 +711,7 @@
   <span class="md-ellipsis">
     
   
-    Scene Manager
-  
+  Scene Manager
 
     
   </span>
@@ -770,8 +759,7 @@
   <span class="md-ellipsis">
     
   
-    Class
-  
+  Class
 
     
   </span>
@@ -786,8 +774,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Class
-  
+  Class
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
@@ -806,8 +793,7 @@
   <span class="md-ellipsis">
     
   
-    Custom
-  
+  Custom
 
     
   </span>
@@ -834,8 +820,7 @@
   <span class="md-ellipsis">
     
   
-    Instances
-  
+  Instances
 
     
   </span>
@@ -862,8 +847,7 @@
   <span class="md-ellipsis">
     
   
-    Objects
-  
+  Objects
 
     
   </span>
@@ -890,8 +874,7 @@
   <span class="md-ellipsis">
     
   
-    Type Hints
-  
+  Type Hints
 
     
   </span>
@@ -939,8 +922,7 @@
   <span class="md-ellipsis">
     
   
-    Signal
-  
+  Signal
 
     
   </span>
@@ -955,8 +937,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Signal
-  
+  Signal
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
@@ -975,8 +956,7 @@
   <span class="md-ellipsis">
     
   
-    Usage
-  
+  Usage
 
     
   </span>
@@ -1003,8 +983,7 @@
   <span class="md-ellipsis">
     
   
-    Collision
-  
+  Collision
 
     
   </span>
@@ -1052,8 +1031,7 @@
   <span class="md-ellipsis">
     
   
-    Tween
-  
+  Tween
 
     
   </span>
@@ -1068,8 +1046,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Tween
-  
+  Tween
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
@@ -1088,8 +1065,7 @@
   <span class="md-ellipsis">
     
   
-    Tween 2D
-  
+  Tween 2D
 
     
   </span>
@@ -1116,8 +1092,7 @@
   <span class="md-ellipsis">
     
   
-    Movment Type
-  
+  Movment Type
 
     
   </span>
@@ -1165,8 +1140,7 @@
   <span class="md-ellipsis">
     
   
-    UI
-  
+  UI
 
     
   </span>
@@ -1181,8 +1155,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    UI
-  
+  UI
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
@@ -1201,8 +1174,7 @@
   <span class="md-ellipsis">
     
   
-    Basics
-  
+  Basics
 
     
   </span>
@@ -1229,8 +1201,34 @@
   <span class="md-ellipsis">
     
   
-    Input
+  Input
+
+    
+  </span>
   
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/drag_and_drop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Drag and Drop
 
     
   </span>
@@ -1278,8 +1276,7 @@
   <span class="md-ellipsis">
     
   
-    Data
-  
+  Data
 
     
   </span>
@@ -1294,8 +1291,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Data
-  
+  Data
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
@@ -1314,8 +1310,34 @@
   <span class="md-ellipsis">
     
   
-    Save/Load
+  Save/Load
+
+    
+  </span>
   
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/working_with_data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Working with Data
 
     
   </span>
@@ -1363,8 +1385,7 @@
   <span class="md-ellipsis">
     
   
-    Resource
-  
+  Resource
 
     
   </span>
@@ -1379,8 +1400,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Resource
-  
+  Resource
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
@@ -1399,8 +1419,7 @@
   <span class="md-ellipsis">
     
   
-    Custom .tres
-  
+  Custom .tres
 
     
   </span>
@@ -1448,8 +1467,7 @@
   <span class="md-ellipsis">
     
   
-    Files
-  
+  Files
 
     
   </span>
@@ -1464,8 +1482,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Files
-  
+  Files
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
@@ -1484,8 +1501,7 @@
   <span class="md-ellipsis">
     
   
-    File IO
-  
+  File IO
 
     
   </span>
@@ -1512,8 +1528,7 @@
   <span class="md-ellipsis">
     
   
-    Management
-  
+  Management
 
     
   </span>
@@ -1540,8 +1555,7 @@
   <span class="md-ellipsis">
     
   
-    User Files
-  
+  User Files
 
     
   </span>
@@ -1589,8 +1603,7 @@
   <span class="md-ellipsis">
     
   
-    Modding
-  
+  Modding
 
     
   </span>
@@ -1605,8 +1618,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Modding
-  
+  Modding
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
@@ -1625,8 +1637,7 @@
   <span class="md-ellipsis">
     
   
-    UGC Concepts
-  
+  UGC Concepts
 
     
   </span>
@@ -1653,8 +1664,7 @@
   <span class="md-ellipsis">
     
   
-    System Theory
-  
+  System Theory
 
     
   </span>
@@ -1707,8 +1717,7 @@
   <span class="md-ellipsis">
     
   
-    More
-  
+  More
 
     
   </span>
@@ -1723,8 +1732,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    More
-  
+  More
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
@@ -1739,7 +1747,7 @@
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
       
       
         
@@ -1752,8 +1760,7 @@
   <span class="md-ellipsis">
     
   
-    Groups
-  
+  Groups
 
     
   </span>
@@ -1763,15 +1770,14 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="./" class="md-nav__link md-nav__link--active">
+      <a href="././" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    Groups
-  
+  Groups
 
     
   </span>
@@ -1782,7 +1788,8 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
   
@@ -1791,16 +1798,16 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#adding-nodes-to-groups" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Adding Nodes to Groups
-      
+      </span>
     </span>
   </a>
   
@@ -1810,9 +1817,9 @@
           <li class="md-nav__item">
   <a href="#in-the-editor" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         In the Editor
-      
+      </span>
     </span>
   </a>
   
@@ -1821,9 +1828,9 @@
           <li class="md-nav__item">
   <a href="#in-code" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         In Code
-      
+      </span>
     </span>
   </a>
   
@@ -1837,9 +1844,9 @@
         <li class="md-nav__item">
   <a href="#retrieving-nodes-from-groups" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Retrieving Nodes from Groups
-      
+      </span>
     </span>
   </a>
   
@@ -1849,9 +1856,9 @@
           <li class="md-nav__item">
   <a href="#get-all-nodes-in-a-group" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Get All Nodes in a Group
-      
+      </span>
     </span>
   </a>
   
@@ -1860,9 +1867,9 @@
           <li class="md-nav__item">
   <a href="#check-if-groups-exist" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Check if Groups Exist
-      
+      </span>
     </span>
   </a>
   
@@ -1876,9 +1883,9 @@
         <li class="md-nav__item">
   <a href="#group-operations" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Group Operations
-      
+      </span>
     </span>
   </a>
   
@@ -1888,9 +1895,9 @@
           <li class="md-nav__item">
   <a href="#call-methods-on-group-members" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Call Methods on Group Members
-      
+      </span>
     </span>
   </a>
   
@@ -1899,9 +1906,9 @@
           <li class="md-nav__item">
   <a href="#set-properties-on-group-members" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Set Properties on Group Members
-      
+      </span>
     </span>
   </a>
   
@@ -1915,9 +1922,9 @@
         <li class="md-nav__item">
   <a href="#removing-from-groups" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Removing from Groups
-      
+      </span>
     </span>
   </a>
   
@@ -1926,9 +1933,9 @@
         <li class="md-nav__item">
   <a href="#practical-examples" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Practical Examples
-      
+      </span>
     </span>
   </a>
   
@@ -1938,9 +1945,9 @@
           <li class="md-nav__item">
   <a href="#enemy-management" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Enemy Management
-      
+      </span>
     </span>
   </a>
   
@@ -1949,9 +1956,9 @@
           <li class="md-nav__item">
   <a href="#collectible-system" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Collectible System
-      
+      </span>
     </span>
   </a>
   
@@ -1960,9 +1967,9 @@
           <li class="md-nav__item">
   <a href="#pause-system" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Pause System
-      
+      </span>
     </span>
   </a>
   
@@ -1971,9 +1978,9 @@
           <li class="md-nav__item">
   <a href="#level-cleanup" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Level Cleanup
-      
+      </span>
     </span>
   </a>
   
@@ -1987,9 +1994,9 @@
         <li class="md-nav__item">
   <a href="#performance-tips" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Performance Tips
-      
+      </span>
     </span>
   </a>
   
@@ -1999,9 +2006,9 @@
           <li class="md-nav__item">
   <a href="#use-call-flags-for-optimization" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Use Call Flags for Optimization
-      
+      </span>
     </span>
   </a>
   
@@ -2010,9 +2017,9 @@
           <li class="md-nav__item">
   <a href="#efficient-group-management" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Efficient Group Management
-      
+      </span>
     </span>
   </a>
   
@@ -2026,9 +2033,9 @@
         <li class="md-nav__item">
   <a href="#common-patterns" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Common Patterns
-      
+      </span>
     </span>
   </a>
   
@@ -2038,9 +2045,9 @@
           <li class="md-nav__item">
   <a href="#singleton-access" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Singleton Access
-      
+      </span>
     </span>
   </a>
   
@@ -2049,9 +2056,9 @@
           <li class="md-nav__item">
   <a href="#event-broadcasting" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Event Broadcasting
-      
+      </span>
     </span>
   </a>
   
@@ -2078,6 +2085,60 @@
   
   
     <li class="md-nav__item">
+      <a href="../graph_edit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  GraphEdit
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visual_effects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Visual Effects
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../helpers/" class="md-nav__link">
         
   
@@ -2085,8 +2146,7 @@
   <span class="md-ellipsis">
     
   
-    Helpers
-  
+  Helpers
 
     
   </span>
@@ -2116,10 +2176,24 @@
               
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
   
@@ -2128,16 +2202,16 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#adding-nodes-to-groups" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Adding Nodes to Groups
-      
+      </span>
     </span>
   </a>
   
@@ -2147,9 +2221,9 @@
           <li class="md-nav__item">
   <a href="#in-the-editor" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         In the Editor
-      
+      </span>
     </span>
   </a>
   
@@ -2158,9 +2232,9 @@
           <li class="md-nav__item">
   <a href="#in-code" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         In Code
-      
+      </span>
     </span>
   </a>
   
@@ -2174,9 +2248,9 @@
         <li class="md-nav__item">
   <a href="#retrieving-nodes-from-groups" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Retrieving Nodes from Groups
-      
+      </span>
     </span>
   </a>
   
@@ -2186,9 +2260,9 @@
           <li class="md-nav__item">
   <a href="#get-all-nodes-in-a-group" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Get All Nodes in a Group
-      
+      </span>
     </span>
   </a>
   
@@ -2197,9 +2271,9 @@
           <li class="md-nav__item">
   <a href="#check-if-groups-exist" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Check if Groups Exist
-      
+      </span>
     </span>
   </a>
   
@@ -2213,9 +2287,9 @@
         <li class="md-nav__item">
   <a href="#group-operations" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Group Operations
-      
+      </span>
     </span>
   </a>
   
@@ -2225,9 +2299,9 @@
           <li class="md-nav__item">
   <a href="#call-methods-on-group-members" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Call Methods on Group Members
-      
+      </span>
     </span>
   </a>
   
@@ -2236,9 +2310,9 @@
           <li class="md-nav__item">
   <a href="#set-properties-on-group-members" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Set Properties on Group Members
-      
+      </span>
     </span>
   </a>
   
@@ -2252,9 +2326,9 @@
         <li class="md-nav__item">
   <a href="#removing-from-groups" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Removing from Groups
-      
+      </span>
     </span>
   </a>
   
@@ -2263,9 +2337,9 @@
         <li class="md-nav__item">
   <a href="#practical-examples" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Practical Examples
-      
+      </span>
     </span>
   </a>
   
@@ -2275,9 +2349,9 @@
           <li class="md-nav__item">
   <a href="#enemy-management" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Enemy Management
-      
+      </span>
     </span>
   </a>
   
@@ -2286,9 +2360,9 @@
           <li class="md-nav__item">
   <a href="#collectible-system" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Collectible System
-      
+      </span>
     </span>
   </a>
   
@@ -2297,9 +2371,9 @@
           <li class="md-nav__item">
   <a href="#pause-system" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Pause System
-      
+      </span>
     </span>
   </a>
   
@@ -2308,9 +2382,9 @@
           <li class="md-nav__item">
   <a href="#level-cleanup" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Level Cleanup
-      
+      </span>
     </span>
   </a>
   
@@ -2324,9 +2398,9 @@
         <li class="md-nav__item">
   <a href="#performance-tips" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Performance Tips
-      
+      </span>
     </span>
   </a>
   
@@ -2336,9 +2410,9 @@
           <li class="md-nav__item">
   <a href="#use-call-flags-for-optimization" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Use Call Flags for Optimization
-      
+      </span>
     </span>
   </a>
   
@@ -2347,9 +2421,9 @@
           <li class="md-nav__item">
   <a href="#efficient-group-management" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Efficient Group Management
-      
+      </span>
     </span>
   </a>
   
@@ -2363,9 +2437,9 @@
         <li class="md-nav__item">
   <a href="#common-patterns" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Common Patterns
-      
+      </span>
     </span>
   </a>
   
@@ -2375,9 +2449,9 @@
           <li class="md-nav__item">
   <a href="#singleton-access" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Singleton Access
-      
+      </span>
     </span>
   </a>
   
@@ -2386,9 +2460,9 @@
           <li class="md-nav__item">
   <a href="#event-broadcasting" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Event Broadcasting
-      
+      </span>
     </span>
   </a>
   
@@ -2414,8 +2488,6 @@
                 
                   
 
-
-
 <h1 id="working-with-groups">Working with Groups</h1>
 <p>Groups in Godot are a powerful organizational system that allows you to tag nodes with string identifiers and then operate on collections of nodes efficiently. This is particularly useful for managing enemies, collectibles, UI elements, or any set of nodes that share common behavior.</p>
 <h2 id="adding-nodes-to-groups">Adding Nodes to Groups</h2>
@@ -2428,59 +2500,59 @@
 <h3 id="in-code">In Code</h3>
 <div class="highlight"><pre><span></span><code><span class="c1"># Add to group during _ready()</span>
 <span class="k">func</span><span class="w"> </span><span class="n">_ready</span><span class="p">():</span>
-<span class="w">    </span><span class="n">add_to_group</span><span class="p">(</span><span class="s2">&quot;enemies&quot;</span><span class="p">)</span>
-<span class="w">    </span><span class="n">add_to_group</span><span class="p">(</span><span class="s2">&quot;ai_controlled&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">add_to_group</span><span class="p">(</span><span class="s2">"enemies"</span><span class="p">)</span>
+<span class="w">    </span><span class="n">add_to_group</span><span class="p">(</span><span class="s2">"ai_controlled"</span><span class="p">)</span>
 
 <span class="c1"># Add another node to a group</span>
-<span class="n">some_node</span><span class="o">.</span><span class="n">add_to_group</span><span class="p">(</span><span class="s2">&quot;collectibles&quot;</span><span class="p">)</span>
+<span class="n">some_node</span><span class="o">.</span><span class="n">add_to_group</span><span class="p">(</span><span class="s2">"collectibles"</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="retrieving-nodes-from-groups">Retrieving Nodes from Groups</h2>
 <h3 id="get-all-nodes-in-a-group">Get All Nodes in a Group</h3>
 <div class="highlight"><pre><span></span><code><span class="c1"># Get all enemy nodes</span>
-<span class="k">var</span><span class="w"> </span><span class="n">enemies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">get_nodes_in_group</span><span class="p">(</span><span class="s2">&quot;enemies&quot;</span><span class="p">)</span>
+<span class="k">var</span><span class="w"> </span><span class="n">enemies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">get_nodes_in_group</span><span class="p">(</span><span class="s2">"enemies"</span><span class="p">)</span>
 <span class="k">for</span><span class="w"> </span><span class="n">enemy</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">enemies</span><span class="p">:</span>
 <span class="w">    </span><span class="n">enemy</span><span class="o">.</span><span class="n">take_damage</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 
 <span class="c1"># Get first node in group (useful for singletons)</span>
-<span class="k">var</span><span class="w"> </span><span class="n">player</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">get_first_node_in_group</span><span class="p">(</span><span class="s2">&quot;player&quot;</span><span class="p">)</span>
+<span class="k">var</span><span class="w"> </span><span class="n">player</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">get_first_node_in_group</span><span class="p">(</span><span class="s2">"player"</span><span class="p">)</span>
 <span class="k">if</span><span class="w"> </span><span class="n">player</span><span class="p">:</span>
 <span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">player_position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">player</span><span class="o">.</span><span class="n">global_position</span>
 </code></pre></div>
 <h3 id="check-if-groups-exist">Check if Groups Exist</h3>
 <div class="highlight"><pre><span></span><code><span class="c1"># Check if group has any nodes</span>
-<span class="k">if</span><span class="w"> </span><span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">has_group</span><span class="p">(</span><span class="s2">&quot;enemies&quot;</span><span class="p">):</span>
-<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Enemies are present in the scene&quot;</span><span class="p">)</span>
+<span class="k">if</span><span class="w"> </span><span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">has_group</span><span class="p">(</span><span class="s2">"enemies"</span><span class="p">):</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">"Enemies are present in the scene"</span><span class="p">)</span>
 
 <span class="c1"># Get group count</span>
-<span class="k">var</span><span class="w"> </span><span class="n">enemy_count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">get_nodes_in_group</span><span class="p">(</span><span class="s2">&quot;enemies&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;There are &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">enemy_count</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot; enemies&quot;</span><span class="p">)</span>
+<span class="k">var</span><span class="w"> </span><span class="n">enemy_count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">get_nodes_in_group</span><span class="p">(</span><span class="s2">"enemies"</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"There are "</span><span class="p">,</span><span class="w"> </span><span class="n">enemy_count</span><span class="p">,</span><span class="w"> </span><span class="s2">" enemies"</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="group-operations">Group Operations</h2>
 <h3 id="call-methods-on-group-members">Call Methods on Group Members</h3>
 <div class="highlight"><pre><span></span><code><span class="c1"># Call a method on all nodes in a group</span>
-<span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">call_group</span><span class="p">(</span><span class="s2">&quot;enemies&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;take_damage&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">)</span>
-<span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">call_group</span><span class="p">(</span><span class="s2">&quot;ui_elements&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;hide&quot;</span><span class="p">)</span>
+<span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">call_group</span><span class="p">(</span><span class="s2">"enemies"</span><span class="p">,</span><span class="w"> </span><span class="s2">"take_damage"</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">)</span>
+<span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">call_group</span><span class="p">(</span><span class="s2">"ui_elements"</span><span class="p">,</span><span class="w"> </span><span class="s2">"hide"</span><span class="p">)</span>
 
 <span class="c1"># Call with flags for performance</span>
 <span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">call_group_flags</span><span class="p">(</span>
 <span class="w">    </span><span class="n">SceneTree</span><span class="o">.</span><span class="n">GROUP_CALL_DEFERRED</span><span class="p">,</span><span class="w"> </span>
-<span class="w">    </span><span class="s2">&quot;enemies&quot;</span><span class="p">,</span><span class="w"> </span>
-<span class="w">    </span><span class="s2">&quot;queue_free&quot;</span>
+<span class="w">    </span><span class="s2">"enemies"</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="s2">"queue_free"</span>
 <span class="p">)</span>
 </code></pre></div>
 <h3 id="set-properties-on-group-members">Set Properties on Group Members</h3>
 <div class="highlight"><pre><span></span><code><span class="c1"># Set property on all group members</span>
-<span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">set_group</span><span class="p">(</span><span class="s2">&quot;enemies&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;speed&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w">  </span><span class="c1"># Freeze all enemies</span>
-<span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">set_group</span><span class="p">(</span><span class="s2">&quot;lights&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;visible&quot;</span><span class="p">,</span><span class="w"> </span><span class="bp">false</span><span class="p">)</span><span class="w">  </span><span class="c1"># Turn off all lights</span>
+<span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">set_group</span><span class="p">(</span><span class="s2">"enemies"</span><span class="p">,</span><span class="w"> </span><span class="s2">"speed"</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w">  </span><span class="c1"># Freeze all enemies</span>
+<span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">set_group</span><span class="p">(</span><span class="s2">"lights"</span><span class="p">,</span><span class="w"> </span><span class="s2">"visible"</span><span class="p">,</span><span class="w"> </span><span class="bp">false</span><span class="p">)</span><span class="w">  </span><span class="c1"># Turn off all lights</span>
 </code></pre></div>
 <h2 id="removing-from-groups">Removing from Groups</h2>
 <div class="highlight"><pre><span></span><code><span class="c1"># Remove node from specific group</span>
-<span class="n">remove_from_group</span><span class="p">(</span><span class="s2">&quot;enemies&quot;</span><span class="p">)</span>
+<span class="n">remove_from_group</span><span class="p">(</span><span class="s2">"enemies"</span><span class="p">)</span>
 
 <span class="c1"># Remove during cleanup</span>
 <span class="k">func</span><span class="w"> </span><span class="n">_exit_tree</span><span class="p">():</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">is_in_group</span><span class="p">(</span><span class="s2">&quot;persistent&quot;</span><span class="p">):</span>
-<span class="w">        </span><span class="n">remove_from_group</span><span class="p">(</span><span class="s2">&quot;persistent&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">is_in_group</span><span class="p">(</span><span class="s2">"persistent"</span><span class="p">):</span>
+<span class="w">        </span><span class="n">remove_from_group</span><span class="p">(</span><span class="s2">"persistent"</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="practical-examples">Practical Examples</h2>
 <h3 id="enemy-management">Enemy Management</h3>
@@ -2490,16 +2562,16 @@
 <span class="k">func</span><span class="w"> </span><span class="n">spawn_enemy</span><span class="p">(</span><span class="n">position</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">Vector2</span><span class="p">):</span>
 <span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">enemy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">enemy_scene</span><span class="o">.</span><span class="n">instantiate</span><span class="p">()</span>
 <span class="w">    </span><span class="n">enemy</span><span class="o">.</span><span class="n">global_position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">position</span>
-<span class="w">    </span><span class="n">enemy</span><span class="o">.</span><span class="n">add_to_group</span><span class="p">(</span><span class="s2">&quot;enemies&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">enemy</span><span class="o">.</span><span class="n">add_to_group</span><span class="p">(</span><span class="s2">"enemies"</span><span class="p">)</span>
 <span class="w">    </span><span class="n">add_child</span><span class="p">(</span><span class="n">enemy</span><span class="p">)</span>
 
 <span class="c1"># Game manager - damage all enemies</span>
 <span class="k">func</span><span class="w"> </span><span class="n">damage_all_enemies</span><span class="p">(</span><span class="n">amount</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">int</span><span class="p">):</span>
-<span class="w">    </span><span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">call_group</span><span class="p">(</span><span class="s2">&quot;enemies&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;take_damage&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">amount</span><span class="p">)</span>
+<span class="w">    </span><span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">call_group</span><span class="p">(</span><span class="s2">"enemies"</span><span class="p">,</span><span class="w"> </span><span class="s2">"take_damage"</span><span class="p">,</span><span class="w"> </span><span class="n">amount</span><span class="p">)</span>
 
 <span class="c1"># Check win condition</span>
 <span class="k">func</span><span class="w"> </span><span class="n">check_victory</span><span class="p">():</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">get_nodes_in_group</span><span class="p">(</span><span class="s2">&quot;enemies&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">is_empty</span><span class="p">():</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">get_nodes_in_group</span><span class="p">(</span><span class="s2">"enemies"</span><span class="p">)</span><span class="o">.</span><span class="n">is_empty</span><span class="p">():</span>
 <span class="w">        </span><span class="n">trigger_victory</span><span class="p">()</span>
 </code></pre></div>
 <h3 id="collectible-system">Collectible System</h3>
@@ -2507,13 +2579,13 @@
 <span class="k">extends</span><span class="w"> </span><span class="n">Area2D</span>
 
 <span class="k">func</span><span class="w"> </span><span class="n">_ready</span><span class="p">():</span>
-<span class="w">    </span><span class="n">add_to_group</span><span class="p">(</span><span class="s2">&quot;collectibles&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">add_to_group</span><span class="p">(</span><span class="s2">"collectibles"</span><span class="p">)</span>
 <span class="w">    </span><span class="n">body_entered</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">_on_collected</span><span class="p">)</span>
 
 <span class="k">func</span><span class="w"> </span><span class="n">_on_collected</span><span class="p">(</span><span class="n">body</span><span class="p">):</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">body</span><span class="o">.</span><span class="n">is_in_group</span><span class="p">(</span><span class="s2">&quot;player&quot;</span><span class="p">):</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">body</span><span class="o">.</span><span class="n">is_in_group</span><span class="p">(</span><span class="s2">"player"</span><span class="p">):</span>
 <span class="w">        </span><span class="c1"># Update UI counter</span>
-<span class="w">        </span><span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">call_group</span><span class="p">(</span><span class="s2">&quot;ui_managers&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;update_collectible_count&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">call_group</span><span class="p">(</span><span class="s2">"ui_managers"</span><span class="p">,</span><span class="w"> </span><span class="s2">"update_collectible_count"</span><span class="p">)</span>
 <span class="w">        </span><span class="n">queue_free</span><span class="p">()</span>
 </code></pre></div>
 <h3 id="pause-system">Pause System</h3>
@@ -2522,15 +2594,15 @@
 
 <span class="k">func</span><span class="w"> </span><span class="n">pause_game</span><span class="p">():</span>
 <span class="w">    </span><span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">paused</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">true</span>
-<span class="w">    </span><span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">set_group</span><span class="p">(</span><span class="s2">&quot;pausable&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;process_mode&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Node</span><span class="o">.</span><span class="n">PROCESS_MODE_DISABLED</span><span class="p">)</span>
+<span class="w">    </span><span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">set_group</span><span class="p">(</span><span class="s2">"pausable"</span><span class="p">,</span><span class="w"> </span><span class="s2">"process_mode"</span><span class="p">,</span><span class="w"> </span><span class="n">Node</span><span class="o">.</span><span class="n">PROCESS_MODE_DISABLED</span><span class="p">)</span>
 
 <span class="k">func</span><span class="w"> </span><span class="n">resume_game</span><span class="p">():</span>
 <span class="w">    </span><span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">paused</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">false</span>
-<span class="w">    </span><span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">set_group</span><span class="p">(</span><span class="s2">&quot;pausable&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;process_mode&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Node</span><span class="o">.</span><span class="n">PROCESS_MODE_INHERIT</span><span class="p">)</span>
+<span class="w">    </span><span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">set_group</span><span class="p">(</span><span class="s2">"pausable"</span><span class="p">,</span><span class="w"> </span><span class="s2">"process_mode"</span><span class="p">,</span><span class="w"> </span><span class="n">Node</span><span class="o">.</span><span class="n">PROCESS_MODE_INHERIT</span><span class="p">)</span>
 
 <span class="c1"># Add to pausable objects</span>
 <span class="k">func</span><span class="w"> </span><span class="n">_ready</span><span class="p">():</span>
-<span class="w">    </span><span class="n">add_to_group</span><span class="p">(</span><span class="s2">&quot;pausable&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">add_to_group</span><span class="p">(</span><span class="s2">"pausable"</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="level-cleanup">Level Cleanup</h3>
 <div class="highlight"><pre><span></span><code><span class="c1"># Scene transition manager</span>
@@ -2538,69 +2610,71 @@
 
 <span class="k">func</span><span class="w"> </span><span class="n">cleanup_level</span><span class="p">():</span>
 <span class="w">    </span><span class="c1"># Remove all temporary objects</span>
-<span class="w">    </span><span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">call_group</span><span class="p">(</span><span class="s2">&quot;temporary&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;queue_free&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">call_group</span><span class="p">(</span><span class="s2">"temporary"</span><span class="p">,</span><span class="w"> </span><span class="s2">"queue_free"</span><span class="p">)</span>
 
 <span class="w">    </span><span class="c1"># Reset persistent objects</span>
-<span class="w">    </span><span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">call_group</span><span class="p">(</span><span class="s2">&quot;persistent&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;reset_state&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">call_group</span><span class="p">(</span><span class="s2">"persistent"</span><span class="p">,</span><span class="w"> </span><span class="s2">"reset_state"</span><span class="p">)</span>
 
 <span class="w">    </span><span class="c1"># Hide UI elements</span>
-<span class="w">    </span><span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">call_group</span><span class="p">(</span><span class="s2">&quot;level_ui&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;visible&quot;</span><span class="p">,</span><span class="w"> </span><span class="bp">false</span><span class="p">)</span>
+<span class="w">    </span><span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">call_group</span><span class="p">(</span><span class="s2">"level_ui"</span><span class="p">,</span><span class="w"> </span><span class="s2">"visible"</span><span class="p">,</span><span class="w"> </span><span class="bp">false</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="performance-tips">Performance Tips</h2>
 <h3 id="use-call-flags-for-optimization">Use Call Flags for Optimization</h3>
 <div class="highlight"><pre><span></span><code><span class="c1"># Defer calls to avoid issues during physics processing</span>
 <span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">call_group_flags</span><span class="p">(</span>
 <span class="w">    </span><span class="n">SceneTree</span><span class="o">.</span><span class="n">GROUP_CALL_DEFERRED</span><span class="p">,</span>
-<span class="w">    </span><span class="s2">&quot;enemies&quot;</span><span class="p">,</span><span class="w"> </span>
-<span class="w">    </span><span class="s2">&quot;die&quot;</span>
+<span class="w">    </span><span class="s2">"enemies"</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="s2">"die"</span>
 <span class="p">)</span>
 
 <span class="c1"># Reverse call order (useful for cleanup)</span>
 <span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">call_group_flags</span><span class="p">(</span>
 <span class="w">    </span><span class="n">SceneTree</span><span class="o">.</span><span class="n">GROUP_CALL_REVERSE</span><span class="p">,</span>
-<span class="w">    </span><span class="s2">&quot;cleanup_objects&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="s2">&quot;cleanup&quot;</span>
+<span class="w">    </span><span class="s2">"cleanup_objects"</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">"cleanup"</span>
 <span class="p">)</span>
 
 <span class="c1"># Unique calls only (avoid duplicate calls in same frame)</span>
 <span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">call_group_flags</span><span class="p">(</span>
 <span class="w">    </span><span class="n">SceneTree</span><span class="o">.</span><span class="n">GROUP_CALL_UNIQUE</span><span class="p">,</span>
-<span class="w">    </span><span class="s2">&quot;audio_sources&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="s2">&quot;stop&quot;</span>
+<span class="w">    </span><span class="s2">"audio_sources"</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">"stop"</span>
 <span class="p">)</span>
 </code></pre></div>
 <h3 id="efficient-group-management">Efficient Group Management</h3>
 <div class="highlight"><pre><span></span><code><span class="c1"># Cache group references for frequently accessed groups</span>
-<span class="err">@</span><span class="k">onready</span><span class="w"> </span><span class="k">var</span><span class="w"> </span><span class="n">players</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">get_nodes_in_group</span><span class="p">(</span><span class="s2">&quot;player&quot;</span><span class="p">)</span>
-<span class="err">@</span><span class="k">onready</span><span class="w"> </span><span class="k">var</span><span class="w"> </span><span class="n">enemies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">get_nodes_in_group</span><span class="p">(</span><span class="s2">&quot;enemies&quot;</span><span class="p">)</span>
+<span class="err">@</span><span class="k">onready</span><span class="w"> </span><span class="k">var</span><span class="w"> </span><span class="n">players</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">get_nodes_in_group</span><span class="p">(</span><span class="s2">"player"</span><span class="p">)</span>
+<span class="err">@</span><span class="k">onready</span><span class="w"> </span><span class="k">var</span><span class="w"> </span><span class="n">enemies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">get_nodes_in_group</span><span class="p">(</span><span class="s2">"enemies"</span><span class="p">)</span>
 
 <span class="c1"># Use specific group names to avoid conflicts</span>
-<span class="n">add_to_group</span><span class="p">(</span><span class="s2">&quot;level1_enemies&quot;</span><span class="p">)</span><span class="w">  </span><span class="c1"># Instead of just &quot;enemies&quot;</span>
-<span class="n">add_to_group</span><span class="p">(</span><span class="s2">&quot;ui_main_menu&quot;</span><span class="p">)</span><span class="w">    </span><span class="c1"># Instead of just &quot;ui&quot;</span>
+<span class="n">add_to_group</span><span class="p">(</span><span class="s2">"level1_enemies"</span><span class="p">)</span><span class="w">  </span><span class="c1"># Instead of just "enemies"</span>
+<span class="n">add_to_group</span><span class="p">(</span><span class="s2">"ui_main_menu"</span><span class="p">)</span><span class="w">    </span><span class="c1"># Instead of just "ui"</span>
 </code></pre></div>
 <h2 id="common-patterns">Common Patterns</h2>
 <h3 id="singleton-access">Singleton Access</h3>
 <div class="highlight"><pre><span></span><code><span class="c1"># Add singleton to group in _ready()</span>
 <span class="k">func</span><span class="w"> </span><span class="n">_ready</span><span class="p">():</span>
-<span class="w">    </span><span class="n">add_to_group</span><span class="p">(</span><span class="s2">&quot;game_manager&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">add_to_group</span><span class="p">(</span><span class="s2">"game_manager"</span><span class="p">)</span>
 
 <span class="c1"># Access from anywhere</span>
-<span class="k">var</span><span class="w"> </span><span class="n">game_manager</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">get_first_node_in_group</span><span class="p">(</span><span class="s2">&quot;game_manager&quot;</span><span class="p">)</span>
+<span class="k">var</span><span class="w"> </span><span class="n">game_manager</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">get_first_node_in_group</span><span class="p">(</span><span class="s2">"game_manager"</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="event-broadcasting">Event Broadcasting</h3>
 <div class="highlight"><pre><span></span><code><span class="c1"># Broadcast events to listeners</span>
 <span class="k">func</span><span class="w"> </span><span class="n">broadcast_game_event</span><span class="p">(</span><span class="n">event_name</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">String</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb nb-Type">null</span><span class="p">):</span>
-<span class="w">    </span><span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">call_group</span><span class="p">(</span><span class="s2">&quot;event_listeners&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;on_game_event&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">event_name</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="p">)</span>
+<span class="w">    </span><span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">call_group</span><span class="p">(</span><span class="s2">"event_listeners"</span><span class="p">,</span><span class="w"> </span><span class="s2">"on_game_event"</span><span class="p">,</span><span class="w"> </span><span class="n">event_name</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="p">)</span>
 
 <span class="c1"># Listener nodes implement on_game_event</span>
 <span class="k">func</span><span class="w"> </span><span class="n">on_game_event</span><span class="p">(</span><span class="n">event_name</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">String</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="p">):</span>
 <span class="w">    </span><span class="k">match</span><span class="w"> </span><span class="n">event_name</span><span class="p">:</span>
-<span class="w">        </span><span class="s2">&quot;player_died&quot;</span><span class="p">:</span>
+<span class="w">        </span><span class="s2">"player_died"</span><span class="p">:</span>
 <span class="w">            </span><span class="n">show_death_screen</span><span class="p">()</span>
-<span class="w">        </span><span class="s2">&quot;score_changed&quot;</span><span class="p">:</span>
+<span class="w">        </span><span class="s2">"score_changed"</span><span class="p">:</span>
 <span class="w">            </span><span class="n">update_score_display</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 </code></pre></div>
 <p>Groups provide a flexible and efficient way to organize and manage nodes in your Godot projects. They're particularly powerful for game systems that need to operate on multiple objects simultaneously.</p>
+
+
 
 
 
@@ -2631,8 +2705,8 @@
   
   
     Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
     </a>
   
 </div>
@@ -2650,10 +2724,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tabs", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.instant","navigation.tabs","content.code.copy","content.code.annotate"],"search":"../../assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.49251538.min.js"></script>
       
     
   </body>
