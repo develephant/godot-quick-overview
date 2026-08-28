@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../basic_ui/">
+        <link rel="prev" href="../../resource/custom_resources_tres/">
       
       
-        <link rel="next" href="../../data/save_and_load/">
+        <link rel="next" href="../file_management/">
       
       
         
@@ -23,7 +23,7 @@
     
     
       
-        <title>Input - Godot 4 Rapid Reference</title>
+        <title>File IO - Godot 4 Rapid Reference</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#input-events" class="md-skip">
+        <a href="#working-with-files" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Input
+              File IO
             
           </span>
         </div>
@@ -310,13 +310,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../basic_ui/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../ui/basic_ui/" class="md-tabs__link">
           
   
   
@@ -372,11 +370,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../files/file_io/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
   
@@ -1141,29 +1141,24 @@
       
   
   
-    
   
   
-  
     
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
         
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
             
   
   
@@ -1181,7 +1176,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1199,7 +1194,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../basic_ui/" class="md-nav__link">
+      <a href="../../ui/basic_ui/" class="md-nav__link">
         
   
   
@@ -1224,37 +1219,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Input
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../ui/input_events/" class="md-nav__link">
         
   
   
@@ -1270,98 +1238,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#input-map-settings" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Input Map Settings
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Input Map Settings">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#define-actions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Define Actions
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#polling-input" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Polling Input
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#event-based-input" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Event Based Input
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#button-signals" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Button Signals
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sprite-click-detection" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Sprite Click Detection
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1548,24 +1424,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
         
           
-          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
             
   
   
@@ -1583,7 +1464,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_10">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1598,10 +1479,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../files/file_io/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    File IO
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1617,6 +1525,170 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fileaccess-quick-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FileAccess Quick Reference
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FileAccess Quick Reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reading-a-text-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reading a text file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#writing-text" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Writing text
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reading-line-by-line" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reading line by line
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#binary-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Binary files
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diraccess-traversing-directories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DirAccess: Traversing Directories
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DirAccess: Traversing Directories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        List files
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iterate-a-folder-of-tres-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Iterate a folder of .tres files
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-directories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create directories
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preloading-assets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preloading Assets
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-fileaccess-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common FileAccess Methods
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-and-pitfalls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips and Pitfalls
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1629,7 +1701,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../files/file_management/" class="md-nav__link">
+      <a href="../file_management/" class="md-nav__link">
         
   
   
@@ -1657,7 +1729,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../files/user_files/" class="md-nav__link">
+      <a href="../user_files/" class="md-nav__link">
         
   
   
@@ -1938,22 +2010,55 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#input-map-settings" class="md-nav__link">
+  <a href="#fileaccess-quick-reference" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Input Map Settings
+        FileAccess Quick Reference
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Input Map Settings">
+    <nav class="md-nav" aria-label="FileAccess Quick Reference">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#define-actions" class="md-nav__link">
+  <a href="#reading-a-text-file" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Define Actions
+        Reading a text file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#writing-text" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Writing text
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reading-line-by-line" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reading line by line
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#binary-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Binary files
       
     </span>
   </a>
@@ -1966,10 +2071,60 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#polling-input" class="md-nav__link">
+  <a href="#diraccess-traversing-directories" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Polling Input
+        DirAccess: Traversing Directories
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DirAccess: Traversing Directories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        List files
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iterate-a-folder-of-tres-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Iterate a folder of .tres files
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-directories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create directories
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preloading-assets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preloading Assets
       
     </span>
   </a>
@@ -1977,10 +2132,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#event-based-input" class="md-nav__link">
+  <a href="#common-fileaccess-methods" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Event Based Input
+        Common FileAccess Methods
       
     </span>
   </a>
@@ -1988,21 +2143,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#button-signals" class="md-nav__link">
+  <a href="#tips-and-pitfalls" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Button Signals
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sprite-click-detection" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Sprite Click Detection
+        Tips and Pitfalls
       
     </span>
   </a>
@@ -2026,102 +2170,165 @@
 
 
 
-<h1 id="input-events">Input Events</h1>
-<h2 id="input-map-settings">Input Map Settings</h2>
-<p>Navigate to <strong>Project Settings &gt; Input Map</strong> in the editor.</p>
-<h3 id="define-actions">Define Actions</h3>
+<h1 id="working-with-files">Working with Files</h1>
+<h2 id="fileaccess-quick-reference">FileAccess Quick Reference</h2>
+<p>Godot 4 uses <code>FileAccess</code> for reading and writing files. It works with <code>res://</code> (project files) and <code>user://</code> (user data) paths.</p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>FileAccess.READ</code></td>
+<td>Open for reading</td>
+</tr>
+<tr>
+<td><code>FileAccess.WRITE</code></td>
+<td>Create or truncate and write</td>
+</tr>
+<tr>
+<td><code>FileAccess.READ_WRITE</code></td>
+<td>Open existing file for both</td>
+</tr>
+</tbody>
+</table>
+<h3 id="reading-a-text-file">Reading a text file</h3>
+<div class="highlight"><pre><span></span><code><span class="k">var</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FileAccess</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;res://data/level_list.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">FileAccess</span><span class="o">.</span><span class="n">READ</span><span class="p">)</span>
+<span class="k">if</span><span class="w"> </span><span class="n">file</span><span class="p">:</span>
+<span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="o">.</span><span class="n">get_as_text</span><span class="p">()</span>
+<span class="w">    </span><span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="writing-text">Writing text</h3>
+<div class="highlight"><pre><span></span><code><span class="k">var</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FileAccess</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;user://log.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">FileAccess</span><span class="o">.</span><span class="n">WRITE</span><span class="p">)</span>
+<span class="k">if</span><span class="w"> </span><span class="n">file</span><span class="p">:</span>
+<span class="w">    </span><span class="n">file</span><span class="o">.</span><span class="n">store_line</span><span class="p">(</span><span class="s2">&quot;Game started&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="reading-line-by-line">Reading line by line</h3>
+<div class="highlight"><pre><span></span><code><span class="k">var</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FileAccess</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;user://save_data.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">FileAccess</span><span class="o">.</span><span class="n">READ</span><span class="p">)</span>
+<span class="k">if</span><span class="w"> </span><span class="n">file</span><span class="p">:</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">file</span><span class="o">.</span><span class="n">eof_reached</span><span class="p">():</span>
+<span class="w">        </span><span class="k">var</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="o">.</span><span class="n">get_line</span><span class="p">()</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+<span class="w">    </span><span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="binary-files">Binary files</h3>
+<div class="highlight"><pre><span></span><code><span class="k">var</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FileAccess</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;user://snapshot.bin&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">FileAccess</span><span class="o">.</span><span class="n">WRITE</span><span class="p">)</span>
+<span class="n">file</span><span class="o">.</span><span class="n">store_32</span><span class="p">(</span><span class="mi">12345</span><span class="p">)</span>
+<span class="n">file</span><span class="o">.</span><span class="n">store_float</span><span class="p">(</span><span class="mf">1.5</span><span class="p">)</span>
+<span class="n">file</span><span class="o">.</span><span class="n">store_buffer</span><span class="p">(</span><span class="n">image_data</span><span class="p">)</span>
+<span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div>
+<h2 id="diraccess-traversing-directories">DirAccess: Traversing Directories</h2>
+<h3 id="list-files">List files</h3>
+<div class="highlight"><pre><span></span><code><span class="k">var</span><span class="w"> </span><span class="n">dir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DirAccess</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;res://data/items&quot;</span><span class="p">)</span>
+<span class="k">if</span><span class="w"> </span><span class="n">dir</span><span class="p">:</span>
+<span class="w">    </span><span class="n">dir</span><span class="o">.</span><span class="n">list_dir_begin</span><span class="p">()</span>
+<span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">file_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dir</span><span class="o">.</span><span class="n">get_next</span><span class="p">()</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="n">file_name</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">:</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">dir</span><span class="o">.</span><span class="n">current_is_dir</span><span class="p">():</span>
+<span class="w">            </span><span class="nb">print</span><span class="p">(</span><span class="n">file_name</span><span class="p">)</span>
+<span class="w">        </span><span class="n">file_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dir</span><span class="o">.</span><span class="n">get_next</span><span class="p">()</span>
+<span class="w">    </span><span class="n">dir</span><span class="o">.</span><span class="n">list_dir_end</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="iterate-a-folder-of-tres-files">Iterate a folder of <code>.tres</code> files</h3>
+<div class="highlight"><pre><span></span><code><span class="k">var</span><span class="w"> </span><span class="n">dir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DirAccess</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;res://data/weapons&quot;</span><span class="p">)</span>
+<span class="k">if</span><span class="w"> </span><span class="n">dir</span><span class="p">:</span>
+<span class="w">    </span><span class="n">dir</span><span class="o">.</span><span class="n">list_dir_begin</span><span class="p">()</span>
+<span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">file_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dir</span><span class="o">.</span><span class="n">get_next</span><span class="p">()</span>
+
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="n">file_name</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">:</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">file_name</span><span class="o">.</span><span class="n">ends_with</span><span class="p">(</span><span class="s2">&quot;.tres&quot;</span><span class="p">):</span>
+<span class="w">            </span><span class="k">var</span><span class="w"> </span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;res://data/weapons/&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">file_name</span>
+<span class="w">            </span><span class="k">var</span><span class="w"> </span><span class="n">weapon</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">load</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">WeaponData</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="n">weapon</span><span class="p">:</span>
+<span class="w">                </span><span class="nb">print</span><span class="p">(</span><span class="n">weapon</span><span class="o">.</span><span class="n">weapon_name</span><span class="p">)</span>
+<span class="w">        </span><span class="n">file_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dir</span><span class="o">.</span><span class="n">get_next</span><span class="p">()</span>
+
+<span class="w">    </span><span class="n">dir</span><span class="o">.</span><span class="n">list_dir_end</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="create-directories">Create directories</h3>
+<div class="highlight"><pre><span></span><code><span class="n">DirAccess</span><span class="o">.</span><span class="n">make_dir_recursive_absolute</span><span class="p">(</span><span class="s2">&quot;user://saves/backup&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="preloading-assets">Preloading Assets</h2>
+<p>Use <code>preload()</code> for known paths at compile time. It is faster and safer than <code>load()</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="k">const</span><span class="w"> </span><span class="n">BULLET_SCENE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">preload</span><span class="p">(</span><span class="s2">&quot;res://scenes/bullet.tscn&quot;</span><span class="p">)</span>
+<span class="k">const</span><span class="w"> </span><span class="n">COIN_TEXTURE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">preload</span><span class="p">(</span><span class="s2">&quot;res://sprites/coin.png&quot;</span><span class="p">)</span>
+
+<span class="k">func</span><span class="w"> </span><span class="n">spawn_bullet</span><span class="p">():</span>
+<span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">bullet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BULLET_SCENE</span><span class="o">.</span><span class="n">instantiate</span><span class="p">()</span>
+<span class="w">    </span><span class="n">add_child</span><span class="p">(</span><span class="n">bullet</span><span class="p">)</span>
+</code></pre></div>
+<p><code>preload()</code> only works with string literal paths inside <code>res://</code>.</p>
+<h2 id="common-fileaccess-methods">Common FileAccess Methods</h2>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>FileAccess.file_exists(path)</code></td>
+<td>Check if a file exists</td>
+</tr>
+<tr>
+<td><code>file.get_as_text()</code></td>
+<td>Read whole file as a <code>String</code></td>
+</tr>
+<tr>
+<td><code>file.get_line()</code></td>
+<td>Read one line</td>
+</tr>
+<tr>
+<td><code>file.get_csv_line()</code></td>
+<td>Read one CSV row</td>
+</tr>
+<tr>
+<td><code>file.store_line(text)</code></td>
+<td>Write a line with a newline</td>
+</tr>
+<tr>
+<td><code>file.store_string(text)</code></td>
+<td>Write text without a newline</td>
+</tr>
+<tr>
+<td><code>file.get_position()</code> / <code>file.get_length()</code></td>
+<td>Track read progress</td>
+</tr>
+<tr>
+<td><code>file.seek(position)</code></td>
+<td>Jump to a byte offset</td>
+</tr>
+<tr>
+<td><code>file.close()</code></td>
+<td>Close the file</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tips-and-pitfalls">Tips and Pitfalls</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Always check FileAccess.open returned a valid object</span>
+<span class="k">var</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FileAccess</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;user://save.json&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">FileAccess</span><span class="o">.</span><span class="n">READ</span><span class="p">)</span>
+<span class="k">if</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">file</span><span class="p">:</span>
+<span class="w">    </span><span class="k">return</span>
+
+<span class="c1"># Always close when done</span>
+<span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="c1"># Use user:// for anything written at runtime</span>
+<span class="c1"># res:// is read-only in exported games</span>
+</code></pre></div>
+<p><strong>Quick Summary:</strong></p>
 <ul>
-<li><strong><em>move_left</em></strong> -&gt; <code>A</code>, <code>Left Arrow</code></li>
-<li><strong><em>move_right</em></strong> -&gt; <code>D</code>, <code>Right Arrow</code></li>
-<li><strong><em>jump</em></strong> -&gt; <code>Space</code></li>
-<li><strong><em>attack</em></strong> -&gt; <code>Mouse Button Left</code></li>
+<li><code>FileAccess</code> is the main class for file read/write.</li>
+<li><code>DirAccess</code> lists, creates, and copies directories.</li>
+<li><code>preload("res://...")</code> is for compile-time known assets.</li>
+<li>Use <code>user://</code> for saved data and <code>res://</code> for shipped assets.</li>
 </ul>
-<h2 id="polling-input">Polling Input</h2>
-<div class="highlight"><pre><span></span><code><span class="c1"># ============================================</span>
-<span class="c1"># POLLING INPUT (every frame)</span>
-<span class="c1"># ============================================</span>
-<span class="k">extends</span><span class="w"> </span><span class="n">CharacterBody2D</span>
-
-<span class="k">func</span><span class="w"> </span><span class="n">_physics_process</span><span class="p">(</span><span class="n">delta</span><span class="p">):</span>
-<span class="w">    </span><span class="c1"># Digital input (pressed/not pressed):</span>
-<span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">direction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Input</span><span class="o">.</span><span class="n">get_axis</span><span class="p">(</span><span class="s2">&quot;move_left&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;move_right&quot;</span><span class="p">)</span>
-<span class="w">    </span><span class="n">velocity</span><span class="o">.</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">direction</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">move_speed</span>
-
-<span class="w">    </span><span class="c1"># Jump (just pressed this frame):</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">Input</span><span class="o">.</span><span class="n">is_action_just_pressed</span><span class="p">(</span><span class="s2">&quot;jump&quot;</span><span class="p">):</span>
-<span class="w">        </span><span class="n">velocity</span><span class="o">.</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">jump_force</span>
-
-<span class="w">    </span><span class="c1"># Attack (held down):</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">Input</span><span class="o">.</span><span class="n">is_action_pressed</span><span class="p">(</span><span class="s2">&quot;attack&quot;</span><span class="p">):</span>
-<span class="w">        </span><span class="n">charge_attack</span><span class="p">(</span><span class="n">delta</span><span class="p">)</span>
-
-<span class="w">    </span><span class="n">move_and_slide</span><span class="p">()</span>
-</code></pre></div>
-<h2 id="event-based-input">Event Based Input</h2>
-<div class="highlight"><pre><span></span><code><span class="c1"># ============================================</span>
-<span class="c1"># EVENT-BASED INPUT</span>
-<span class="c1"># ============================================</span>
-<span class="k">extends</span><span class="w"> </span><span class="n">Node</span>
-
-<span class="k">func</span><span class="w"> </span><span class="n">_unhandled_input</span><span class="p">(</span><span class="n">event</span><span class="p">):</span>
-<span class="w">    </span><span class="c1"># Keyboard:</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">event</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">InputEventKey</span><span class="p">:</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">event</span><span class="o">.</span><span class="n">pressed</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">event</span><span class="o">.</span><span class="n">keycode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">KEY_ESCAPE</span><span class="p">:</span>
-<span class="w">            </span><span class="n">toggle_pause</span><span class="p">()</span>
-
-<span class="w">    </span><span class="c1"># Mouse button:</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">event</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">InputEventMouseButton</span><span class="p">:</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">event</span><span class="o">.</span><span class="n">button_index</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MOUSE_BUTTON_LEFT</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">event</span><span class="o">.</span><span class="n">pressed</span><span class="p">:</span>
-<span class="w">            </span><span class="n">shoot</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">position</span><span class="p">)</span>
-
-<span class="w">    </span><span class="c1"># Mouse motion:</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">event</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">InputEventMouseMotion</span><span class="p">:</span>
-<span class="w">        </span><span class="n">aim_at</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">position</span><span class="p">)</span>
-</code></pre></div>
-<h2 id="button-signals">Button Signals</h2>
-<div class="highlight"><pre><span></span><code><span class="c1"># ============================================</span>
-<span class="c1"># UI BUTTON SIGNALS</span>
-<span class="c1"># ============================================</span>
-<span class="k">extends</span><span class="w"> </span><span class="n">Control</span>
-
-<span class="err">@</span><span class="k">onready</span><span class="w"> </span><span class="k">var</span><span class="w"> </span><span class="n">start_button</span><span class="p">:</span><span class="w"> </span><span class="n">Button</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">$</span><span class="n">StartButton</span>
-
-<span class="k">func</span><span class="w"> </span><span class="n">_ready</span><span class="p">():</span>
-<span class="w">    </span><span class="n">start_button</span><span class="o">.</span><span class="n">pressed</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">_on_start_pressed</span><span class="p">)</span>
-
-<span class="w">    </span><span class="c1"># Or multi-param:</span>
-<span class="w">    </span><span class="n">start_button</span><span class="o">.</span><span class="n">pressed</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="k">func</span><span class="p">():</span><span class="w"> </span><span class="n">start_game</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
-
-<span class="k">func</span><span class="w"> </span><span class="n">_on_start_pressed</span><span class="p">():</span>
-<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Game starting!&quot;</span><span class="p">)</span>
-<span class="w">    </span><span class="n">GameManager</span><span class="o">.</span><span class="n">change_scene</span><span class="p">(</span><span class="s2">&quot;res://scenes/game.tscn&quot;</span><span class="p">)</span>
-</code></pre></div>
-<h2 id="sprite-click-detection">Sprite Click Detection</h2>
-<div class="highlight"><pre><span></span><code><span class="c1"># ============================================</span>
-<span class="c1"># CLICK DETECTION ON SPRITES</span>
-<span class="c1"># ============================================</span>
-<span class="k">extends</span><span class="w"> </span><span class="n">Sprite2D</span>
-
-<span class="k">signal</span><span class="w"> </span><span class="n">clicked</span>
-
-<span class="k">func</span><span class="w"> </span><span class="n">_ready</span><span class="p">():</span>
-<span class="w">    </span><span class="c1"># Make it clickable (needs CollisionShape2D child):</span>
-<span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">area</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Area2D</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
-<span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">collision</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CollisionShape2D</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
-<span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">shape</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RectangleShape2D</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
-<span class="w">    </span><span class="n">shape</span><span class="o">.</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">texture</span><span class="o">.</span><span class="n">get_size</span><span class="p">()</span>
-<span class="w">    </span><span class="n">collision</span><span class="o">.</span><span class="n">shape</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">shape</span>
-<span class="w">    </span><span class="n">area</span><span class="o">.</span><span class="n">add_child</span><span class="p">(</span><span class="n">collision</span><span class="p">)</span>
-<span class="w">    </span><span class="n">add_child</span><span class="p">(</span><span class="n">area</span><span class="p">)</span>
-
-<span class="w">    </span><span class="n">area</span><span class="o">.</span><span class="n">input_event</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">_on_input_event</span><span class="p">)</span>
-
-<span class="k">func</span><span class="w"> </span><span class="n">_on_input_event</span><span class="p">(</span><span class="n">viewport</span><span class="p">,</span><span class="w"> </span><span class="n">event</span><span class="p">,</span><span class="w"> </span><span class="n">shape_idx</span><span class="p">):</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">event</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">InputEventMouseButton</span><span class="p">:</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">event</span><span class="o">.</span><span class="n">button_index</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MOUSE_BUTTON_LEFT</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">event</span><span class="o">.</span><span class="n">pressed</span><span class="p">:</span>
-<span class="w">            </span><span class="n">clicked</span><span class="o">.</span><span class="n">emit</span><span class="p">()</span>
-<span class="w">            </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sprite clicked!&quot;</span><span class="p">)</span>
-</code></pre></div>
 
 
 

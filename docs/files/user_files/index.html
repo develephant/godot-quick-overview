@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../basic_ui/">
+        <link rel="prev" href="../file_management/">
       
       
-        <link rel="next" href="../../data/save_and_load/">
+        <link rel="next" href="../../modding/ugc_create_and_load/">
       
       
         
@@ -23,7 +23,7 @@
     
     
       
-        <title>Input - Godot 4 Rapid Reference</title>
+        <title>User Files - Godot 4 Rapid Reference</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#input-events" class="md-skip">
+        <a href="#working-with-user-files" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Input
+              User Files
             
           </span>
         </div>
@@ -310,13 +310,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../basic_ui/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../ui/basic_ui/" class="md-tabs__link">
           
   
   
@@ -372,11 +370,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../files/file_io/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../file_io/" class="md-tabs__link">
           
   
   
@@ -1141,29 +1141,24 @@
       
   
   
-    
   
   
-  
     
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
         
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
             
   
   
@@ -1181,7 +1176,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1199,7 +1194,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../basic_ui/" class="md-nav__link">
+      <a href="../../ui/basic_ui/" class="md-nav__link">
         
   
   
@@ -1224,37 +1219,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Input
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../ui/input_events/" class="md-nav__link">
         
   
   
@@ -1270,98 +1238,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#input-map-settings" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Input Map Settings
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Input Map Settings">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#define-actions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Define Actions
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#polling-input" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Polling Input
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#event-based-input" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Event Based Input
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#button-signals" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Button Signals
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sprite-click-detection" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Sprite Click Detection
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1548,24 +1424,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
         
           
-          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
             
   
   
@@ -1583,7 +1464,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_10">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1601,7 +1482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../files/file_io/" class="md-nav__link">
+      <a href="../file_io/" class="md-nav__link">
         
   
   
@@ -1629,7 +1510,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../files/file_management/" class="md-nav__link">
+      <a href="../file_management/" class="md-nav__link">
         
   
   
@@ -1654,10 +1535,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../files/user_files/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Files
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1673,6 +1581,120 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-user-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The user:// Directory
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loading-and-saving-user-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Loading and Saving User Data
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Loading and Saving User Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simple-text-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Simple text file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configfile-for-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ConfigFile for settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#saving-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Saving JSON
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Use Cases
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-user-directories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating User Directories
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-and-pitfalls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips and Pitfalls
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1938,22 +1960,55 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#input-map-settings" class="md-nav__link">
+  <a href="#the-user-directory" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Input Map Settings
+        The user:// Directory
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Input Map Settings">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loading-and-saving-user-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Loading and Saving User Data
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Loading and Saving User Data">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#define-actions" class="md-nav__link">
+  <a href="#simple-text-file" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Define Actions
+        Simple text file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configfile-for-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ConfigFile for settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#saving-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Saving JSON
       
     </span>
   </a>
@@ -1966,10 +2021,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#polling-input" class="md-nav__link">
+  <a href="#common-use-cases" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Polling Input
+        Common Use Cases
       
     </span>
   </a>
@@ -1977,10 +2032,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#event-based-input" class="md-nav__link">
+  <a href="#creating-user-directories" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Event Based Input
+        Creating User Directories
       
     </span>
   </a>
@@ -1988,21 +2043,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#button-signals" class="md-nav__link">
+  <a href="#tips-and-pitfalls" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Button Signals
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sprite-click-detection" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Sprite Click Detection
+        Tips and Pitfalls
       
     </span>
   </a>
@@ -2026,102 +2070,133 @@
 
 
 
-<h1 id="input-events">Input Events</h1>
-<h2 id="input-map-settings">Input Map Settings</h2>
-<p>Navigate to <strong>Project Settings &gt; Input Map</strong> in the editor.</p>
-<h3 id="define-actions">Define Actions</h3>
+<h1 id="working-with-user-files">Working with User Files</h1>
+<h2 id="the-user-directory">The <code>user://</code> Directory</h2>
+<p><code>user://</code> is the recommended place to store anything your game writes at runtime: saves, settings, logs, screenshots, and downloaded content. It maps to an OS-specific folder, so it works across Windows, macOS, Linux, Android, and iOS.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">OS</span><span class="o">.</span><span class="n">get_user_data_dir</span><span class="p">())</span>
+<span class="c1"># Windows example: C:/Users/Name/AppData/Roaming/Godot/app_userdata/MyGame</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Why not <code>res://</code>?</p>
+<p><code>res://</code> points at your project files. In an exported build it is read-only, so always write to <code>user://</code>.</p>
+</div>
+<h2 id="loading-and-saving-user-data">Loading and Saving User Data</h2>
+<h3 id="simple-text-file">Simple text file</h3>
+<div class="highlight"><pre><span></span><code><span class="k">const</span><span class="w"> </span><span class="n">SETTINGS_PATH</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;user://settings.txt&quot;</span>
+
+<span class="k">func</span><span class="w"> </span><span class="n">save_volume</span><span class="p">(</span><span class="n">value</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">float</span><span class="p">):</span>
+<span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FileAccess</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">SETTINGS_PATH</span><span class="p">,</span><span class="w"> </span><span class="n">FileAccess</span><span class="o">.</span><span class="n">WRITE</span><span class="p">)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">file</span><span class="p">:</span>
+<span class="w">        </span><span class="n">file</span><span class="o">.</span><span class="n">store_line</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+<span class="w">        </span><span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="k">func</span><span class="w"> </span><span class="n">load_volume</span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nb nb-Type">float</span><span class="p">:</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">FileAccess</span><span class="o">.</span><span class="n">file_exists</span><span class="p">(</span><span class="n">SETTINGS_PATH</span><span class="p">):</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mf">1.0</span>
+<span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FileAccess</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">SETTINGS_PATH</span><span class="p">,</span><span class="w"> </span><span class="n">FileAccess</span><span class="o">.</span><span class="n">READ</span><span class="p">)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">file</span><span class="p">:</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mf">1.0</span>
+<span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="o">.</span><span class="n">get_line</span><span class="p">()</span><span class="o">.</span><span class="n">to_float</span><span class="p">()</span>
+<span class="w">    </span><span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">value</span>
+</code></pre></div>
+<h3 id="configfile-for-settings">ConfigFile for settings</h3>
+<div class="highlight"><pre><span></span><code><span class="k">const</span><span class="w"> </span><span class="n">SETTINGS_PATH</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;user://settings.cfg&quot;</span>
+
+<span class="k">func</span><span class="w"> </span><span class="n">save_settings</span><span class="p">():</span>
+<span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ConfigFile</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
+<span class="w">    </span><span class="n">config</span><span class="o">.</span><span class="n">set_value</span><span class="p">(</span><span class="s2">&quot;audio&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;volume&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">0.8</span><span class="p">)</span>
+<span class="w">    </span><span class="n">config</span><span class="o">.</span><span class="n">set_value</span><span class="p">(</span><span class="s2">&quot;video&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;fullscreen&quot;</span><span class="p">,</span><span class="w"> </span><span class="bp">true</span><span class="p">)</span>
+<span class="w">    </span><span class="n">config</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">SETTINGS_PATH</span><span class="p">)</span>
+
+<span class="k">func</span><span class="w"> </span><span class="n">load_settings</span><span class="p">():</span>
+<span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ConfigFile</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
+<span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">SETTINGS_PATH</span><span class="p">)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">OK</span><span class="p">:</span>
+<span class="w">        </span><span class="k">return</span>
+<span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">volume</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span><span class="s2">&quot;audio&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;volume&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">)</span>
+<span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">fullscreen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span><span class="s2">&quot;video&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;fullscreen&quot;</span><span class="p">,</span><span class="w"> </span><span class="bp">false</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="saving-json">Saving JSON</h3>
+<div class="highlight"><pre><span></span><code><span class="k">const</span><span class="w"> </span><span class="n">SAVE_PATH</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;user://save.json&quot;</span>
+
+<span class="k">func</span><span class="w"> </span><span class="n">save_game</span><span class="p">(</span><span class="n">state</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">Dictionary</span><span class="p">):</span>
+<span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FileAccess</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">SAVE_PATH</span><span class="p">,</span><span class="w"> </span><span class="n">FileAccess</span><span class="o">.</span><span class="n">WRITE</span><span class="p">)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">file</span><span class="p">:</span>
+<span class="w">        </span><span class="k">return</span>
+<span class="w">    </span><span class="n">file</span><span class="o">.</span><span class="n">store_string</span><span class="p">(</span><span class="n">JSON</span><span class="o">.</span><span class="n">stringify</span><span class="p">(</span><span class="n">state</span><span class="p">))</span>
+<span class="w">    </span><span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="k">func</span><span class="w"> </span><span class="n">load_game</span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nb nb-Type">Dictionary</span><span class="p">:</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">FileAccess</span><span class="o">.</span><span class="n">file_exists</span><span class="p">(</span><span class="n">SAVE_PATH</span><span class="p">):</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FileAccess</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">SAVE_PATH</span><span class="p">,</span><span class="w"> </span><span class="n">FileAccess</span><span class="o">.</span><span class="n">READ</span><span class="p">)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">file</span><span class="p">:</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">json</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">JSON</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
+<span class="w">    </span><span class="n">json</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">file</span><span class="o">.</span><span class="n">get_as_text</span><span class="p">())</span>
+<span class="w">    </span><span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">json</span><span class="o">.</span><span class="n">data</span>
+</code></pre></div>
+<h2 id="common-use-cases">Common Use Cases</h2>
+<table>
+<thead>
+<tr>
+<th>Use case</th>
+<th>Suggested path / pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Save games</td>
+<td><code>user://saves/slot1.save</code></td>
+</tr>
+<tr>
+<td>Settings</td>
+<td><code>user://settings.cfg</code></td>
+</tr>
+<tr>
+<td>Logs</td>
+<td><code>user://logs/session.log</code></td>
+</tr>
+<tr>
+<td>Screenshots</td>
+<td><code>user://screenshots/</code> + timestamp</td>
+</tr>
+<tr>
+<td>UGC / mods</td>
+<td><code>user://mods/</code></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span class="c1"># Screenshot example</span>
+<span class="k">var</span><span class="w"> </span><span class="n">img</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_viewport</span><span class="p">()</span><span class="o">.</span><span class="n">get_texture</span><span class="p">()</span><span class="o">.</span><span class="n">get_image</span><span class="p">()</span>
+<span class="k">var</span><span class="w"> </span><span class="n">time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Time</span><span class="o">.</span><span class="n">get_datetime_string_from_system</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;-&quot;</span><span class="p">)</span>
+<span class="n">DirAccess</span><span class="o">.</span><span class="n">make_dir_recursive_absolute</span><span class="p">(</span><span class="s2">&quot;user://screenshots&quot;</span><span class="p">)</span>
+<span class="n">img</span><span class="o">.</span><span class="n">save_png</span><span class="p">(</span><span class="s2">&quot;user://screenshots/shot_&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">time</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;.png&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="creating-user-directories">Creating User Directories</h2>
+<div class="highlight"><pre><span></span><code><span class="n">DirAccess</span><span class="o">.</span><span class="n">make_dir_recursive_absolute</span><span class="p">(</span><span class="s2">&quot;user://saves&quot;</span><span class="p">)</span>
+<span class="n">DirAccess</span><span class="o">.</span><span class="n">make_dir_recursive_absolute</span><span class="p">(</span><span class="s2">&quot;user://mods/weapons&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="tips-and-pitfalls">Tips and Pitfalls</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Create the directory before writing</span>
+<span class="n">DirAccess</span><span class="o">.</span><span class="n">make_dir_recursive_absolute</span><span class="p">(</span><span class="s2">&quot;user://saves&quot;</span><span class="p">)</span>
+
+<span class="c1"># Check a file exists before loading</span>
+<span class="k">if</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">FileAccess</span><span class="o">.</span><span class="n">file_exists</span><span class="p">(</span><span class="s2">&quot;user://save.json&quot;</span><span class="p">):</span>
+<span class="w">    </span><span class="k">return</span>
+
+<span class="c1"># user:// is created automatically on first write</span>
+<span class="c1"># Use OS.get_user_data_dir() to find the real folder for debugging</span>
+</code></pre></div>
+<p><strong>Quick Summary:</strong></p>
 <ul>
-<li><strong><em>move_left</em></strong> -&gt; <code>A</code>, <code>Left Arrow</code></li>
-<li><strong><em>move_right</em></strong> -&gt; <code>D</code>, <code>Right Arrow</code></li>
-<li><strong><em>jump</em></strong> -&gt; <code>Space</code></li>
-<li><strong><em>attack</em></strong> -&gt; <code>Mouse Button Left</code></li>
+<li>Use <code>user://</code> for all runtime writes.</li>
+<li><code>FileAccess</code>, <code>ConfigFile</code>, and <code>JSON</code> cover most save/load needs.</li>
+<li>Create missing directories with <code>DirAccess.make_dir_recursive_absolute</code>.</li>
+<li><code>OS.get_user_data_dir()</code> reveals the actual OS path.</li>
 </ul>
-<h2 id="polling-input">Polling Input</h2>
-<div class="highlight"><pre><span></span><code><span class="c1"># ============================================</span>
-<span class="c1"># POLLING INPUT (every frame)</span>
-<span class="c1"># ============================================</span>
-<span class="k">extends</span><span class="w"> </span><span class="n">CharacterBody2D</span>
-
-<span class="k">func</span><span class="w"> </span><span class="n">_physics_process</span><span class="p">(</span><span class="n">delta</span><span class="p">):</span>
-<span class="w">    </span><span class="c1"># Digital input (pressed/not pressed):</span>
-<span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">direction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Input</span><span class="o">.</span><span class="n">get_axis</span><span class="p">(</span><span class="s2">&quot;move_left&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;move_right&quot;</span><span class="p">)</span>
-<span class="w">    </span><span class="n">velocity</span><span class="o">.</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">direction</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">move_speed</span>
-
-<span class="w">    </span><span class="c1"># Jump (just pressed this frame):</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">Input</span><span class="o">.</span><span class="n">is_action_just_pressed</span><span class="p">(</span><span class="s2">&quot;jump&quot;</span><span class="p">):</span>
-<span class="w">        </span><span class="n">velocity</span><span class="o">.</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">jump_force</span>
-
-<span class="w">    </span><span class="c1"># Attack (held down):</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">Input</span><span class="o">.</span><span class="n">is_action_pressed</span><span class="p">(</span><span class="s2">&quot;attack&quot;</span><span class="p">):</span>
-<span class="w">        </span><span class="n">charge_attack</span><span class="p">(</span><span class="n">delta</span><span class="p">)</span>
-
-<span class="w">    </span><span class="n">move_and_slide</span><span class="p">()</span>
-</code></pre></div>
-<h2 id="event-based-input">Event Based Input</h2>
-<div class="highlight"><pre><span></span><code><span class="c1"># ============================================</span>
-<span class="c1"># EVENT-BASED INPUT</span>
-<span class="c1"># ============================================</span>
-<span class="k">extends</span><span class="w"> </span><span class="n">Node</span>
-
-<span class="k">func</span><span class="w"> </span><span class="n">_unhandled_input</span><span class="p">(</span><span class="n">event</span><span class="p">):</span>
-<span class="w">    </span><span class="c1"># Keyboard:</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">event</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">InputEventKey</span><span class="p">:</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">event</span><span class="o">.</span><span class="n">pressed</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">event</span><span class="o">.</span><span class="n">keycode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">KEY_ESCAPE</span><span class="p">:</span>
-<span class="w">            </span><span class="n">toggle_pause</span><span class="p">()</span>
-
-<span class="w">    </span><span class="c1"># Mouse button:</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">event</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">InputEventMouseButton</span><span class="p">:</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">event</span><span class="o">.</span><span class="n">button_index</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MOUSE_BUTTON_LEFT</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">event</span><span class="o">.</span><span class="n">pressed</span><span class="p">:</span>
-<span class="w">            </span><span class="n">shoot</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">position</span><span class="p">)</span>
-
-<span class="w">    </span><span class="c1"># Mouse motion:</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">event</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">InputEventMouseMotion</span><span class="p">:</span>
-<span class="w">        </span><span class="n">aim_at</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">position</span><span class="p">)</span>
-</code></pre></div>
-<h2 id="button-signals">Button Signals</h2>
-<div class="highlight"><pre><span></span><code><span class="c1"># ============================================</span>
-<span class="c1"># UI BUTTON SIGNALS</span>
-<span class="c1"># ============================================</span>
-<span class="k">extends</span><span class="w"> </span><span class="n">Control</span>
-
-<span class="err">@</span><span class="k">onready</span><span class="w"> </span><span class="k">var</span><span class="w"> </span><span class="n">start_button</span><span class="p">:</span><span class="w"> </span><span class="n">Button</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">$</span><span class="n">StartButton</span>
-
-<span class="k">func</span><span class="w"> </span><span class="n">_ready</span><span class="p">():</span>
-<span class="w">    </span><span class="n">start_button</span><span class="o">.</span><span class="n">pressed</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">_on_start_pressed</span><span class="p">)</span>
-
-<span class="w">    </span><span class="c1"># Or multi-param:</span>
-<span class="w">    </span><span class="n">start_button</span><span class="o">.</span><span class="n">pressed</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="k">func</span><span class="p">():</span><span class="w"> </span><span class="n">start_game</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
-
-<span class="k">func</span><span class="w"> </span><span class="n">_on_start_pressed</span><span class="p">():</span>
-<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Game starting!&quot;</span><span class="p">)</span>
-<span class="w">    </span><span class="n">GameManager</span><span class="o">.</span><span class="n">change_scene</span><span class="p">(</span><span class="s2">&quot;res://scenes/game.tscn&quot;</span><span class="p">)</span>
-</code></pre></div>
-<h2 id="sprite-click-detection">Sprite Click Detection</h2>
-<div class="highlight"><pre><span></span><code><span class="c1"># ============================================</span>
-<span class="c1"># CLICK DETECTION ON SPRITES</span>
-<span class="c1"># ============================================</span>
-<span class="k">extends</span><span class="w"> </span><span class="n">Sprite2D</span>
-
-<span class="k">signal</span><span class="w"> </span><span class="n">clicked</span>
-
-<span class="k">func</span><span class="w"> </span><span class="n">_ready</span><span class="p">():</span>
-<span class="w">    </span><span class="c1"># Make it clickable (needs CollisionShape2D child):</span>
-<span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">area</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Area2D</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
-<span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">collision</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CollisionShape2D</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
-<span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">shape</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RectangleShape2D</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
-<span class="w">    </span><span class="n">shape</span><span class="o">.</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">texture</span><span class="o">.</span><span class="n">get_size</span><span class="p">()</span>
-<span class="w">    </span><span class="n">collision</span><span class="o">.</span><span class="n">shape</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">shape</span>
-<span class="w">    </span><span class="n">area</span><span class="o">.</span><span class="n">add_child</span><span class="p">(</span><span class="n">collision</span><span class="p">)</span>
-<span class="w">    </span><span class="n">add_child</span><span class="p">(</span><span class="n">area</span><span class="p">)</span>
-
-<span class="w">    </span><span class="n">area</span><span class="o">.</span><span class="n">input_event</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">_on_input_event</span><span class="p">)</span>
-
-<span class="k">func</span><span class="w"> </span><span class="n">_on_input_event</span><span class="p">(</span><span class="n">viewport</span><span class="p">,</span><span class="w"> </span><span class="n">event</span><span class="p">,</span><span class="w"> </span><span class="n">shape_idx</span><span class="p">):</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">event</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">InputEventMouseButton</span><span class="p">:</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">event</span><span class="o">.</span><span class="n">button_index</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MOUSE_BUTTON_LEFT</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">event</span><span class="o">.</span><span class="n">pressed</span><span class="p">:</span>
-<span class="w">            </span><span class="n">clicked</span><span class="o">.</span><span class="n">emit</span><span class="p">()</span>
-<span class="w">            </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sprite clicked!&quot;</span><span class="p">)</span>
-</code></pre></div>
 
 
 

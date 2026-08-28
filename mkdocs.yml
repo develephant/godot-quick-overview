@@ -28,6 +28,10 @@ nav:
     - "Save/Load": data/save_and_load.md
   - Resource:
     - "Custom .tres": resource/custom_resources_tres.md
+  - Files:
+    - "File IO": "files/file_io.md"
+    - "Management": "files/file_management.md"
+    - "User Files": "files/user_files.md"
   - Modding:
     - "UGC Concepts": modding/ugc_create_and_load.md
     - "System Theory": modding/modding_system_theory.md

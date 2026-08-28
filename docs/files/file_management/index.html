@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../basic_ui/">
+        <link rel="prev" href="../file_io/">
       
       
-        <link rel="next" href="../../data/save_and_load/">
+        <link rel="next" href="../user_files/">
       
       
         
@@ -23,7 +23,7 @@
     
     
       
-        <title>Input - Godot 4 Rapid Reference</title>
+        <title>Management - Godot 4 Rapid Reference</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#input-events" class="md-skip">
+        <a href="#file-management" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Input
+              Management
             
           </span>
         </div>
@@ -310,13 +310,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../basic_ui/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../ui/basic_ui/" class="md-tabs__link">
           
   
   
@@ -372,11 +370,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../files/file_io/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../file_io/" class="md-tabs__link">
           
   
   
@@ -1141,29 +1141,24 @@
       
   
   
-    
   
   
-  
     
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
         
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
             
   
   
@@ -1181,7 +1176,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1199,7 +1194,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../basic_ui/" class="md-nav__link">
+      <a href="../../ui/basic_ui/" class="md-nav__link">
         
   
   
@@ -1224,37 +1219,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Input
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../ui/input_events/" class="md-nav__link">
         
   
   
@@ -1270,98 +1238,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#input-map-settings" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Input Map Settings
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Input Map Settings">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#define-actions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Define Actions
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#polling-input" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Polling Input
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#event-based-input" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Event Based Input
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#button-signals" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Button Signals
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sprite-click-detection" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Sprite Click Detection
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1548,24 +1424,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
         
           
-          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
             
   
   
@@ -1583,7 +1464,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_10">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1601,7 +1482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../files/file_io/" class="md-nav__link">
+      <a href="../file_io/" class="md-nav__link">
         
   
   
@@ -1626,10 +1507,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../files/file_management/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Management
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1645,6 +1553,137 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#loading-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Loading Resources
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Loading Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#load-vs-preload" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        load() vs preload()
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loading-and-instantiating-scenes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Loading and Instantiating Scenes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loading-json-and-text-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Loading JSON and Text Data
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#saving-and-loading-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Saving and Loading Resources
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Saving and Loading Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configfile-for-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ConfigFile for settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#threaded-loading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Threaded Loading
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hidden-useful-directories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hidden / Useful Directories
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-and-pitfalls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips and Pitfalls
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1657,7 +1696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../files/user_files/" class="md-nav__link">
+      <a href="../user_files/" class="md-nav__link">
         
   
   
@@ -1938,22 +1977,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#input-map-settings" class="md-nav__link">
+  <a href="#loading-resources" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Input Map Settings
+        Loading Resources
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Input Map Settings">
+    <nav class="md-nav" aria-label="Loading Resources">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#define-actions" class="md-nav__link">
+  <a href="#load-vs-preload" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Define Actions
+        load() vs preload()
       
     </span>
   </a>
@@ -1966,10 +2005,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#polling-input" class="md-nav__link">
+  <a href="#loading-and-instantiating-scenes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Polling Input
+        Loading and Instantiating Scenes
       
     </span>
   </a>
@@ -1977,10 +2016,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#event-based-input" class="md-nav__link">
+  <a href="#loading-json-and-text-data" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Event Based Input
+        Loading JSON and Text Data
       
     </span>
   </a>
@@ -1988,10 +2027,38 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#button-signals" class="md-nav__link">
+  <a href="#saving-and-loading-resources" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Button Signals
+        Saving and Loading Resources
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Saving and Loading Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configfile-for-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ConfigFile for settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#threaded-loading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Threaded Loading
       
     </span>
   </a>
@@ -1999,10 +2066,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sprite-click-detection" class="md-nav__link">
+  <a href="#hidden-useful-directories" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Sprite Click Detection
+        Hidden / Useful Directories
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-and-pitfalls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips and Pitfalls
       
     </span>
   </a>
@@ -2026,102 +2104,141 @@
 
 
 
-<h1 id="input-events">Input Events</h1>
-<h2 id="input-map-settings">Input Map Settings</h2>
-<p>Navigate to <strong>Project Settings &gt; Input Map</strong> in the editor.</p>
-<h3 id="define-actions">Define Actions</h3>
+<h1 id="file-management">File Management</h1>
+<h2 id="loading-resources">Loading Resources</h2>
+<h3 id="load-vs-preload"><code>load()</code> vs <code>preload()</code></h3>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>When to use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>preload("res://path")</code></td>
+<td>Path is known at compile time; fast and safe</td>
+</tr>
+<tr>
+<td><code>load("res://path")</code></td>
+<td>Path is dynamic; loaded when called</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span class="c1"># Compile time</span>
+<span class="k">const</span><span class="w"> </span><span class="n">ICON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">preload</span><span class="p">(</span><span class="s2">&quot;res://icon.png&quot;</span><span class="p">)</span>
+
+<span class="c1"># Runtime</span>
+<span class="k">var</span><span class="w"> </span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;res://data/items/&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">item_name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;.tres&quot;</span>
+<span class="k">var</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">load</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">ItemData</span>
+</code></pre></div>
+<h2 id="loading-and-instantiating-scenes">Loading and Instantiating Scenes</h2>
+<div class="highlight"><pre><span></span><code><span class="k">var</span><span class="w"> </span><span class="n">scene</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">load</span><span class="p">(</span><span class="s2">&quot;res://scenes/enemy.tscn&quot;</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">PackedScene</span>
+<span class="k">var</span><span class="w"> </span><span class="n">enemy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scene</span><span class="o">.</span><span class="n">instantiate</span><span class="p">()</span>
+<span class="n">add_child</span><span class="p">(</span><span class="n">enemy</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Shorthand</span>
+<span class="k">var</span><span class="w"> </span><span class="n">player</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">load</span><span class="p">(</span><span class="s2">&quot;res://scenes/player.tscn&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">instantiate</span><span class="p">()</span>
+<span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">current_scene</span><span class="o">.</span><span class="n">add_child</span><span class="p">(</span><span class="n">player</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="loading-json-and-text-data">Loading JSON and Text Data</h2>
+<div class="highlight"><pre><span></span><code><span class="k">var</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FileAccess</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;res://data/config.json&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">FileAccess</span><span class="o">.</span><span class="n">READ</span><span class="p">)</span>
+<span class="k">if</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">file</span><span class="p">:</span>
+<span class="w">    </span><span class="k">return</span>
+
+<span class="k">var</span><span class="w"> </span><span class="n">json</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">JSON</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
+<span class="k">var</span><span class="w"> </span><span class="n">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">json</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">file</span><span class="o">.</span><span class="n">get_as_text</span><span class="p">())</span>
+<span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="k">if</span><span class="w"> </span><span class="n">err</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">OK</span><span class="p">:</span>
+<span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">json</span><span class="o">.</span><span class="n">data</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">])</span>
+</code></pre></div>
+<h2 id="saving-and-loading-resources">Saving and Loading Resources</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Create and save a resource</span>
+<span class="k">var</span><span class="w"> </span><span class="n">weapon</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">WeaponData</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
+<span class="n">weapon</span><span class="o">.</span><span class="n">weapon_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Iron Axe&quot;</span>
+<span class="n">weapon</span><span class="o">.</span><span class="n">damage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">15</span>
+
+<span class="n">DirAccess</span><span class="o">.</span><span class="n">make_dir_recursive_absolute</span><span class="p">(</span><span class="s2">&quot;user://weapons&quot;</span><span class="p">)</span>
+<span class="n">ResourceSaver</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">weapon</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;user://weapons/iron_axe.tres&quot;</span><span class="p">)</span>
+
+<span class="c1"># Load it back</span>
+<span class="k">var</span><span class="w"> </span><span class="n">loaded</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">load</span><span class="p">(</span><span class="s2">&quot;user://weapons/iron_axe.tres&quot;</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">WeaponData</span>
+</code></pre></div>
+<h3 id="configfile-for-settings">ConfigFile for settings</h3>
+<div class="highlight"><pre><span></span><code><span class="k">var</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ConfigFile</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
+<span class="n">config</span><span class="o">.</span><span class="n">set_value</span><span class="p">(</span><span class="s2">&quot;audio&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;volume&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">0.8</span><span class="p">)</span>
+<span class="n">config</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;user://settings.cfg&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="threaded-loading">Threaded Loading</h2>
+<div class="highlight"><pre><span></span><code><span class="k">var</span><span class="w"> </span><span class="n">path</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;res://scenes/big_level.tscn&quot;</span>
+<span class="n">ResourceLoader</span><span class="o">.</span><span class="n">load_threaded_request</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+
+<span class="k">while</span><span class="w"> </span><span class="n">ResourceLoader</span><span class="o">.</span><span class="n">load_threaded_get_status</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">ResourceLoader</span><span class="o">.</span><span class="n">THREAD_LOAD_IN_PROGRESS</span><span class="p">:</span>
+<span class="w">    </span><span class="n">await</span><span class="w"> </span><span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">process_frame</span>
+
+<span class="k">var</span><span class="w"> </span><span class="n">scene</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ResourceLoader</span><span class="o">.</span><span class="n">load_threaded_get</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">PackedScene</span>
+</code></pre></div>
+<h2 id="hidden-useful-directories">Hidden / Useful Directories</h2>
+<table>
+<thead>
+<tr>
+<th>Path</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>res://</code></td>
+<td>Project files (read-only in exported games)</td>
+</tr>
+<tr>
+<td><code>user://</code></td>
+<td>User data, saves, and settings</td>
+</tr>
+<tr>
+<td><code>OS.get_user_data_dir()</code></td>
+<td>Absolute OS path that <code>user://</code> maps to</td>
+</tr>
+<tr>
+<td><code>.godot/</code></td>
+<td>Imported assets, shader cache, and editor state (do not commit)</td>
+</tr>
+<tr>
+<td><code>.godot/imported/</code></td>
+<td>Cached imported resources</td>
+</tr>
+<tr>
+<td><code>.godot/editor/</code></td>
+<td>Editor layout and state</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Find your user data path</p>
+<p><code>OS.get_user_data_dir()</code> is great for debugging. It returns the absolute OS path that <code>user://</code> maps to.</p>
+</div>
+<h2 id="tips-and-pitfalls">Tips and Pitfalls</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># load() returns a Resource. Cast it for typed access.</span>
+<span class="k">var</span><span class="w"> </span><span class="n">weapon</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">load</span><span class="p">(</span><span class="s2">&quot;res://sword.tres&quot;</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">WeaponData</span>
+
+<span class="c1"># Instantiating a PackedScene is not the same as loading it</span>
+<span class="k">var</span><span class="w"> </span><span class="n">scene</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">load</span><span class="p">(</span><span class="s2">&quot;res://enemy.tscn&quot;</span><span class="p">)</span><span class="w">      </span><span class="c1"># PackedScene</span>
+<span class="k">var</span><span class="w"> </span><span class="n">enemy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scene</span><span class="o">.</span><span class="n">instantiate</span><span class="p">()</span><span class="w">            </span><span class="c1"># Node instance</span>
+
+<span class="c1"># ResourceSaver overwrites existing files</span>
+<span class="c1"># Make sure the directory exists first</span>
+<span class="n">DirAccess</span><span class="o">.</span><span class="n">make_dir_recursive_absolute</span><span class="p">(</span><span class="s2">&quot;user://weapons&quot;</span><span class="p">)</span>
+<span class="n">ResourceSaver</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">weapon</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;user://weapons/iron_axe.tres&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p><strong>Quick Summary:</strong></p>
 <ul>
-<li><strong><em>move_left</em></strong> -&gt; <code>A</code>, <code>Left Arrow</code></li>
-<li><strong><em>move_right</em></strong> -&gt; <code>D</code>, <code>Right Arrow</code></li>
-<li><strong><em>jump</em></strong> -&gt; <code>Space</code></li>
-<li><strong><em>attack</em></strong> -&gt; <code>Mouse Button Left</code></li>
+<li><code>load()</code> and <code>preload()</code> bring assets into memory.</li>
+<li>Loaded <code>PackedScene</code>s must be <code>instantiate()</code>-d to become nodes.</li>
+<li><code>ResourceSaver.save()</code> persists <code>Resource</code> objects.</li>
+<li><code>user://</code> is for writable runtime data; <code>res://</code> is for shipped files.</li>
 </ul>
-<h2 id="polling-input">Polling Input</h2>
-<div class="highlight"><pre><span></span><code><span class="c1"># ============================================</span>
-<span class="c1"># POLLING INPUT (every frame)</span>
-<span class="c1"># ============================================</span>
-<span class="k">extends</span><span class="w"> </span><span class="n">CharacterBody2D</span>
-
-<span class="k">func</span><span class="w"> </span><span class="n">_physics_process</span><span class="p">(</span><span class="n">delta</span><span class="p">):</span>
-<span class="w">    </span><span class="c1"># Digital input (pressed/not pressed):</span>
-<span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">direction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Input</span><span class="o">.</span><span class="n">get_axis</span><span class="p">(</span><span class="s2">&quot;move_left&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;move_right&quot;</span><span class="p">)</span>
-<span class="w">    </span><span class="n">velocity</span><span class="o">.</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">direction</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">move_speed</span>
-
-<span class="w">    </span><span class="c1"># Jump (just pressed this frame):</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">Input</span><span class="o">.</span><span class="n">is_action_just_pressed</span><span class="p">(</span><span class="s2">&quot;jump&quot;</span><span class="p">):</span>
-<span class="w">        </span><span class="n">velocity</span><span class="o">.</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">jump_force</span>
-
-<span class="w">    </span><span class="c1"># Attack (held down):</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">Input</span><span class="o">.</span><span class="n">is_action_pressed</span><span class="p">(</span><span class="s2">&quot;attack&quot;</span><span class="p">):</span>
-<span class="w">        </span><span class="n">charge_attack</span><span class="p">(</span><span class="n">delta</span><span class="p">)</span>
-
-<span class="w">    </span><span class="n">move_and_slide</span><span class="p">()</span>
-</code></pre></div>
-<h2 id="event-based-input">Event Based Input</h2>
-<div class="highlight"><pre><span></span><code><span class="c1"># ============================================</span>
-<span class="c1"># EVENT-BASED INPUT</span>
-<span class="c1"># ============================================</span>
-<span class="k">extends</span><span class="w"> </span><span class="n">Node</span>
-
-<span class="k">func</span><span class="w"> </span><span class="n">_unhandled_input</span><span class="p">(</span><span class="n">event</span><span class="p">):</span>
-<span class="w">    </span><span class="c1"># Keyboard:</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">event</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">InputEventKey</span><span class="p">:</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">event</span><span class="o">.</span><span class="n">pressed</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">event</span><span class="o">.</span><span class="n">keycode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">KEY_ESCAPE</span><span class="p">:</span>
-<span class="w">            </span><span class="n">toggle_pause</span><span class="p">()</span>
-
-<span class="w">    </span><span class="c1"># Mouse button:</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">event</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">InputEventMouseButton</span><span class="p">:</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">event</span><span class="o">.</span><span class="n">button_index</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MOUSE_BUTTON_LEFT</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">event</span><span class="o">.</span><span class="n">pressed</span><span class="p">:</span>
-<span class="w">            </span><span class="n">shoot</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">position</span><span class="p">)</span>
-
-<span class="w">    </span><span class="c1"># Mouse motion:</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">event</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">InputEventMouseMotion</span><span class="p">:</span>
-<span class="w">        </span><span class="n">aim_at</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">position</span><span class="p">)</span>
-</code></pre></div>
-<h2 id="button-signals">Button Signals</h2>
-<div class="highlight"><pre><span></span><code><span class="c1"># ============================================</span>
-<span class="c1"># UI BUTTON SIGNALS</span>
-<span class="c1"># ============================================</span>
-<span class="k">extends</span><span class="w"> </span><span class="n">Control</span>
-
-<span class="err">@</span><span class="k">onready</span><span class="w"> </span><span class="k">var</span><span class="w"> </span><span class="n">start_button</span><span class="p">:</span><span class="w"> </span><span class="n">Button</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">$</span><span class="n">StartButton</span>
-
-<span class="k">func</span><span class="w"> </span><span class="n">_ready</span><span class="p">():</span>
-<span class="w">    </span><span class="n">start_button</span><span class="o">.</span><span class="n">pressed</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">_on_start_pressed</span><span class="p">)</span>
-
-<span class="w">    </span><span class="c1"># Or multi-param:</span>
-<span class="w">    </span><span class="n">start_button</span><span class="o">.</span><span class="n">pressed</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="k">func</span><span class="p">():</span><span class="w"> </span><span class="n">start_game</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
-
-<span class="k">func</span><span class="w"> </span><span class="n">_on_start_pressed</span><span class="p">():</span>
-<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Game starting!&quot;</span><span class="p">)</span>
-<span class="w">    </span><span class="n">GameManager</span><span class="o">.</span><span class="n">change_scene</span><span class="p">(</span><span class="s2">&quot;res://scenes/game.tscn&quot;</span><span class="p">)</span>
-</code></pre></div>
-<h2 id="sprite-click-detection">Sprite Click Detection</h2>
-<div class="highlight"><pre><span></span><code><span class="c1"># ============================================</span>
-<span class="c1"># CLICK DETECTION ON SPRITES</span>
-<span class="c1"># ============================================</span>
-<span class="k">extends</span><span class="w"> </span><span class="n">Sprite2D</span>
-
-<span class="k">signal</span><span class="w"> </span><span class="n">clicked</span>
-
-<span class="k">func</span><span class="w"> </span><span class="n">_ready</span><span class="p">():</span>
-<span class="w">    </span><span class="c1"># Make it clickable (needs CollisionShape2D child):</span>
-<span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">area</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Area2D</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
-<span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">collision</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CollisionShape2D</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
-<span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">shape</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RectangleShape2D</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
-<span class="w">    </span><span class="n">shape</span><span class="o">.</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">texture</span><span class="o">.</span><span class="n">get_size</span><span class="p">()</span>
-<span class="w">    </span><span class="n">collision</span><span class="o">.</span><span class="n">shape</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">shape</span>
-<span class="w">    </span><span class="n">area</span><span class="o">.</span><span class="n">add_child</span><span class="p">(</span><span class="n">collision</span><span class="p">)</span>
-<span class="w">    </span><span class="n">add_child</span><span class="p">(</span><span class="n">area</span><span class="p">)</span>
-
-<span class="w">    </span><span class="n">area</span><span class="o">.</span><span class="n">input_event</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">_on_input_event</span><span class="p">)</span>
-
-<span class="k">func</span><span class="w"> </span><span class="n">_on_input_event</span><span class="p">(</span><span class="n">viewport</span><span class="p">,</span><span class="w"> </span><span class="n">event</span><span class="p">,</span><span class="w"> </span><span class="n">shape_idx</span><span class="p">):</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">event</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">InputEventMouseButton</span><span class="p">:</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">event</span><span class="o">.</span><span class="n">button_index</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MOUSE_BUTTON_LEFT</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">event</span><span class="o">.</span><span class="n">pressed</span><span class="p">:</span>
-<span class="w">            </span><span class="n">clicked</span><span class="o">.</span><span class="n">emit</span><span class="p">()</span>
-<span class="w">            </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sprite clicked!&quot;</span><span class="p">)</span>
-</code></pre></div>
 
 
 
